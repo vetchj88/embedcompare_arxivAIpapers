@@ -1,5 +1,6 @@
 # embedcompare_arxivAIpapers
 A visual analysis tool comparing three sentences transformers effects on clustering with UMAP+HDBSCAN
+![image](https://github.com/user-attachments/assets/55e96c76-21de-4351-ae0a-4e5ebe660653)
 
 Comparative Analysis of Sentence Transformers
 
