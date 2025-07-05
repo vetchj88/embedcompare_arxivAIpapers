@@ -90,17 +90,30 @@ Bash
     Alternatively, you can use the Live Server extension in Visual Studio Code.
 
     View the Application: Open your web browser and navigate to http://localhost:8000. The application should load and display the three point clouds.
-
 📈 The Analytical Pipeline
 
-For those interested in the data generation process, the project followed these main steps:
+This project's backend data processing involved several distinct steps:
 
     Data Ingestion (1_fetch_papers.py): Fetched metadata for 500 AI papers from the arXiv API.
 
-    Embedding & Clustering (2_embed_papers.py, 3_analyze_embeddings.py): Generated vector embeddings for each paper's abstract using the three models. UMAP was used for dimensionality reduction to 3D, and HDBSCAN was used to identify clusters.
+    Embedding and Storage (2_embed_papers.py):
 
-    Quantitative Analysis (4_run_analysis.py, 5_deep_analysis.py): Calculated cluster quality scores and the Adjusted Rand Index to create the data for the analysis_summary.json file.
+        Paper abstracts were embedded using each of the three sentence transformer models.
 
-    Visualization (main.js): The final data is loaded and rendered in the browser using three.js.
+        The resulting vector embeddings and paper metadata were stored in a persistent ChromaDB vector database. A separate collection was created for each model.
 
-To create your own dataset, simply run the python scripts in order and this will generate the necessary files for the comparative analysis. Change the parameters in the scripts to adjust the dataset and papers you are getting from ARXIV.  
+    Analysis and Export (3_analyze_embeddings.py):
+
+        For each model's collection, all embeddings were retrieved from ChromaDB.
+
+        UMAP was used to reduce the dimensionality of the embeddings to 3D.
+
+        HDBSCAN was run on the 3D coordinates to find dense clusters of semantically similar papers.
+
+        The final data (metadata, 3D coordinates, cluster ID) was exported to the .json files used by the frontend.
+
+    Quantitative Analysis (4_run_analysis.py, 5_deep_analysis.py):
+
+        Cluster quality scores and the Adjusted Rand Index were calculated to create the data for analysis_summary.json.
+
+    Visualization (main.js): The final .json data files are loaded and rendered in the browser using three.js.
