@@ -1,0 +1,29 @@
+{
+    "model_metrics": {
+        "BGE-Large": {
+            "Num Clusters": 7,
+            "Num Outliers": 30,
+            "Calinski-Harabasz Score": "159.64",
+            "Davies-Bouldin Score": "0.931"
+        },
+        "GTE-Large": {
+            "Num Clusters": 9,
+            "Num Outliers": 78,
+            "Calinski-Harabasz Score": "116.12",
+            "Davies-Bouldin Score": "0.682"
+        },
+        "MiniLM": {
+            "Num Clusters": 14,
+            "Num Outliers": 71,
+            "Calinski-Harabasz Score": "141.73",
+            "Davies-Bouldin Score": "0.755"
+        }
+    },
+    "comparative_metrics": {
+        "Adjusted Rand Index": {
+            "BGE vs GTE": "0.4624",
+            "BGE vs MiniLM": "0.2466",
+            "GTE vs MiniLM": "0.2148"
+        }
+    }
+}

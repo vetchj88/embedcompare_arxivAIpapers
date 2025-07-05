@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    color: #fff;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+#loading-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    z-index: 10;
+    color: #aaa;
+}
+
+#tooltip {
+    position: absolute;
+    display: none;
+    padding: 12px;
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid #555;
+    border-radius: 8px;
+    pointer-events: none;
+    max-width: 350px;
+    z-index: 100;
+}
+#tooltip strong { color: #ffffff; }
+#tooltip p { color: #cccccc; margin: 5px 0 0 0; }
+#tooltip a { color: #61afef; text-decoration: none; }
+#tooltip a:hover { text-decoration: underline; }
+
+/* --- Style for a Much Larger GUI --- */
+.lil-gui.root {
+    font-size: 18px;       /* Adjusted for balance */
+    width: 450px;          /* Wider panel */
+    --widget-height: 40px;
+    --title-height: 48px;
+    top: 20px;
+    right: 20px;
+}
