@@ -53,7 +53,7 @@ Prerequisites
 
 You need a modern web browser that supports WebGL. No other dependencies are required to simply view the visualization.
 
-Installation & Setup
+Installation & Setup to run the program with provided data:
 
     Clone the repository:
     Bash
@@ -102,3 +102,5 @@ For those interested in the data generation process, the project followed these 
     Quantitative Analysis (4_run_analysis.py, 5_deep_analysis.py): Calculated cluster quality scores and the Adjusted Rand Index to create the data for the analysis_summary.json file.
 
     Visualization (main.js): The final data is loaded and rendered in the browser using three.js.
+
+To create your own dataset, simply run the python scripts in order and this will generate the necessary files for the comparative analysis. Change the parameters in the scripts to adjust the dataset and papers you are getting from ARXIV.  
