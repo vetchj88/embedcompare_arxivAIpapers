@@ -35,6 +35,166 @@ canvas {
 #tooltip p { color: #cccccc; margin: 5px 0 0 0; }
 #tooltip a { color: #61afef; text-decoration: none; }
 #tooltip a:hover { text-decoration: underline; }
+.tooltip-section {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.tooltip-section-title {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8dc5ff;
+    margin-bottom: 6px;
+}
+.tooltip-highlights {
+    margin: 0;
+    padding-left: 16px;
+    color: #d0e4ff;
+    font-size: 0.85rem;
+}
+.tooltip-highlights li {
+    margin-bottom: 4px;
+}
+.tooltip-highlights li:last-child {
+    margin-bottom: 0;
+}
+
+.overlay-card {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: min(420px, 30vw);
+    max-height: 70vh;
+    background: rgba(15, 15, 15, 0.88);
+    border: 1px solid rgba(70, 130, 180, 0.65);
+    border-radius: 16px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 22px 34px rgba(0, 0, 0, 0.45);
+    z-index: 60;
+    backdrop-filter: blur(6px);
+}
+
+.overlay-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.overlay-header h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+}
+
+#explanation-close {
+    background: transparent;
+    border: none;
+    color: #a0b4c8;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 2px 6px;
+    transition: color 0.2s ease;
+}
+
+#explanation-close:hover,
+#explanation-close:focus {
+    color: #ffffff;
+    outline: none;
+}
+
+.overlay-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 6px;
+    scrollbar-width: thin;
+}
+
+.overlay-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.overlay-content::-webkit-scrollbar-thumb {
+    background: rgba(97, 175, 239, 0.45);
+    border-radius: 3px;
+}
+
+.overlay-content .placeholder {
+    margin: 0;
+    color: #c7d4e4;
+    line-height: 1.6;
+}
+
+.explanation-section {
+    margin-bottom: 14px;
+}
+
+.explanation-section:last-of-type {
+    margin-bottom: 0;
+}
+
+.explanation-section h3 {
+    margin: 0 0 6px 0;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9ad0ff;
+}
+
+.explanation-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.explanation-section li {
+    background: rgba(97, 175, 239, 0.08);
+    border: 1px solid rgba(97, 175, 239, 0.28);
+    border-radius: 10px;
+    padding: 8px 10px;
+    color: #dce9f6;
+    font-size: 0.92rem;
+    line-height: 1.4;
+}
+
+.overlay-toggle {
+    position: absolute;
+    left: 24px;
+    bottom: 30px;
+    background: rgba(40, 60, 90, 0.75);
+    color: #dce9f6;
+    border: 1px solid rgba(97, 175, 239, 0.55);
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35);
+    z-index: 60;
+}
+
+.overlay-toggle:hover,
+.overlay-toggle:focus {
+    background: rgba(97, 175, 239, 0.45);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.overlay-toggle[aria-pressed="false"] {
+    background: rgba(25, 30, 40, 0.8);
+    color: #aab7c8;
+    border-color: rgba(85, 100, 120, 0.6);
+}
 
 /* GUI Styling */
 .lil-gui.root {

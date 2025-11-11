@@ -7,6 +7,11 @@ import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 // --- DOM References ---
 const loadingIndicator = document.getElementById('loading-indicator');
 const tooltip = document.getElementById('tooltip');
+const explanationOverlay = document.getElementById('explanation-overlay');
+const explanationContent = document.getElementById('explanation-content');
+const explanationTitle = document.getElementById('explanation-title');
+const explanationToggle = document.getElementById('explanation-toggle');
+const explanationClose = document.getElementById('explanation-close');
 const timeControls = document.getElementById('time-controls');
 const timeSlider = document.getElementById('time-slider');
 const timeLabel = document.getElementById('time-label');
@@ -61,6 +66,9 @@ let temporalManifest = null;
 let currentFont = null;
 const snapshotCache = new Map();
 let snapshotRequestToken = 0;
+let paperExplanations = new Map();
+let explanationEnabled = true;
+let lastExplainedPaper = null;
 
 // --- Utility Functions ---
 function disposeMesh(mesh) {
@@ -100,6 +108,92 @@ async function loadSnapshot(path) {
     const payload = await response.json();
     snapshotCache.set(path, payload);
     return payload;
+}
+
+function escapeHTML(value) {
+    return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+function renderExplanationPlaceholder() {
+    if (!explanationContent) return;
+    explanationTitle.textContent = 'Paper insights';
+    explanationContent.innerHTML = '<p class="placeholder">Hover over a paper to see why it clusters with its neighbors.</p>';
+}
+
+function buildExplanationSection(section) {
+    const title = escapeHTML(section.title || 'Details');
+    const items = (section.items || [])
+        .map(item => `<li>${escapeHTML(item)}</li>`)
+        .join('');
+    return `<div class="explanation-section"><h3>${title}</h3><ul>${items}</ul></div>`;
+}
+
+function setExplanationVisibility(enabled) {
+    explanationEnabled = enabled;
+    if (!explanationOverlay || !explanationToggle) return;
+    explanationToggle.textContent = enabled ? 'Hide explanations' : 'Show explanations';
+    explanationToggle.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+    if (enabled) {
+        explanationOverlay.classList.remove('hidden');
+        if (lastExplainedPaper) {
+            updateExplanationPanel(lastExplainedPaper);
+        } else {
+            renderExplanationPlaceholder();
+        }
+    } else {
+        explanationOverlay.classList.add('hidden');
+    }
+}
+
+function updateExplanationPanel(paper) {
+    if (!explanationEnabled || !paper || !explanationContent) {
+        return;
+    }
+
+    lastExplainedPaper = paper;
+    if (explanationOverlay) {
+        explanationOverlay.classList.remove('hidden');
+    }
+
+    explanationTitle.textContent = paper.title ?? 'Paper insights';
+    const explanation = paperExplanations.get(paper.id);
+    if (!explanation) {
+        explanationContent.innerHTML = '<p class="placeholder">No explanation metadata available for this paper.</p>';
+        return;
+    }
+
+    const validSections = (explanation.sections || []).filter(section =>
+        Array.isArray(section.items) && section.items.length > 0
+    );
+
+    if (validSections.length === 0) {
+        const fallback = explanation.highlights && explanation.highlights.length > 0
+            ? escapeHTML(explanation.highlights[0])
+            : 'No explanation metadata available for this paper.';
+        explanationContent.innerHTML = `<p class="placeholder">${fallback}</p>`;
+        return;
+    }
+
+    explanationContent.innerHTML = validSections.map(buildExplanationSection).join('');
+}
+
+setExplanationVisibility(true);
+
+if (explanationToggle) {
+    explanationToggle.addEventListener('click', () => {
+        setExplanationVisibility(!explanationEnabled);
+    });
+}
+
+if (explanationClose) {
+    explanationClose.addEventListener('click', () => {
+        setExplanationVisibility(false);
+    });
 }
 
 function createPointCloud(model, font, data) {
@@ -228,6 +322,10 @@ async function applySnapshot(index) {
             const snapshotData = data.models?.[model.name] ?? [];
             createPointCloud(model, currentFont, snapshotData);
         }
+        if (explanationEnabled) {
+            lastExplainedPaper = null;
+            renderExplanationPlaceholder();
+        }
         timeLabel.textContent = label;
     } catch (error) {
         console.error(error);
@@ -273,9 +371,13 @@ async function loadAllData() {
     const manifestPromise = fetch('temporal_snapshots/manifest.json')
         .then(res => res.ok ? res.json() : null)
         .catch(() => null);
+    const explanationsPromise = fetch('paper_explanations.json')
+        .then(res => (res.ok ? res.json() : []))
+        .catch(() => []);
 
-    const [font, analysisData, manifest] = await Promise.all([fontPromise, analysisPromise, manifestPromise]);
+    const [font, analysisData, manifest, explanations] = await Promise.all([fontPromise, analysisPromise, manifestPromise, explanationsPromise]);
     currentFont = font;
+    paperExplanations = new Map((explanations ?? []).map(item => [item.id, item]));
 
     if (manifest) {
         setupTimeControls(manifest);
@@ -316,6 +418,17 @@ function animate() {
             tooltip.style.left = `${mousePosition.x + 15}px`;
             tooltip.style.top = `${mousePosition.y + 15}px`;
             const lastUpdated = paper.last_updated ? `<p>Last Updated: ${new Date(paper.last_updated).toLocaleDateString()}</p>` : '';
+            const explanation = paperExplanations.get(paper.id);
+            let highlightMarkup = '';
+            if (explanation && explanation.highlights && explanation.highlights.length) {
+                const items = explanation.highlights.map(item => `<li>${escapeHTML(item)}</li>`).join('');
+                highlightMarkup = `
+                    <div class="tooltip-section">
+                        <span class="tooltip-section-title">Top signals</span>
+                        <ul class="tooltip-highlights">${items}</ul>
+                    </div>
+                `.trim();
+            }
             tooltip.innerHTML = `
                 <strong>${paper.title}</strong>
                 <p>Authors: ${paper.authors}</p>
@@ -323,7 +436,9 @@ function animate() {
                 <p>Cluster ID: ${paper.cluster_id}</p>
                 ${lastUpdated}
                 <a href="https://arxiv.org/abs/${paper.id}" target="_blank">View on arXiv</a>
+                ${highlightMarkup}
             `;
+            updateExplanationPanel(paper);
         }
     } else {
         tooltip.style.display = 'none';
