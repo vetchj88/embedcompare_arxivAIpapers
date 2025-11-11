@@ -15,6 +15,24 @@ const explanationClose = document.getElementById('explanation-close');
 const timeControls = document.getElementById('time-controls');
 const timeSlider = document.getElementById('time-slider');
 const timeLabel = document.getElementById('time-label');
+const pipelineOpen = document.getElementById('pipeline-open');
+const pipelineOverlay = document.getElementById('pipeline-overlay');
+const pipelineClose = document.getElementById('pipeline-close');
+const pipelineForm = document.getElementById('pipeline-form');
+const pipelineCategories = document.getElementById('pipeline-categories');
+const pipelineStepsContainer = document.getElementById('pipeline-steps');
+const pipelineStatus = document.getElementById('pipeline-status');
+const pipelineReload = document.getElementById('pipeline-reload');
+const pipelineSubmit = document.getElementById('pipeline-submit');
+
+const DEFAULT_CATEGORY_OPTIONS = ['cs.AI', 'cs.LG', 'cs.CL', 'cs.CV', 'cs.NE', 'cs.RO', 'cs.IR', 'cs.HC'];
+const DEFAULT_STEP_LABELS = {
+    fetch: 'Fetch latest papers',
+    embed: 'Generate embeddings',
+    analyze: 'Build hybrid layouts',
+    run_analysis: 'Compute clustering metrics',
+    deep_analysis: 'Derive deep-dive diagnostics',
+};
 
 // --- Scene Setup ---
 const scene = new THREE.Scene();
@@ -69,8 +87,322 @@ let snapshotRequestToken = 0;
 let paperExplanations = new Map();
 let explanationEnabled = true;
 let lastExplainedPaper = null;
+let pipelineOptions = null;
+let pipelinePollHandle = null;
+let pipelineJobId = null;
 
 // --- Utility Functions ---
+function setPipelineVisibility(visible) {
+    if (!pipelineOverlay || !pipelineOpen) {
+        return;
+    }
+    if (visible) {
+        pipelineOverlay.classList.remove('hidden');
+        pipelineOverlay.setAttribute('aria-hidden', 'false');
+        pipelineOpen.classList.add('hidden');
+    } else {
+        pipelineOverlay.classList.add('hidden');
+        pipelineOverlay.setAttribute('aria-hidden', 'true');
+        pipelineOpen.classList.remove('hidden');
+    }
+}
+
+function showPipelineMessage(message, level = 'info') {
+    if (!pipelineStatus) return;
+    pipelineStatus.innerHTML = '';
+    const paragraph = document.createElement('p');
+    paragraph.textContent = message;
+    paragraph.classList.add(`status-${level}`);
+    pipelineStatus.appendChild(paragraph);
+}
+
+function renderPipelineCategories(categories, defaults = []) {
+    if (!pipelineCategories) return;
+    pipelineCategories.innerHTML = '';
+    categories.forEach(category => {
+        const safeId = `pipeline-cat-${category.replace(/[^a-z0-9]/gi, '-').toLowerCase()}`;
+        const wrapper = document.createElement('label');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.value = category;
+        checkbox.id = safeId;
+        checkbox.checked = defaults.length === 0 || defaults.includes(category);
+        const span = document.createElement('span');
+        span.textContent = category;
+        wrapper.appendChild(checkbox);
+        wrapper.appendChild(span);
+        pipelineCategories.appendChild(wrapper);
+    });
+}
+
+function renderPipelineSteps(stepMap, defaults = []) {
+    if (!pipelineStepsContainer) return;
+    pipelineStepsContainer.innerHTML = '';
+    Object.entries(stepMap).forEach(([key, label]) => {
+        const safeId = `pipeline-step-${key}`;
+        const wrapper = document.createElement('label');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.value = key;
+        checkbox.id = safeId;
+        checkbox.checked = defaults.length === 0 || defaults.includes(key);
+        const span = document.createElement('span');
+        span.textContent = label;
+        wrapper.appendChild(checkbox);
+        wrapper.appendChild(span);
+        pipelineStepsContainer.appendChild(wrapper);
+    });
+}
+
+function collectCheckedValues(container) {
+    if (!container) return [];
+    const values = new Set();
+    container.querySelectorAll('input[type="checkbox"]:checked').forEach(input => {
+        if (input.value) {
+            values.add(input.value);
+        }
+    });
+    return Array.from(values);
+}
+
+async function loadPipelineOptions() {
+    if (pipelineOptions) {
+        return pipelineOptions;
+    }
+    try {
+        const response = await fetch('/api/pipeline/options', { cache: 'no-store' });
+        if (!response.ok) {
+            throw new Error(`Request failed with status ${response.status}`);
+        }
+        const data = await response.json();
+        pipelineOptions = data;
+        const categories = Array.isArray(data.default_categories) && data.default_categories.length
+            ? data.default_categories
+            : DEFAULT_CATEGORY_OPTIONS;
+        renderPipelineCategories(categories, categories);
+        const steps = data.available_steps ?? DEFAULT_STEP_LABELS;
+        const defaultSteps = Array.isArray(data.default_steps) && data.default_steps.length
+            ? data.default_steps
+            : Object.keys(DEFAULT_STEP_LABELS);
+        renderPipelineSteps(steps, defaultSteps);
+        const maxInput = document.getElementById('pipeline-max');
+        if (maxInput && data.default_max_results) {
+            maxInput.value = data.default_max_results;
+        }
+        const embedSelect = document.getElementById('pipeline-embed-mode');
+        if (embedSelect && data.default_embed_mode) {
+            embedSelect.value = data.default_embed_mode;
+        }
+        showPipelineMessage('Ready to launch the pipeline.', 'info');
+        return data;
+    } catch (error) {
+        pipelineOptions = null;
+        showPipelineMessage('Unable to reach the pipeline API. Start the backend server to run the pipeline.', 'error');
+        throw error;
+    }
+}
+
+function buildPipelinePayload() {
+    if (!pipelineForm) return null;
+    const formData = new FormData(pipelineForm);
+    const payload = {
+        categories: collectCheckedValues(pipelineCategories),
+        search_terms: (formData.get('search') || '').toString().trim() || null,
+        start_date: (formData.get('start_date') || '').toString() || null,
+        end_date: (formData.get('end_date') || '').toString() || null,
+        max_results: Number(formData.get('max_results') || 500),
+        embed_mode: (formData.get('embed_mode') || 'abstracts').toString(),
+        steps: collectCheckedValues(pipelineStepsContainer),
+    };
+    if (!payload.start_date) payload.start_date = null;
+    if (!payload.end_date) payload.end_date = null;
+    if (Number.isNaN(payload.max_results)) {
+        payload.max_results = 500;
+    }
+    payload.max_results = Math.max(50, Math.min(2000, payload.max_results));
+    if (!payload.steps.length) {
+        payload.steps = pipelineOptions?.default_steps ?? Object.keys(DEFAULT_STEP_LABELS);
+    }
+    return payload;
+}
+
+function beginPipelinePolling(jobId) {
+    pipelineJobId = jobId;
+    if (pipelinePollHandle) {
+        clearInterval(pipelinePollHandle);
+    }
+    pipelinePollHandle = setInterval(() => fetchPipelineStatus(jobId), 4000);
+    fetchPipelineStatus(jobId);
+}
+
+async function fetchPipelineStatus(jobId) {
+    try {
+        const response = await fetch(`/api/jobs/${jobId}`, { cache: 'no-store' });
+        if (!response.ok) {
+            throw new Error(`Status ${response.status}`);
+        }
+        const job = await response.json();
+        updatePipelineStatus(job);
+    } catch (error) {
+        if (pipelineSubmit) {
+            pipelineSubmit.disabled = false;
+            pipelineSubmit.textContent = 'Start pipeline';
+        }
+        showPipelineMessage(`Failed to fetch pipeline status: ${error.message}`, 'error');
+        if (pipelinePollHandle) {
+            clearInterval(pipelinePollHandle);
+            pipelinePollHandle = null;
+        }
+    }
+}
+
+function updatePipelineStatus(job) {
+    if (!pipelineStatus) return;
+    pipelineStatus.innerHTML = '';
+
+    const summary = document.createElement('p');
+    summary.classList.add('status-info');
+    const progress = job.total_steps ? `${job.completed_steps}/${job.total_steps}` : '0/0';
+    const stepLabel = job.current_step ? ` • ${job.current_step}` : '';
+    summary.innerHTML = `<strong>Status:</strong> ${job.status}${stepLabel} (${progress} steps)`;
+    pipelineStatus.appendChild(summary);
+
+    const logs = Array.isArray(job.logs) ? job.logs.slice(-200) : [];
+    if (logs.length) {
+        const fragment = document.createDocumentFragment();
+        logs.forEach(entry => {
+            const p = document.createElement('p');
+            p.classList.add('log-entry');
+            p.textContent = entry;
+            fragment.appendChild(p);
+        });
+        pipelineStatus.appendChild(fragment);
+    } else {
+        const waiting = document.createElement('p');
+        waiting.classList.add('status-info');
+        waiting.textContent = 'Waiting for pipeline output...';
+        pipelineStatus.appendChild(waiting);
+    }
+
+    if (job.status === 'completed') {
+        const success = document.createElement('p');
+        success.classList.add('status-success');
+        success.textContent = 'Pipeline finished successfully.';
+        pipelineStatus.appendChild(success);
+        if (pipelineReload) {
+            pipelineReload.classList.remove('hidden');
+        }
+        if (pipelinePollHandle) {
+            clearInterval(pipelinePollHandle);
+            pipelinePollHandle = null;
+        }
+    } else if (job.status === 'failed') {
+        const errorLine = document.createElement('p');
+        errorLine.classList.add('status-error');
+        errorLine.textContent = job.error ? `Pipeline failed: ${job.error}` : 'Pipeline failed.';
+        pipelineStatus.appendChild(errorLine);
+        if (pipelineReload) {
+            pipelineReload.classList.add('hidden');
+        }
+        if (pipelinePollHandle) {
+            clearInterval(pipelinePollHandle);
+            pipelinePollHandle = null;
+        }
+    } else if (pipelineReload) {
+        pipelineReload.classList.add('hidden');
+    }
+
+    pipelineStatus.scrollTop = pipelineStatus.scrollHeight;
+
+    if (pipelineSubmit) {
+        if (job.status === 'running') {
+            pipelineSubmit.disabled = true;
+            pipelineSubmit.textContent = 'Running...';
+        } else {
+            pipelineSubmit.disabled = false;
+            pipelineSubmit.textContent = 'Start pipeline';
+        }
+    }
+}
+
+async function handlePipelineSubmit(event) {
+    event.preventDefault();
+    if (!pipelineForm) return;
+
+    const payload = buildPipelinePayload();
+    if (!payload) return;
+    if (!payload.categories.length) {
+        showPipelineMessage('Please select at least one category to fetch.', 'error');
+        return;
+    }
+
+    if (pipelineSubmit) {
+        pipelineSubmit.disabled = true;
+        pipelineSubmit.textContent = 'Starting...';
+    }
+    if (pipelineReload) {
+        pipelineReload.classList.add('hidden');
+    }
+    showPipelineMessage('Submitting pipeline request...', 'info');
+
+    try {
+        const response = await fetch('/api/pipeline/run', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+        });
+        if (!response.ok) {
+            let detail = `Failed to start pipeline (HTTP ${response.status})`;
+            try {
+                const problem = await response.json();
+                if (problem && problem.detail) {
+                    detail = problem.detail;
+                }
+            } catch (err) {
+                console.warn('Pipeline start response could not be parsed', err);
+            }
+            throw new Error(detail);
+        }
+        const job = await response.json();
+        updatePipelineStatus(job);
+        beginPipelinePolling(job.job_id);
+    } catch (error) {
+        showPipelineMessage(error.message ?? String(error), 'error');
+        if (pipelineSubmit) {
+            pipelineSubmit.disabled = false;
+            pipelineSubmit.textContent = 'Start pipeline';
+        }
+    }
+}
+
+function initializePipelineUI() {
+    if (!pipelineForm || !pipelineStatus) {
+        return;
+    }
+    renderPipelineCategories(DEFAULT_CATEGORY_OPTIONS, DEFAULT_CATEGORY_OPTIONS);
+    renderPipelineSteps(DEFAULT_STEP_LABELS, Object.keys(DEFAULT_STEP_LABELS));
+    showPipelineMessage('Configure your pipeline parameters and press start.', 'info');
+
+    if (pipelineOpen) {
+        pipelineOpen.addEventListener('click', () => {
+            setPipelineVisibility(true);
+            loadPipelineOptions().catch(() => {});
+        });
+    }
+    if (pipelineClose) {
+        pipelineClose.addEventListener('click', () => setPipelineVisibility(false));
+    }
+    pipelineForm.addEventListener('submit', handlePipelineSubmit);
+    if (pipelineReload) {
+        pipelineReload.addEventListener('click', () => window.location.reload());
+    }
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && pipelineOverlay && !pipelineOverlay.classList.contains('hidden')) {
+            setPipelineVisibility(false);
+        }
+    });
+}
+
 function disposeMesh(mesh) {
     if (!mesh) return;
     if (mesh.geometry) mesh.geometry.dispose();
@@ -453,5 +785,6 @@ window.addEventListener('resize', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
+initializePipelineUI();
 loadAllData();
 animate();

@@ -78,21 +78,18 @@ File Structure: Ensure your project directory is structured correctly with all t
 ├── square.png
 └── triangle.png
 
-Run a Local Server: Due to browser security policies (CORS), you cannot open index.html directly from the file system. You must serve it from a local web server. The easiest way is using Python's built-in server.
+Run the integrated application: the repository now ships with a FastAPI backend that exposes the data pipeline and serves the frontend. This replaces the need to run separate scripts manually.
 
-If you have Python 3 installed:
-Bash
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn backend.server:app --host 0.0.0.0 --port 8000
+```
 
-python -m http.server
+Open your browser to http://localhost:8000 to access the visualization and the new "Launch data pipeline" controls. The UI lets you choose paper categories, filter by submission dates or keywords, select pipeline stages, and trigger the full backend workflow without touching the command line.
 
-If you have Python 2 installed:
-Bash
-
-    python -m SimpleHTTPServer
-
-    Alternatively, you can use the Live Server extension in Visual Studio Code.
-
-    View the Application: Open your web browser and navigate to http://localhost:8000. The application should load and display the three point clouds.
+While the legacy ``python -m http.server`` approach still works for viewing the static dataset, the pipeline controls require the FastAPI server so the UI can communicate with the backend endpoints.
 📈 The Analytical Pipeline
 
 This project's backend data processing involved several distinct steps:

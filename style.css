@@ -196,6 +196,205 @@ canvas {
     border-color: rgba(85, 100, 120, 0.6);
 }
 
+.control-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: rgba(25, 45, 75, 0.85);
+    color: #e4ecf8;
+    border: 1px solid rgba(120, 180, 255, 0.4);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 20px 32px rgba(0, 0, 0, 0.35);
+    z-index: 70;
+}
+
+.control-button:hover,
+.control-button:focus {
+    background: rgba(120, 180, 255, 0.4);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.pipeline-card {
+    left: auto;
+    right: 24px;
+    width: min(440px, 32vw);
+    gap: 18px;
+}
+
+.pipeline-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pipeline-form label,
+.pipeline-form legend {
+    font-size: 0.92rem;
+    letter-spacing: 0.03em;
+    color: #cfe0ff;
+    text-transform: uppercase;
+}
+
+.pipeline-form input,
+.pipeline-form select {
+    width: 100%;
+    background: rgba(30, 40, 55, 0.9);
+    border: 1px solid rgba(110, 150, 200, 0.45);
+    border-radius: 10px;
+    padding: 8px 10px;
+    color: #f0f4ff;
+    font-size: 0.95rem;
+}
+
+.pipeline-form input:focus,
+.pipeline-form select:focus {
+    outline: 2px solid rgba(120, 180, 255, 0.6);
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+}
+
+.category-grid label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(32, 45, 70, 0.9);
+    border: 1px solid rgba(97, 175, 239, 0.3);
+    border-radius: 10px;
+    padding: 8px 10px;
+    color: #dde9f9;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.category-grid input[type="checkbox"] {
+    accent-color: #6ea6ff;
+}
+
+.pipeline-steps {
+    border: 1px solid rgba(97, 175, 239, 0.35);
+    border-radius: 12px;
+    padding: 12px;
+    background: rgba(25, 35, 55, 0.85);
+}
+
+.pipeline-steps legend {
+    margin-left: 6px;
+    padding: 0 6px;
+}
+
+.pipeline-steps label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    color: #d9e6f8;
+    font-size: 0.9rem;
+}
+
+.pipeline-steps label:last-child {
+    margin-bottom: 0;
+}
+
+.pipeline-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.pipeline-actions button {
+    flex: 1;
+    border-radius: 999px;
+    border: none;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#pipeline-submit {
+    background: linear-gradient(135deg, rgba(126, 214, 255, 0.9), rgba(86, 155, 255, 0.9));
+    color: #0a1425;
+    font-weight: 600;
+}
+
+#pipeline-submit:hover,
+#pipeline-submit:focus {
+    transform: translateY(-1px);
+}
+
+.pipeline-actions .secondary {
+    background: rgba(30, 40, 55, 0.85);
+    color: #e1edff;
+    border: 1px solid rgba(120, 180, 255, 0.35);
+}
+
+.pipeline-actions .secondary:hover,
+.pipeline-actions .secondary:focus {
+    background: rgba(120, 180, 255, 0.3);
+}
+
+.pipeline-status {
+    max-height: 180px;
+    overflow-y: auto;
+    background: rgba(15, 20, 35, 0.9);
+    border: 1px solid rgba(97, 175, 239, 0.25);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #d5e2ff;
+}
+
+.pipeline-status p {
+    margin: 0 0 6px 0;
+}
+
+.pipeline-status p:last-child {
+    margin-bottom: 0;
+}
+
+.pipeline-status .log-entry {
+    margin: 0 0 4px 0;
+    font-family: "Fira Code", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.pipeline-status .log-entry strong {
+    color: #8cc6ff;
+}
+
+.pipeline-status .status-info {
+    color: #d5e2ff;
+}
+
+.pipeline-status .status-success {
+    color: #b6ffcc;
+}
+
+.pipeline-status .status-error {
+    color: #ffb3c1;
+}
+
 /* GUI Styling */
 .lil-gui.root {
     font-size: 18px;
