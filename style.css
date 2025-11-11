@@ -36,12 +36,52 @@ canvas {
 #tooltip a { color: #61afef; text-decoration: none; }
 #tooltip a:hover { text-decoration: underline; }
 
-/* --- Style for a Much Larger GUI --- */
+/* GUI Styling */
 .lil-gui.root {
-    font-size: 18px;       /* Adjusted for balance */
-    width: 450px;          /* Wider panel */
+    font-size: 18px;
+    width: 450px;
     --widget-height: 40px;
     --title-height: 48px;
     top: 20px;
     right: 20px;
+}
+
+/* Temporal controls */
+#time-controls {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 14px 18px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    z-index: 50;
+}
+
+#time-controls label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #bbbbbb;
+}
+
+#time-controls input[type="range"] {
+    width: 100%;
+    accent-color: #61afef;
+}
+
+#time-label {
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hidden {
+    display: none !important;
 }
