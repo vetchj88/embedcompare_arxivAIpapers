@@ -118,3 +118,32 @@ This project's backend data processing involved several distinct steps:
         Cluster quality scores, layout hyperparameters, and layout trustworthiness/continuity metrics are calculated to populate analysis_summary.json.
 
     Visualization (main.js): The final .json data files are loaded and rendered in the browser using three.js.
+
+    Heterogeneous Graph Construction (data_scripts/build_hetero_graph.py):
+
+        Local metadata from papers_metadata.csv is merged with OpenAlex enrichments (concepts, venues, citations, keywords).
+
+        Nodes are created for papers, authors, venues, topical fields, and extracted keyphrases. Each node keeps lightweight metadata.
+
+        Typed edges include citation (paper→paper), co-author (author↔author), venue membership (paper→venue), co-citation (paper↔paper pairs sharing references), and keyphrase overlap (paper↔paper pairs sharing extracted keyphrases).
+
+        The resulting schema and summary statistics are written to graph_data/hetero_graph.json and graph_data/graph_summary.json for downstream consumption.
+
+    Graph Representation Learning (models/hetero_gnn.py):
+
+        A two-layer HAN-style backbone propagates information across the heterogeneous graph using ELU activations.
+
+        Paper nodes start from multi-hot keyphrase/field features, while other node types learn embeddings of size 128 that are updated during message passing.
+
+        Training aligns paper representations with section-aware vectors stored in ChromaDB (collection: paper_sections) through an MSE objective, regularized by an L2 prior on all node embeddings.
+
+        Default hyperparameters: hidden dimension = 256, output dimension = 256 (auto-matched to section vectors when available), epochs = 200, learning rate = 1e-3, weight decay = 1e-5, alignment weight = 1.0, L2 regularization weight = 1e-4, diagnostics every 10 epochs.
+
+        Learned paper embeddings are persisted back to ChromaDB in the papers_hetero_hgnn collection and can optionally be exported as JSON for offline fusion.
+
+To run the new graph workflow end-to-end:
+
+```
+python data_scripts/build_hetero_graph.py --metadata papers_metadata.csv --output-dir graph_data --mailto you@example.com
+python models/hetero_gnn.py --graph graph_data/hetero_graph.json --chroma-path ./chroma_db --section-collection paper_sections --output-collection papers_hetero_hgnn
+```
