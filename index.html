@@ -17,6 +17,16 @@
 <body>
     <div id="loading-indicator">Loading Models...</div>
     <div id="tooltip"></div>
+    <div id="explanation-overlay" class="overlay-card">
+        <div class="overlay-header">
+            <h2 id="explanation-title">Paper insights</h2>
+            <button id="explanation-close" type="button" aria-label="Hide explanations">&times;</button>
+        </div>
+        <div id="explanation-content" class="overlay-content">
+            <p class="placeholder">Hover over a paper to see why it clusters with its neighbors.</p>
+        </div>
+    </div>
+    <button id="explanation-toggle" class="overlay-toggle" type="button" aria-pressed="true">Hide explanations</button>
     <div id="time-controls" class="hidden">
         <label for="time-slider">Timeline</label>
         <input type="range" id="time-slider" min="0" max="0" value="0" step="1">
