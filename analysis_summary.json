@@ -25,5 +25,78 @@
             "BGE vs MiniLM": "0.2466",
             "GTE vs MiniLM": "0.2148"
         }
+    },
+    "layout": {
+        "hyperparameters": {
+            "graph": {
+                "n_neighbors": 12,
+                "text_weight": 0.6,
+                "metadata_weight": 0.25,
+                "cluster_weight": 0.15,
+                "author_weight": 0.6,
+                "time_scale_days": 365.0
+            },
+            "pacmap": {
+                "n_components": 3,
+                "MN_ratio": 0.5,
+                "FP_ratio": 2.0,
+                "lr": 1.0,
+                "num_iters": [
+                    100,
+                    100,
+                    250
+                ],
+                "random_state": 42
+            },
+            "starmap": {
+                "n_components": 3,
+                "solver": "SpectralEmbedding",
+                "random_state": 42
+            }
+        },
+        "quality": {
+            "BGE-Large": {
+                "graph": {
+                    "nodes": 300,
+                    "edges": 3600
+                },
+                "PaCMAP": {
+                    "trustworthiness": 0.788219,
+                    "continuity": 0.820075
+                },
+                "StarMAP": {
+                    "trustworthiness": 0.724704,
+                    "continuity": 0.725239
+                }
+            },
+            "GTE-Large": {
+                "graph": {
+                    "nodes": 300,
+                    "edges": 3600
+                },
+                "PaCMAP": {
+                    "trustworthiness": 0.788219,
+                    "continuity": 0.820075
+                },
+                "StarMAP": {
+                    "trustworthiness": 0.693377,
+                    "continuity": 0.710627
+                }
+            },
+            "MiniLM": {
+                "graph": {
+                    "nodes": 300,
+                    "edges": 3600
+                },
+                "PaCMAP": {
+                    "trustworthiness": 0.788219,
+                    "continuity": 0.820075
+                },
+                "StarMAP": {
+                    "trustworthiness": 0.722813,
+                    "continuity": 0.741982
+                }
+            }
+        }
     }
 }
