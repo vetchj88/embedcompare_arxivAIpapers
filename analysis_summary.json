@@ -25,5 +25,6 @@
             "BGE vs MiniLM": "0.2466",
             "GTE vs MiniLM": "0.2148"
         }
-    }
+    },
+    "alignment_diagnostics": {}
 }
