@@ -4,13 +4,19 @@ import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 
-// --- Basic Scene Setup ---
+// --- DOM References ---
+const loadingIndicator = document.getElementById('loading-indicator');
+const tooltip = document.getElementById('tooltip');
+const timeControls = document.getElementById('time-controls');
+const timeSlider = document.getElementById('time-slider');
+const timeLabel = document.getElementById('time-label');
+
+// --- Scene Setup ---
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
-const loadingIndicator = document.getElementById('loading-indicator');
 
 // --- Lighting ---
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
@@ -25,65 +31,105 @@ controls.enableDamping = true;
 camera.position.set(0, 15, 60);
 controls.update();
 
-// --- Data, Groups, and Object Storage ---
-const tooltip = document.getElementById('tooltip');
+// --- Data Structures ---
 const models = [
-    { name: 'BGE-Large', group: new THREE.Group(), shape: 'square', file: 'papers_bge_large.json', metadata: [], points: null },
-    { name: 'GTE-Large', group: new THREE.Group(), shape: 'circle', file: 'papers_gte_large.json', metadata: [], points: null },
-    { name: 'MiniLM', group: new THREE.Group(), shape: 'triangle', file: 'papers_minilm.json', metadata: [], points: null }
+    { name: 'BGE-Large', group: new THREE.Group(), shape: 'square', file: 'papers_bge_large.json', metadata: [], points: null, axesHelper: null, labelMesh: null },
+    { name: 'GTE-Large', group: new THREE.Group(), shape: 'circle', file: 'papers_gte_large.json', metadata: [], points: null, axesHelper: null, labelMesh: null },
+    { name: 'MiniLM', group: new THREE.Group(), shape: 'triangle', file: 'papers_minilm.json', metadata: [], points: null, axesHelper: null, labelMesh: null }
 ];
 const textureLoader = new THREE.TextureLoader();
 const textures = {
-    'square': textureLoader.load('./square.png'),
-    'circle': textureLoader.load('./circle.png'),
-    'triangle': textureLoader.load('./triangle.png')
+    square: textureLoader.load('./square.png'),
+    circle: textureLoader.load('./circle.png'),
+    triangle: textureLoader.load('./triangle.png'),
 };
 
-// --- Group Positioning ---
 const separationDistance = 25;
 models[0].group.position.x = -separationDistance;
 models[1].group.position.x = 0;
 models[2].group.position.x = separationDistance;
 models.forEach(model => scene.add(model.group));
 
-// --- Raycasting Setup ---
+// --- Raycasting ---
 const raycaster = new THREE.Raycaster();
 const pointer = new THREE.Vector2(1, 1);
 const mousePosition = new THREE.Vector2();
 raycaster.params.Points.threshold = 0.5;
 
-// --- Main Data Loading Function ---
-async function loadAllData() {
-    const fontPromise = new FontLoader().loadAsync('https://unpkg.com/three@0.165.0/examples/fonts/helvetiker_regular.typeface.json');
-    const dataPromises = models.map(model =>
-        fetch(`./${model.file}`).then(res => res.json()).then(data => ({ ...model, data }))
-    );
-    // analysis_summary.json is also loaded here
-    const analysisPromise = fetch('analysis_summary.json').then(res => res.json());
+// --- Temporal State ---
+let temporalManifest = null;
+let currentFont = null;
+const snapshotCache = new Map();
+let snapshotRequestToken = 0;
 
-    const [font, analysisData, ...loadedModels] = await Promise.all([fontPromise, analysisPromise, ...dataPromises]);
-    
-    loadedModels.forEach(loadedModel => {
-        const model = models.find(m => m.name === loadedModel.name);
-        if (model) {
-            model.metadata = loadedModel.data;
-            createPointCloud(model, font);
+// --- Utility Functions ---
+function disposeMesh(mesh) {
+    if (!mesh) return;
+    if (mesh.geometry) mesh.geometry.dispose();
+    if (mesh.material) {
+        if (Array.isArray(mesh.material)) {
+            mesh.material.forEach(mat => mat.dispose());
+        } else {
+            mesh.material.dispose();
         }
-    });
-
-    setupGUI(analysisData);
-    loadingIndicator.style.display = 'none';
+    }
 }
 
-// --- Point Cloud Creation Function ---
-function createPointCloud(model, font) {
-    const data = model.metadata;
+function formatSnapshotLabel(snapshot) {
+    if (!snapshot) return '--';
+    if (snapshot.label) return snapshot.label;
+    try {
+        return new Date(snapshot.timestamp).toLocaleString(undefined, {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+        });
+    } catch (error) {
+        return snapshot.timestamp || '--';
+    }
+}
+
+async function loadSnapshot(path) {
+    if (snapshotCache.has(path)) {
+        return snapshotCache.get(path);
+    }
+    const response = await fetch(path);
+    if (!response.ok) {
+        throw new Error(`Failed to load snapshot: ${path}`);
+    }
+    const payload = await response.json();
+    snapshotCache.set(path, payload);
+    return payload;
+}
+
+function createPointCloud(model, font, data) {
+    model.metadata = data;
+
+    if (model.points) {
+        model.group.remove(model.points);
+        disposeMesh(model.points);
+        model.points = null;
+    }
+    if (model.axesHelper) {
+        model.group.remove(model.axesHelper);
+        model.axesHelper = null;
+    }
+    if (model.labelMesh) {
+        model.group.remove(model.labelMesh);
+        disposeMesh(model.labelMesh);
+        model.labelMesh = null;
+    }
+
+    if (!data || data.length === 0) {
+        return;
+    }
+
     const positions = data.flatMap(p => [p.x, p.y, p.z]);
-    
+
     const clusterColors = {};
     const uniqueClusters = [...new Set(data.map(p => p.cluster_id))];
     uniqueClusters.forEach(id => {
-        if (id === -1) clusterColors[id] = new THREE.Color(0x666666); // Outlier color
+        if (id === -1) clusterColors[id] = new THREE.Color(0x666666);
         else {
             const color = new THREE.Color();
             color.setHSL((id * 0.13) % 1.0, 0.7, 0.6);
@@ -111,7 +157,7 @@ function createPointCloud(model, font) {
         alphaTest: 0.5,
         vertexColors: true,
         size: 0.4,
-        sizeAttenuation: true
+        sizeAttenuation: true,
     });
 
     const points = new THREE.Points(geometry, material);
@@ -119,17 +165,20 @@ function createPointCloud(model, font) {
     model.points = points;
     model.group.add(points);
 
-    const axesHelper = new THREE.AxesHelper(maxDim * 0.75);
+    const axesHelper = new THREE.AxesHelper(Math.max(maxDim * 0.75, 1));
+    model.axesHelper = axesHelper;
     model.group.add(axesHelper);
 
-    const textGeom = new TextGeometry(model.name, { font: font, size: maxDim * 0.15, depth: maxDim * 0.02 });
-    const textMat = new THREE.MeshPhongMaterial({ color: 0xffffff });
-    const textMesh = new THREE.Mesh(textGeom, textMat);
-    textMesh.position.set(0, size.y / 2 + maxDim * 0.2, 0);
-    model.group.add(textMesh);
+    if (font) {
+        const textGeom = new TextGeometry(model.name, { font, size: Math.max(maxDim * 0.15, 1.5), depth: Math.max(maxDim * 0.02, 0.25) });
+        const textMat = new THREE.MeshPhongMaterial({ color: 0xffffff });
+        const textMesh = new THREE.Mesh(textGeom, textMat);
+        textMesh.position.set(0, size.y / 2 + Math.max(maxDim * 0.2, 2), 0);
+        model.labelMesh = textMesh;
+        model.group.add(textMesh);
+    }
 }
 
-// --- GUI Controller (Fully Merged) ---
 function setupGUI(analysisData) {
     const gui = new GUI();
     const params = {
@@ -144,19 +193,15 @@ function setupGUI(analysisData) {
     visibilityFolder.add(params, 'MiniLM').name('MiniLM (Triangle)').onChange(val => models.find(m => m.name === 'MiniLM').group.visible = val);
 
     const metricsFolder = gui.addFolder('Performance Metrics');
-    // ✅ RESTORED: Loop through model_metrics from the JSON file
     for (const modelName in analysisData.model_metrics) {
         const modelFolder = metricsFolder.addFolder(modelName);
         const metrics = analysisData.model_metrics[modelName];
-        
-        // Add all metrics from the old GUI
         modelFolder.add(metrics, 'Num Clusters').name('Clusters').disable();
         modelFolder.add(metrics, 'Num Outliers').name('Outliers').disable();
         modelFolder.add(metrics, 'Calinski-Harabasz Score').name('C-H Score (Higher is Better)').disable();
         modelFolder.add(metrics, 'Davies-Bouldin Score').name('D-B Score (Lower is Better)').disable();
     }
 
-    // ✅ RESTORED: Add the comparative ARI scores
     if (analysisData.comparative_metrics && analysisData.comparative_metrics['Adjusted Rand Index']) {
         const comparisonFolder = metricsFolder.addFolder('Model Agreement (ARI)');
         const ari = analysisData.comparative_metrics['Adjusted Rand Index'];
@@ -167,8 +212,83 @@ function setupGUI(analysisData) {
     metricsFolder.open();
 }
 
+async function applySnapshot(index) {
+    if (!temporalManifest || !currentFont) return;
+    const descriptor = temporalManifest.snapshots[index];
+    if (!descriptor) return;
+    const requestId = ++snapshotRequestToken;
+    const label = formatSnapshotLabel(descriptor);
+    timeLabel.textContent = `${label} (loading...)`;
+    try {
+        const data = await loadSnapshot(descriptor.path);
+        if (requestId !== snapshotRequestToken) {
+            return;
+        }
+        for (const model of models) {
+            const snapshotData = data.models?.[model.name] ?? [];
+            createPointCloud(model, currentFont, snapshotData);
+        }
+        timeLabel.textContent = label;
+    } catch (error) {
+        console.error(error);
+        timeLabel.textContent = 'Failed to load timeline';
+    }
+}
 
-// --- Event Listener & Animation Loop ---
+function setupTimeControls(manifest) {
+    if (!manifest || !manifest.snapshots || manifest.snapshots.length === 0) {
+        timeControls.classList.add('hidden');
+        return;
+    }
+    temporalManifest = manifest;
+    timeControls.classList.remove('hidden');
+    timeSlider.min = 0;
+    timeSlider.max = manifest.snapshots.length - 1;
+    timeSlider.value = manifest.snapshots.length - 1;
+    const latestIndex = manifest.snapshots.length - 1;
+    timeLabel.textContent = formatSnapshotLabel(manifest.snapshots[latestIndex]);
+    timeSlider.oninput = event => {
+        const index = parseInt(event.target.value, 10);
+        applySnapshot(index);
+    };
+    applySnapshot(latestIndex);
+}
+
+async function loadStaticData(font) {
+    const dataPromises = models.map(model =>
+        fetch(`./${model.file}`).then(res => res.json()).then(data => ({ ...model, data }))
+    );
+    const loadedModels = await Promise.all(dataPromises);
+    loadedModels.forEach(loadedModel => {
+        const model = models.find(m => m.name === loadedModel.name);
+        if (model) {
+            createPointCloud(model, font, loadedModel.data);
+        }
+    });
+}
+
+async function loadAllData() {
+    const fontPromise = new FontLoader().loadAsync('https://unpkg.com/three@0.165.0/examples/fonts/helvetiker_regular.typeface.json');
+    const analysisPromise = fetch('analysis_summary.json').then(res => res.json());
+    const manifestPromise = fetch('temporal_snapshots/manifest.json')
+        .then(res => res.ok ? res.json() : null)
+        .catch(() => null);
+
+    const [font, analysisData, manifest] = await Promise.all([fontPromise, analysisPromise, manifestPromise]);
+    currentFont = font;
+
+    if (manifest) {
+        setupTimeControls(manifest);
+    } else {
+        await loadStaticData(font);
+        timeControls.classList.add('hidden');
+    }
+
+    setupGUI(analysisData);
+    loadingIndicator.style.display = 'none';
+}
+
+// --- Interaction & Rendering ---
 window.addEventListener('pointermove', event => {
     pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
     pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
@@ -195,11 +315,13 @@ function animate() {
             tooltip.style.display = 'block';
             tooltip.style.left = `${mousePosition.x + 15}px`;
             tooltip.style.top = `${mousePosition.y + 15}px`;
+            const lastUpdated = paper.last_updated ? `<p>Last Updated: ${new Date(paper.last_updated).toLocaleDateString()}</p>` : '';
             tooltip.innerHTML = `
                 <strong>${paper.title}</strong>
                 <p>Authors: ${paper.authors}</p>
                 <p>Published: ${paper.date}</p>
                 <p>Cluster ID: ${paper.cluster_id}</p>
+                ${lastUpdated}
                 <a href="https://arxiv.org/abs/${paper.id}" target="_blank">View on arXiv</a>
             `;
         }
@@ -210,12 +332,11 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-// --- Initial Load and Start ---
-loadAllData();
-animate();
-
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
+loadAllData();
+animate();

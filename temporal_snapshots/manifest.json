@@ -1,0 +1,17 @@
+{
+  "generated_at": "2025-11-10T23:13:04.073411+00:00",
+  "snapshots": [
+    {
+      "id": "2025-06-25",
+      "timestamp": "2025-06-25T00:00:00+00:00",
+      "label": "25 Jun 2025",
+      "path": "temporal_snapshots/snapshot_2025-06-25.json"
+    },
+    {
+      "id": "2025-06-30",
+      "timestamp": "2025-06-30T00:00:00+00:00",
+      "label": "30 Jun 2025",
+      "path": "temporal_snapshots/snapshot_2025-06-30.json"
+    }
+  ]
+}

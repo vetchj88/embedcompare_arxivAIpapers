@@ -26,5 +26,1563 @@
             "GTE vs MiniLM": "0.2148"
         }
     },
-    "alignment_diagnostics": {}
+    "cluster_taxonomy": {
+        "BGE-Large": {
+            "-1": {
+                "paper_count": 30,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 30,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2465
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.1987
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1961
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2465
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 30,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2478
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2339
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.1794
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.2478
+                        }
+                    }
+                }
+            },
+            "0": {
+                "paper_count": 6,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 6,
+                        "top_labels": [
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2476
+                            },
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2092
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.2031
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Natural Language Processing",
+                            "score": 0.2476
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 6,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.219
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.2076
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.1999
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.219
+                        }
+                    }
+                }
+            },
+            "1": {
+                "paper_count": 36,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 36,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2294
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2085
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2044
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2294
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 36,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.232
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2143
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.199
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.232
+                        }
+                    }
+                }
+            },
+            "2": {
+                "paper_count": 9,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 9,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2935
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.2035
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1714
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2935
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 9,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2675
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.2094
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.1771
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.2675
+                        }
+                    }
+                }
+            },
+            "3": {
+                "paper_count": 47,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 47,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2673
+                            },
+                            {
+                                "label": "Robotics",
+                                "score": 0.1886
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1854
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2673
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 47,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2584
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.1995
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.1846
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.2584
+                        }
+                    }
+                }
+            },
+            "4": {
+                "paper_count": 99,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 99,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2388
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.2088
+                            },
+                            {
+                                "label": "Robotics",
+                                "score": 0.2038
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2388
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 99,
+                        "top_labels": [
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.2347
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2117
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.1954
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Reinforcement Learning",
+                            "score": 0.2347
+                        }
+                    }
+                }
+            },
+            "5": {
+                "paper_count": 10,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 10,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2526
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.198
+                            },
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.1937
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2526
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 10,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2328
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2198
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.1841
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.2328
+                        }
+                    }
+                }
+            },
+            "6": {
+                "paper_count": 63,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 63,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2864
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2126
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1775
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2864
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 63,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.255
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1955
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.1939
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.255
+                        }
+                    }
+                }
+            }
+        },
+        "GTE-Large": {
+            "-1": {
+                "paper_count": 78,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 78,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.234
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2172
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1911
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.234
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 78,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2347
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2219
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.1855
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.2347
+                        }
+                    }
+                }
+            },
+            "0": {
+                "paper_count": 100,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 100,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.237
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.212
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.2036
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.237
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 100,
+                        "top_labels": [
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.2347
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2231
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.1958
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Reinforcement Learning",
+                            "score": 0.2347
+                        }
+                    }
+                }
+            },
+            "1": {
+                "paper_count": 18,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 18,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2524
+                            },
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.1987
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1923
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2524
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 18,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2772
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2135
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.1703
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2772
+                        }
+                    }
+                }
+            },
+            "2": {
+                "paper_count": 23,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 23,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2466
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.241
+                            },
+                            {
+                                "label": "Robotics",
+                                "score": 0.1737
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2466
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 23,
+                        "top_labels": [
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.2155
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.2063
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.1975
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Information Retrieval",
+                            "score": 0.2155
+                        }
+                    }
+                }
+            },
+            "3": {
+                "paper_count": 22,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 22,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.3255
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2134
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1683
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.3255
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 22,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2981
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2085
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.182
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2981
+                        }
+                    }
+                }
+            },
+            "4": {
+                "paper_count": 19,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 19,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2395
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.2006
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1933
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2395
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 19,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2563
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2368
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.183
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2563
+                        }
+                    }
+                }
+            },
+            "5": {
+                "paper_count": 6,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 6,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2796
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.2193
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.1871
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2796
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 6,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2671
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.1984
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.1945
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.2671
+                        }
+                    }
+                }
+            },
+            "6": {
+                "paper_count": 18,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 18,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2562
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1966
+                            },
+                            {
+                                "label": "Robotics",
+                                "score": 0.1911
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2562
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 18,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2555
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.2052
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.1866
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.2555
+                        }
+                    }
+                }
+            },
+            "7": {
+                "paper_count": 8,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 8,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2962
+                            },
+                            {
+                                "label": "Robotics",
+                                "score": 0.2086
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.1718
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2962
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 8,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.3167
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.1946
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1818
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.3167
+                        }
+                    }
+                }
+            },
+            "8": {
+                "paper_count": 8,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 8,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2631
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.204
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1933
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2631
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 8,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.254
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.2036
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.1922
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.254
+                        }
+                    }
+                }
+            }
+        },
+        "MiniLM": {
+            "-1": {
+                "paper_count": 71,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 71,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.224
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2074
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1976
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.224
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 71,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2236
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2127
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.1887
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.2236
+                        }
+                    }
+                }
+            },
+            "0": {
+                "paper_count": 21,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 21,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.3244
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1999
+                            },
+                            {
+                                "label": "Robotics",
+                                "score": 0.1865
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.3244
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 21,
+                        "top_labels": [
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.213
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2091
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.196
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Reinforcement Learning",
+                            "score": 0.213
+                        }
+                    }
+                }
+            },
+            "1": {
+                "paper_count": 5,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 5,
+                        "top_labels": [
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2612
+                            },
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2157
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1844
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Natural Language Processing",
+                            "score": 0.2612
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 5,
+                        "top_labels": [
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.242
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.2226
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.2009
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Natural Language Processing",
+                            "score": 0.242
+                        }
+                    }
+                }
+            },
+            "2": {
+                "paper_count": 5,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 5,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.3801
+                            },
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.1682
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1563
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.3801
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 5,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.236
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2073
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.1889
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.236
+                        }
+                    }
+                }
+            },
+            "3": {
+                "paper_count": 20,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 20,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2451
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.1998
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1904
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2451
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 20,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2563
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2343
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.1867
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.2563
+                        }
+                    }
+                }
+            },
+            "4": {
+                "paper_count": 7,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 7,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2449
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2169
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1986
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2449
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 7,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.253
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.2091
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.1861
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.253
+                        }
+                    }
+                }
+            },
+            "5": {
+                "paper_count": 8,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 8,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2296
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2161
+                            },
+                            {
+                                "label": "Robotics",
+                                "score": 0.1956
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2296
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 8,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2232
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.2091
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.1936
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.2232
+                        }
+                    }
+                }
+            },
+            "6": {
+                "paper_count": 14,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 14,
+                        "top_labels": [
+                            {
+                                "label": "Robotics",
+                                "score": 0.312
+                            },
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.1928
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1882
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Robotics",
+                            "score": 0.312
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 14,
+                        "top_labels": [
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.2674
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2145
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2067
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Reinforcement Learning",
+                            "score": 0.2674
+                        }
+                    }
+                }
+            },
+            "7": {
+                "paper_count": 11,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 11,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2949
+                            },
+                            {
+                                "label": "Robotics",
+                                "score": 0.1964
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1783
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2949
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 11,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.3047
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.1837
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.18
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.3047
+                        }
+                    }
+                }
+            },
+            "8": {
+                "paper_count": 63,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 63,
+                        "top_labels": [
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2343
+                            },
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2215
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.2153
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Natural Language Processing",
+                            "score": 0.2343
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 63,
+                        "top_labels": [
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.2307
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.227
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.1921
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Reinforcement Learning",
+                            "score": 0.2307
+                        }
+                    }
+                }
+            },
+            "9": {
+                "paper_count": 10,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 10,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.3261
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1966
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.1681
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.3261
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 10,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.2608
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.1986
+                            },
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.1849
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.2608
+                        }
+                    }
+                }
+            },
+            "10": {
+                "paper_count": 21,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 21,
+                        "top_labels": [
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.2567
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1927
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1853
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Machine Learning",
+                            "score": 0.2567
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 21,
+                        "top_labels": [
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.311
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.1897
+                            },
+                            {
+                                "label": "Information Retrieval",
+                                "score": 0.1739
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Deep Learning",
+                            "score": 0.311
+                        }
+                    }
+                }
+            },
+            "11": {
+                "paper_count": 11,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 11,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.3359
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2052
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.1748
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.3359
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 11,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2916
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.2052
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.205
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2916
+                        }
+                    }
+                }
+            },
+            "12": {
+                "paper_count": 19,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 19,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2417
+                            },
+                            {
+                                "label": "Knowledge Representation",
+                                "score": 0.2036
+                            },
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.1987
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2417
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 19,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2709
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.203
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.1782
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2709
+                        }
+                    }
+                }
+            },
+            "13": {
+                "paper_count": 14,
+                "taxonomies": {
+                    "ORKG": {
+                        "classified_papers": 14,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2467
+                            },
+                            {
+                                "label": "Natural Language Processing",
+                                "score": 0.23
+                            },
+                            {
+                                "label": "Machine Learning",
+                                "score": 0.184
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2467
+                        }
+                    },
+                    "CSO": {
+                        "classified_papers": 14,
+                        "top_labels": [
+                            {
+                                "label": "Computer Vision",
+                                "score": 0.2261
+                            },
+                            {
+                                "label": "Reinforcement Learning",
+                                "score": 0.2049
+                            },
+                            {
+                                "label": "Deep Learning",
+                                "score": 0.204
+                            }
+                        ],
+                        "dominant_label": {
+                            "label": "Computer Vision",
+                            "score": 0.2261
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
