@@ -210,7 +210,7 @@ def gated_fusion_ensemble(
     norms = normalise_weights(model_names, weights)
     weight_vector = np.array([norms[name] for name in model_names], dtype=np.float32)
     norms_matrix = np.linalg.norm(stacked, axis=1)
-    gating_logits = norms_matrix * weight_vector
+    gating_logits = norms_matrix[:, np.newaxis] * weight_vector[np.newaxis, :]
     gating_weights = softmax(gating_logits, axis=-1, temperature=temperature)
     fused = np.sum(stacked * gating_weights[:, np.newaxis, :], axis=-1)
     stats = {
