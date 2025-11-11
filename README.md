@@ -1,5 +1,5 @@
 # embedcompare_arxivAIpapers
-A visual analysis tool comparing three sentences transformers effects on clustering with UMAP+HDBSCAN
+A visual analysis tool comparing three sentences transformers effects on clustering with a hybrid graph layout pipeline (PaCMAP + StarMAP)
 ![image](https://github.com/user-attachments/assets/55e96c76-21de-4351-ae0a-4e5ebe660653)
 
 Comparative Analysis of Sentence Transformers
@@ -16,7 +16,7 @@ The core goal of this project was to explore how different AI models create "sem
 
     all-MiniLM-L6-v2 (sentence-transformers/all-MiniLM-L6-v2)
 
-The resulting high-dimensional embeddings were then reduced to 3D coordinates using UMAP and clustered using HDBSCAN. This web application renders those 3D coordinates as interactive point clouds, allowing for a direct visual comparison of each model's clustering behavior.
+The resulting high-dimensional embeddings are blended with paper metadata to construct a hybrid similarity graph. We generate 3D coordinates from this graph using PaCMAP (and audit the structure with a StarMAP spectral embedding) so that the web application renders graph-aware point clouds for each model.
 
 ✨ Features
 
@@ -34,13 +34,15 @@ The resulting high-dimensional embeddings were then reduced to 3D coordinates us
 
         Adjusted Rand Index (ARI) to measure the agreement between the clustering solutions of different models.
 
+        PaCMAP/StarMAP trustworthiness and continuity scores to quantify layout fidelity.
+
     Dynamic Controls: Toggle the visibility of each point cloud to focus on specific models.
 
 🛠️ Tech Stack
 
     Data Fetching & Processing: Python, arxiv, pandas
 
-    AI & ML: sentence-transformers, umap-learn, hdbscan, scikit-learn
+    AI & ML: sentence-transformers, PaCMAP, spectral embedding (StarMAP), hdbscan, scikit-learn
 
     Frontend Visualization: JavaScript, three.js, lil-gui
 
@@ -105,17 +107,15 @@ This project's backend data processing involved several distinct steps:
 
     Analysis and Export (3_analyze_embeddings.py):
 
-        For each model's collection, all embeddings were retrieved from ChromaDB.
+        For each model snapshot, a hybrid similarity graph (text similarity + shared authorship + publication recency + existing cluster membership) is constructed.
 
-        UMAP was used to reduce the dimensionality of the embeddings to 3D.
+        PaCMAP generates the primary 3D coordinates directly from the hybrid graph, and a StarMAP spectral layout is produced for auditing.
 
-        HDBSCAN was run on the 3D coordinates to find dense clusters of semantically similar papers.
-
-        The final data (metadata, 3D coordinates, cluster ID) was exported to the .json files used by the frontend.
+        The final data (metadata, graph-driven layouts, cluster ID) is exported to the .json files used by the frontend.
 
     Quantitative Analysis (4_run_analysis.py, 5_deep_analysis.py):
 
-        Cluster quality scores and the Adjusted Rand Index were calculated to create the data for analysis_summary.json.
+        Cluster quality scores, layout hyperparameters, and layout trustworthiness/continuity metrics are calculated to populate analysis_summary.json.
 
     Visualization (main.js): The final .json data files are loaded and rendered in the browser using three.js.
 
