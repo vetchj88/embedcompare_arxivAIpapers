@@ -27,6 +27,51 @@
         </div>
     </div>
     <button id="explanation-toggle" class="overlay-toggle" type="button" aria-pressed="true">Hide explanations</button>
+    <button id="pipeline-open" class="control-button" type="button">Launch data pipeline</button>
+    <div id="pipeline-overlay" class="overlay-card pipeline-card hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="pipeline-title">
+        <div class="overlay-header">
+            <h2 id="pipeline-title">Build a new dataset</h2>
+            <button id="pipeline-close" type="button" aria-label="Close pipeline builder">&times;</button>
+        </div>
+        <form id="pipeline-form" class="pipeline-form">
+            <label for="pipeline-categories">Paper categories</label>
+            <div id="pipeline-categories" class="category-grid" role="group" aria-label="Paper categories"></div>
+
+            <label for="pipeline-search">Keyword filter</label>
+            <input id="pipeline-search" name="search" type="text" placeholder="e.g. diffusion models" autocomplete="off">
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="pipeline-start">Start date</label>
+                    <input id="pipeline-start" name="start_date" type="date" max="9999-12-31">
+                </div>
+                <div class="form-field">
+                    <label for="pipeline-end">End date</label>
+                    <input id="pipeline-end" name="end_date" type="date" max="9999-12-31">
+                </div>
+            </div>
+
+            <label for="pipeline-max">Maximum papers</label>
+            <input id="pipeline-max" name="max_results" type="number" min="50" max="2000" step="50" value="500">
+
+            <label for="pipeline-embed-mode">Embedding mode</label>
+            <select id="pipeline-embed-mode" name="embed_mode">
+                <option value="abstracts">Abstracts only</option>
+                <option value="sections">Segmented sections</option>
+            </select>
+
+            <fieldset class="pipeline-steps">
+                <legend>Pipeline stages</legend>
+                <div id="pipeline-steps"></div>
+            </fieldset>
+
+            <div class="pipeline-actions">
+                <button id="pipeline-submit" type="submit">Start pipeline</button>
+                <button id="pipeline-reload" type="button" class="secondary hidden">Reload visualization</button>
+            </div>
+        </form>
+        <div id="pipeline-status" class="pipeline-status" aria-live="polite"></div>
+    </div>
     <div id="time-controls" class="hidden">
         <label for="time-slider">Timeline</label>
         <input type="range" id="time-slider" min="0" max="0" value="0" step="1">
