@@ -1,0 +1,2536 @@
+{
+  "nodes": [
+    {
+      "id": "paper:2506.24127v1",
+      "type": "paper",
+      "label": "How to Design and Train Your Implicit Neural Representation for Video Compression"
+    },
+    {
+      "id": "dataset:UCF-101",
+      "type": "dataset",
+      "label": "UCF-101"
+    },
+    {
+      "id": "method:Hypernetworks",
+      "type": "method",
+      "label": "Hypernetworks"
+    },
+    {
+      "id": "paper:2506.24125v1",
+      "type": "paper",
+      "label": "FADRM: Fast and Accurate Data Residual Matching for Dataset Distillation"
+    },
+    {
+      "id": "dataset:ImageNet",
+      "type": "dataset",
+      "label": "ImageNet"
+    },
+    {
+      "id": "paper:2506.24124v2",
+      "type": "paper",
+      "label": "Teaching Time Series to See and Speak: Forecasting with Aligned Visual and Textual Perspectives"
+    },
+    {
+      "id": "method:Contrastive Learning",
+      "type": "method",
+      "label": "Contrastive Learning"
+    },
+    {
+      "id": "paper:2506.24123v1",
+      "type": "paper",
+      "label": "Calligrapher: Freestyle Text Image Customization"
+    },
+    {
+      "id": "paper:2506.24121v1",
+      "type": "paper",
+      "label": "TextMesh4D: High-Quality Text-to-4D Mesh Generation"
+    },
+    {
+      "id": "paper:2506.24120v1",
+      "type": "paper",
+      "label": "Data Uniformity Improves Training Efficiency and More, with a Convergence Framework Beyond the NTK Regime"
+    },
+    {
+      "id": "method:Transformers",
+      "type": "method",
+      "label": "Transformers"
+    },
+    {
+      "id": "paper:2506.24119v2",
+      "type": "paper",
+      "label": "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning"
+    },
+    {
+      "id": "paper:2506.24117v2",
+      "type": "paper",
+      "label": "Intertextual Parallel Detection in Biblical Hebrew: A Transformer-Based Benchmark"
+    },
+    {
+      "id": "paper:2506.24113v1",
+      "type": "paper",
+      "label": "Epona: Autoregressive Diffusion World Model for Autonomous Driving"
+    },
+    {
+      "id": "task:Planning",
+      "type": "task",
+      "label": "Planning"
+    },
+    {
+      "id": "method:Diffusion Models",
+      "type": "method",
+      "label": "Diffusion Models"
+    },
+    {
+      "id": "paper:2506.24108v1",
+      "type": "paper",
+      "label": "Navigating with Annealing Guidance Scale in Diffusion Space"
+    },
+    {
+      "id": "paper:2506.24106v1",
+      "type": "paper",
+      "label": "On the Predictive Power of Representation Dispersion in Language Models"
+    },
+    {
+      "id": "task:Summarization",
+      "type": "task",
+      "label": "Summarization"
+    },
+    {
+      "id": "paper:2506.24102v1",
+      "type": "paper",
+      "label": "DenseWorld-1M: Towards Detailed Dense Grounded Caption in the Real World"
+    },
+    {
+      "id": "paper:2506.24096v1",
+      "type": "paper",
+      "label": "MILo: Mesh-In-the-Loop Gaussian Splatting for Detailed and Efficient Surface Reconstruction"
+    },
+    {
+      "id": "paper:2506.24093v1",
+      "type": "paper",
+      "label": "Development of Hybrid Artificial Intelligence Training on Real and Synthetic Data: Benchmark on Two Mixed Training Strategies"
+    },
+    {
+      "id": "paper:2506.24086v1",
+      "type": "paper",
+      "label": "MotionGPT3: Human Motion as a Second Modality"
+    },
+    {
+      "id": "method:Autoencoders",
+      "type": "method",
+      "label": "Autoencoders"
+    },
+    {
+      "id": "paper:2506.24085v1",
+      "type": "paper",
+      "label": "Imagine for Me: Creative Conceptual Blending of Real Images and Text via Blended Attention"
+    },
+    {
+      "id": "paper:2506.24081v1",
+      "type": "paper",
+      "label": "SQUASH: A SWAP-Based Quantum Attack to Sabotage Hybrid Quantum Neural Networks"
+    },
+    {
+      "id": "paper:2506.24074v1",
+      "type": "paper",
+      "label": "C3VDv2 -- Colonoscopy 3D video dataset with enhanced realism"
+    },
+    {
+      "id": "task:Segmentation",
+      "type": "task",
+      "label": "Segmentation"
+    },
+    {
+      "id": "paper:2506.24068v1",
+      "type": "paper",
+      "label": "STACK: Adversarial Attacks on LLM Safeguard Pipelines"
+    },
+    {
+      "id": "paper:2506.24063v1",
+      "type": "paper",
+      "label": "Continual Adaptation: Environment-Conditional Parameter Generation for Object Detection in Dynamic Scenarios"
+    },
+    {
+      "id": "paper:2506.24056v1",
+      "type": "paper",
+      "label": "Logit-Gap Steering: Efficient Short-Suffix Jailbreaks for Aligned Large Language Models"
+    },
+    {
+      "id": "paper:2506.24048v1",
+      "type": "paper",
+      "label": "Consensus-based optimization for closed-box adversarial attacks and a connection to evolution strategies"
+    },
+    {
+      "id": "paper:2506.24045v1",
+      "type": "paper",
+      "label": "Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC"
+    },
+    {
+      "id": "paper:2506.24044v1",
+      "type": "paper",
+      "label": "A Survey on Vision-Language-Action Models for Autonomous Driving"
+    },
+    {
+      "id": "paper:2506.24042v1",
+      "type": "paper",
+      "label": "Faster Diffusion Models via Higher-Order Approximation"
+    },
+    {
+      "id": "paper:2506.24041v1",
+      "type": "paper",
+      "label": "Unsupervised Sparse Coding-based Spiking Neural Network for Real-time Spike Sorting"
+    },
+    {
+      "id": "paper:2506.24039v1",
+      "type": "paper",
+      "label": "Foundation Models for Zero-Shot Segmentation of Scientific Images without AI-Ready Data"
+    },
+    {
+      "id": "paper:2506.24034v1",
+      "type": "paper",
+      "label": "Supervised Diffusion-Model-Based PET Image Reconstruction"
+    },
+    {
+      "id": "paper:2506.24026v1",
+      "type": "paper",
+      "label": "Constructing Non-Markovian Decision Process via History Aggregator"
+    },
+    {
+      "id": "paper:2506.24024v1",
+      "type": "paper",
+      "label": "Post-processing of EEG-based Auditory Attention Decoding Decisions via Hidden Markov Models"
+    },
+    {
+      "id": "paper:2506.24019v1",
+      "type": "paper",
+      "label": "Ella: Embodied Social Agents with Lifelong Memory"
+    },
+    {
+      "id": "paper:2506.24018v1",
+      "type": "paper",
+      "label": "Bridging Theory and Practice in Link Representation with Graph Neural Networks"
+    },
+    {
+      "id": "method:Graph Neural Networks",
+      "type": "method",
+      "label": "Graph Neural Networks"
+    },
+    {
+      "id": "paper:2506.24016v1",
+      "type": "paper",
+      "label": "EXPERT: An Explainable Image Captioning Evaluation Metric with Structured Explanations"
+    },
+    {
+      "id": "paper:2506.24009v1",
+      "type": "paper",
+      "label": "Bridging Physical and Digital Worlds: Embodied Large AI for Future Wireless Systems"
+    },
+    {
+      "id": "paper:2506.24007v1",
+      "type": "paper",
+      "label": "Minimax and Bayes Optimal Best-arm Identification: Adaptive Experimental Design for Treatment Choice"
+    },
+    {
+      "id": "paper:2506.24006v1",
+      "type": "paper",
+      "label": "Large Language Models Don't Make Sense of Word Problems. A Scoping Review from a Mathematics Education Perspective"
+    },
+    {
+      "id": "paper:2506.24005v1",
+      "type": "paper",
+      "label": "Provably Efficient and Agile Randomized Q-Learning"
+    },
+    {
+      "id": "paper:2506.24003v1",
+      "type": "paper",
+      "label": "ShapeKit"
+    },
+    {
+      "id": "paper:2506.24000v1",
+      "type": "paper",
+      "label": "The Illusion of Progress? A Critical Look at Test-Time Adaptation for Vision-Language Models"
+    },
+    {
+      "id": "paper:2506.23998v1",
+      "type": "paper",
+      "label": "Auto-TA: Towards Scalable Automated Thematic Analysis (TA) via Multi-Agent Large Language Models with Reinforcement Learning"
+    },
+    {
+      "id": "paper:2506.23996v1",
+      "type": "paper",
+      "label": "The Jacobian and Hessian of the Kullback-Leibler Divergence between Multivariate Gaussian Distributions (Technical Report)"
+    },
+    {
+      "id": "paper:2506.23995v1",
+      "type": "paper",
+      "label": "STCLocker: Deadlock Avoidance Testing for Autonomous Driving Systems"
+    },
+    {
+      "id": "paper:2506.23992v1",
+      "type": "paper",
+      "label": "Harnessing AI Agents to Advance Research on Refugee Child Mental Health"
+    },
+    {
+      "id": "paper:2506.23990v1",
+      "type": "paper",
+      "label": "Machine Understanding of Scientific Language"
+    },
+    {
+      "id": "paper:2506.23982v1",
+      "type": "paper",
+      "label": "StyleDrive: Towards Driving-Style Aware Benchmarking of End-To-End Autonomous Driving"
+    },
+    {
+      "id": "paper:2506.23979v1",
+      "type": "paper",
+      "label": "TaP: A Taxonomy-Guided Framework for Automated and Scalable Preference Data Generation"
+    },
+    {
+      "id": "paper:2506.23978v1",
+      "type": "paper",
+      "label": "LLM Agents Are the Antidote to Walled Gardens"
+    },
+    {
+      "id": "task:Machine Translation",
+      "type": "task",
+      "label": "Machine Translation"
+    },
+    {
+      "id": "paper:2506.23977v1",
+      "type": "paper",
+      "label": "A Scalable Approach for Safe and Robust Learning via Lipschitz-Constrained Networks"
+    },
+    {
+      "id": "dataset:MNIST",
+      "type": "dataset",
+      "label": "MNIST"
+    },
+    {
+      "id": "paper:2506.23975v1",
+      "type": "paper",
+      "label": "Toward Simple and Robust Contrastive Explanations for Image Classification by Leveraging Instance Similarity and Concept Relevance"
+    },
+    {
+      "id": "paper:2506.23972v1",
+      "type": "paper",
+      "label": "Visual and Memory Dual Adapter for Multi-Modal Object Tracking"
+    },
+    {
+      "id": "paper:2506.23971v1",
+      "type": "paper",
+      "label": "UMA: A Family of Universal Models for Atoms"
+    },
+    {
+      "id": "paper:2506.23964v1",
+      "type": "paper",
+      "label": "Learning Constraints Directly from Network Data"
+    },
+    {
+      "id": "paper:2506.23963v1",
+      "type": "paper",
+      "label": "Evaluating the Impact of Khmer Font Types on Text Recognition"
+    },
+    {
+      "id": "paper:2506.23960v1",
+      "type": "paper",
+      "label": "ADReFT: Adaptive Decision Repair for Safe Autonomous Driving via Reinforcement Fine-Tuning"
+    },
+    {
+      "id": "paper:2506.23958v1",
+      "type": "paper",
+      "label": "Bridging the Gap with Retrieval-Augmented Generation: Making Prosthetic Device User Manuals Available in Marginalised Languages"
+    },
+    {
+      "id": "paper:2506.23957v1",
+      "type": "paper",
+      "label": "GaVS: 3D-Grounded Video Stabilization via Temporally-Consistent Local Reconstruction and Rendering"
+    },
+    {
+      "id": "paper:2506.23952v2",
+      "type": "paper",
+      "label": "Autonomy by Design: Preserving Human Autonomy in AI Decision-Support"
+    },
+    {
+      "id": "paper:2506.23951v1",
+      "type": "paper",
+      "label": "Unveiling Decision-Making in LLMs for Text Classification : Extraction of influential and interpretable concepts with Sparse Autoencoders"
+    },
+    {
+      "id": "paper:2506.23949v1",
+      "type": "paper",
+      "label": "AI Risk-Management Standards Profile for General-Purpose AI (GPAI) and Foundation Models"
+    },
+    {
+      "id": "paper:2506.23944v2",
+      "type": "paper",
+      "label": "Adapt Your Body: Mitigating Proprioception Shifts in Imitation Learning"
+    },
+    {
+      "id": "paper:2506.23940v2",
+      "type": "paper",
+      "label": "Graft: Integrating the Domain Knowledge via Efficient Parameter Synergy for MLLMs"
+    },
+    {
+      "id": "paper:2506.23934v1",
+      "type": "paper",
+      "label": "QPART: Adaptive Model Quantization and Dynamic Workload Balancing for Accuracy-aware Edge Inference"
+    },
+    {
+      "id": "paper:2506.23930v1",
+      "type": "paper",
+      "label": "Leveraging the Potential of Prompt Engineering for Hate Speech Detection in Low-Resource Languages"
+    },
+    {
+      "id": "paper:2506.23929v1",
+      "type": "paper",
+      "label": "IMPACT: Inflectional Morphology Probes Across Complex Typologies"
+    },
+    {
+      "id": "paper:2506.23926v1",
+      "type": "paper",
+      "label": "Industrial brain: a human-like autonomous neuro-symbolic cognitive decision-making system"
+    },
+    {
+      "id": "paper:2506.23924v1",
+      "type": "paper",
+      "label": "Performance of LLMs on Stochastic Modeling Operations Research Problems: From Theory to Practice"
+    },
+    {
+      "id": "paper:2506.23923v1",
+      "type": "paper",
+      "label": "Reinforcement Learning for Synchronised Flow Control in a Dual-Gate Resin Infusion System"
+    },
+    {
+      "id": "paper:2506.23921v1",
+      "type": "paper",
+      "label": "The Trilemma of Truth in Large Language Models"
+    },
+    {
+      "id": "paper:2506.23918v2",
+      "type": "paper",
+      "label": "Thinking with Images for Multimodal Reasoning: Foundations, Methods, and Future Frontiers"
+    },
+    {
+      "id": "paper:2506.23916v1",
+      "type": "paper",
+      "label": "Three-dimensional end-to-end deep learning for brain MRI analysis"
+    },
+    {
+      "id": "paper:2506.23914v1",
+      "type": "paper",
+      "label": "Learning robust parameter inference and density reconstruction in flyer plate impact experiments"
+    },
+    {
+      "id": "paper:2506.23909v1",
+      "type": "paper",
+      "label": "RawMal-TF: Raw Malware Dataset Labeled by Type and Family"
+    },
+    {
+      "id": "paper:2506.23908v1",
+      "type": "paper",
+      "label": "Beyond Statistical Learning: Exact Learning Is Essential for General Intelligence"
+    },
+    {
+      "id": "paper:2506.23903v1",
+      "type": "paper",
+      "label": "GroundingDINO-US-SAM: Text-Prompted Multi-Organ Segmentation in Ultrasound with LoRA-Tuned Vision-Language Models"
+    },
+    {
+      "id": "paper:2506.23897v2",
+      "type": "paper",
+      "label": "PriOr-Flow: Enhancing Primitive Panoramic Optical Flow with Orthogonal View"
+    },
+    {
+      "id": "paper:2506.23888v1",
+      "type": "paper",
+      "label": "Advancing Multi-Step Mathematical Reasoning in Large Language Models through Multi-Layered Self-Reflection with Auto-Prompting"
+    },
+    {
+      "id": "paper:2506.23881v1",
+      "type": "paper",
+      "label": "Spurious-Aware Prototype Refinement for Reliable Out-of-Distribution Detection"
+    },
+    {
+      "id": "dataset:COCO",
+      "type": "dataset",
+      "label": "COCO"
+    },
+    {
+      "id": "paper:2506.23875v1",
+      "type": "paper",
+      "label": "Chain of Thought in Order: Discovering Learning-Friendly Orders for Arithmetic"
+    },
+    {
+      "id": "paper:2506.23873v1",
+      "type": "paper",
+      "label": "Emergent musical properties of a transformer under contrastive self-supervised learning"
+    },
+    {
+      "id": "paper:2506.23872v1",
+      "type": "paper",
+      "label": "When Plants Respond: Electrophysiology and Machine Learning for Green Monitoring Systems"
+    },
+    {
+      "id": "paper:2506.23869v1",
+      "type": "paper",
+      "label": "Scaling Self-Supervised Representation Learning for Symbolic Piano Performance"
+    },
+    {
+      "id": "paper:2506.23864v1",
+      "type": "paper",
+      "label": "Garbage In, Reasoning Out? Why Benchmark Scores are Unreliable and What to Do About It"
+    },
+    {
+      "id": "task:Question Answering",
+      "type": "task",
+      "label": "Question Answering"
+    },
+    {
+      "id": "paper:2506.23863v1",
+      "type": "paper",
+      "label": "Puzzles: Unbounded Video-Depth Augmentation for Scalable End-to-End 3D Reconstruction"
+    },
+    {
+      "id": "paper:2506.23858v1",
+      "type": "paper",
+      "label": "VMoBA: Mixture-of-Block Attention for Video Diffusion Models"
+    },
+    {
+      "id": "paper:2506.23856v1",
+      "type": "paper",
+      "label": "A Closer Look at Conditional Prompt Tuning for Vision-Language Models"
+    },
+    {
+      "id": "paper:2506.23855v1",
+      "type": "paper",
+      "label": "Differentially Private Synthetic Data Release for Topics API Outputs"
+    },
+    {
+      "id": "paper:2506.23854v1",
+      "type": "paper",
+      "label": "HiNeuS: High-fidelity Neural Surface Mitigating Low-texture and Reflective Ambiguity"
+    },
+    {
+      "id": "paper:2506.23852v1",
+      "type": "paper",
+      "label": "RGC-VQA: An Exploration Database for Robotic-Generated Video Quality Assessment"
+    },
+    {
+      "id": "paper:2506.23845v1",
+      "type": "paper",
+      "label": "Use Sparse Autoencoders to Discover Unknown Concepts, Not to Act on Known Concepts"
+    },
+    {
+      "id": "paper:2506.23844v1",
+      "type": "paper",
+      "label": "A Survey on Autonomy-Induced Security Risks in Large Model-Based Agents"
+    },
+    {
+      "id": "paper:2506.23843v1",
+      "type": "paper",
+      "label": "EFPI: Elastic Formation and Position Identification in Football (Soccer) using Template Matching and Linear Assignment"
+    },
+    {
+      "id": "paper:2506.23840v1",
+      "type": "paper",
+      "label": "Do Thinking Tokens Help or Trap? Towards More Efficient Large Reasoning Model"
+    },
+    {
+      "id": "paper:2506.23836v1",
+      "type": "paper",
+      "label": "Proving the Limited Scalability of Centralized Distributed Optimization via a New Lower Bound Construction"
+    },
+    {
+      "id": "paper:2506.23835v1",
+      "type": "paper",
+      "label": "Refine Any Object in Any Scene"
+    },
+    {
+      "id": "paper:2506.23833v1",
+      "type": "paper",
+      "label": "PointSSIM: A novel low dimensional resolution invariant image-to-image comparison metric"
+    },
+    {
+      "id": "paper:2506.23832v1",
+      "type": "paper",
+      "label": "Low-latency vision transformers via large-scale multi-head attention"
+    },
+    {
+      "id": "paper:2506.23827v1",
+      "type": "paper",
+      "label": "Spatially Gene Expression Prediction using Dual-Scale Contrastive Learning"
+    },
+    {
+      "id": "paper:2506.23826v1",
+      "type": "paper",
+      "label": "Towards the \"Digital Me\": A vision of authentic Conversational Agents powered by personal Human Digital Twins"
+    },
+    {
+      "id": "paper:2506.23825v1",
+      "type": "paper",
+      "label": "Flash-VStream: Efficient Real-Time Understanding for Long Video Streams"
+    },
+    {
+      "id": "paper:2506.23824v1",
+      "type": "paper",
+      "label": "Supercm: Revisiting Clustering for Semi-Supervised Learning"
+    },
+    {
+      "id": "paper:2506.23822v1",
+      "type": "paper",
+      "label": "Interpretable Zero-Shot Learning with Locally-Aligned Vision-Language Model"
+    },
+    {
+      "id": "paper:2506.23815v2",
+      "type": "paper",
+      "label": "The Impact of AI on Educational Assessment: A Framework for Constructive Alignment"
+    },
+    {
+      "id": "paper:2506.23810v1",
+      "type": "paper",
+      "label": "MadCLIP: Few-shot Medical Anomaly Detection with CLIP"
+    },
+    {
+      "id": "paper:2506.23808v1",
+      "type": "paper",
+      "label": "Towards Initialization-free Calibrated Bundle Adjustment"
+    },
+    {
+      "id": "paper:2506.23803v1",
+      "type": "paper",
+      "label": "SGD with Adaptive Preconditioning: Unified Analysis and Momentum Acceleration"
+    },
+    {
+      "id": "paper:2506.23802v1",
+      "type": "paper",
+      "label": "Adaptive Out-of-Control Point Pattern Detection in Sequential Random Finite Set Observations"
+    },
+    {
+      "id": "paper:2506.23801v1",
+      "type": "paper",
+      "label": "Controllable Reference-Based Real-World Remote Sensing Image Super-Resolution with Generative Diffusion Priors"
+    },
+    {
+      "id": "paper:2506.23800v2",
+      "type": "paper",
+      "label": "Towards the Training of Deeper Predictive Coding Neural Networks"
+    },
+    {
+      "id": "paper:2506.23799v1",
+      "type": "paper",
+      "label": "KAIROS: Scalable Model-Agnostic Data Valuation"
+    },
+    {
+      "id": "paper:2506.23793v1",
+      "type": "paper",
+      "label": "Advancing Learnable Multi-Agent Pathfinding Solvers with Active Fine-Tuning"
+    },
+    {
+      "id": "paper:2506.23785v1",
+      "type": "paper",
+      "label": "Visual Textualization for Image Prompted Object Detection"
+    },
+    {
+      "id": "paper:2506.23784v1",
+      "type": "paper",
+      "label": "When GNNs Met a Word Equations Solver: Learning to Rank Equations (Extended Technical Report)"
+    },
+    {
+      "id": "paper:2506.23783v1",
+      "type": "paper",
+      "label": "Mamba-FETrack V2: Revisiting State Space Model for Frame-Event based Visual Object Tracking"
+    },
+    {
+      "id": "paper:2506.23782v1",
+      "type": "paper",
+      "label": "Calibrating Graph Neural Networks with Wavelet-Aware Temperature Scaling"
+    },
+    {
+      "id": "paper:2506.23776v1",
+      "type": "paper",
+      "label": "Model-driven Stochastic Trace Clustering"
+    },
+    {
+      "id": "paper:2506.23773v1",
+      "type": "paper",
+      "label": "BayesL: Towards a Logical Framework for Bayesian Networks"
+    },
+    {
+      "id": "paper:2506.23771v1",
+      "type": "paper",
+      "label": "Multi-Timescale Hierarchical Reinforcement Learning for Unified Behavior and Control of Autonomous Driving"
+    },
+    {
+      "id": "paper:2506.23767v1",
+      "type": "paper",
+      "label": "Explainable AI for Comprehensive Risk Assessment for Financial Reports: A Lightweight Hierarchical Transformer Network Approach"
+    },
+    {
+      "id": "paper:2506.23762v1",
+      "type": "paper",
+      "label": "Software Engineering for Large Language Models: Research Status, Challenges and the Road Ahead"
+    },
+    {
+      "id": "paper:2506.23759v1",
+      "type": "paper",
+      "label": "Spatio-Temporal Representation Decoupling and Enhancement for Federated Instrument Segmentation in Surgical Videos"
+    },
+    {
+      "id": "paper:2506.23757v1",
+      "type": "paper",
+      "label": "Training of Spiking Neural Networks with Expectation-Propagation"
+    },
+    {
+      "id": "paper:2506.23751v1",
+      "type": "paper",
+      "label": "Can We Challenge Open-Vocabulary Object Detectors with Generated Content in Street Scenes?"
+    },
+    {
+      "id": "paper:2506.23743v2",
+      "type": "paper",
+      "label": "Positional Bias in Binary Question Answering: How Uncertainty Shapes Model Preferences"
+    },
+    {
+      "id": "dataset:SQuAD",
+      "type": "dataset",
+      "label": "SQuAD"
+    },
+    {
+      "id": "paper:2506.23738v1",
+      "type": "paper",
+      "label": "More Efficient Real-Valued Gray-Box Optimization through Incremental Distribution Estimation in RV-GOMEA"
+    },
+    {
+      "id": "paper:2506.23735v1",
+      "type": "paper",
+      "label": "AutoEvoEval: An Automated Framework for Evolving Close-Ended LLM Evaluation Data"
+    },
+    {
+      "id": "paper:2506.23734v1",
+      "type": "paper",
+      "label": "Marker Gene Method : Identifying Stable Solutions in a Dynamic Environment"
+    },
+    {
+      "id": "paper:2506.23731v1",
+      "type": "paper",
+      "label": "Radioactive Watermarks in Diffusion and Autoregressive Image Generative Models"
+    },
+    {
+      "id": "paper:2506.23729v1",
+      "type": "paper",
+      "label": "Proteus-ID: ID-Consistent and Motion-Coherent Video Customization"
+    },
+    {
+      "id": "paper:2506.23726v1",
+      "type": "paper",
+      "label": "System-Embedded Diffusion Bridge Models"
+    },
+    {
+      "id": "paper:2506.23725v1",
+      "type": "paper",
+      "label": "PAC Bench: Do Foundation Models Understand Prerequisites for Executing Manipulation Policies?"
+    },
+    {
+      "id": "paper:2506.23724v1",
+      "type": "paper",
+      "label": "When Small Guides Large: Cross-Model Co-Learning for Test-Time Adaptation"
+    },
+    {
+      "id": "paper:2506.23721v1",
+      "type": "paper",
+      "label": "Deep Learning-Based Semantic Segmentation for Real-Time Kidney Imaging and Measurements with Augmented Reality-Assisted Ultrasound"
+    },
+    {
+      "id": "paper:2506.23719v1",
+      "type": "paper",
+      "label": "DABstep: Data Agent Benchmark for Multi-step Reasoning"
+    },
+    {
+      "id": "paper:2506.23717v1",
+      "type": "paper",
+      "label": "Towards Efficient and Accurate Spiking Neural Networks via Adaptive Bit Allocation"
+    },
+    {
+      "id": "paper:2506.23714v1",
+      "type": "paper",
+      "label": "Towards an Automated Multimodal Approach for Video Summarization: Building a Bridge Between Text, Audio and Facial Cue-Based Summarization"
+    },
+    {
+      "id": "paper:2506.23711v1",
+      "type": "paper",
+      "label": "Subjective Camera: Bridging Human Cognition and Visual Reconstruction through Sequence-Aware Sketch-Guided Diffusion"
+    },
+    {
+      "id": "paper:2506.23706v1",
+      "type": "paper",
+      "label": "Attestable Audits: Verifiable AI Safety Benchmarks Using Trusted Execution Environments"
+    },
+    {
+      "id": "paper:2506.23705v1",
+      "type": "paper",
+      "label": "Single Image Test-Time Adaptation via Multi-View Co-Training"
+    },
+    {
+      "id": "paper:2506.23703v1",
+      "type": "paper",
+      "label": "A New Perspective On AI Safety Through Control Theory Methodologies"
+    },
+    {
+      "id": "paper:2506.23701v1",
+      "type": "paper",
+      "label": "MDPG: Multi-domain Diffusion Prior Guidance for MRI Reconstruction"
+    },
+    {
+      "id": "paper:2506.23700v1",
+      "type": "paper",
+      "label": "MedSAM-CA: A CNN-Augmented ViT with Attention-Enhanced Multi-Scale Fusion for Medical Image Segmentation"
+    },
+    {
+      "id": "paper:2506.23692v1",
+      "type": "paper",
+      "label": "Agent4S: The Transformation of Research Paradigms from the Perspective of Large Language Models"
+    },
+    {
+      "id": "paper:2506.23690v1",
+      "type": "paper",
+      "label": "SynMotion: Semantic-Visual Adaptation for Motion Customized Video Generation"
+    },
+    {
+      "id": "paper:2506.23689v1",
+      "type": "paper",
+      "label": "Pok\u00e9AI: A Goal-Generating, Battle-Optimizing Multi-agent System for Pokemon Red"
+    },
+    {
+      "id": "paper:2506.23679v1",
+      "type": "paper",
+      "label": "Learning Modular Exponentiation with Transformers"
+    },
+    {
+      "id": "paper:2506.23678v1",
+      "type": "paper",
+      "label": "Interactive Reasoning: Visualizing and Controlling Chain-of-Thought Reasoning in Large Language Models"
+    },
+    {
+      "id": "paper:2506.23676v1",
+      "type": "paper",
+      "label": "A Unified Framework for Stealthy Adversarial Generation via Latent Optimization and Transferability Enhancement"
+    },
+    {
+      "id": "paper:2506.23675v1",
+      "type": "paper",
+      "label": "Pruning by Block Benefit: Exploring the Properties of Vision Transformer Blocks during Domain Adaptation"
+    },
+    {
+      "id": "paper:2506.23674v1",
+      "type": "paper",
+      "label": "Partial Forward Blocking: A Novel Data Pruning Paradigm for Lossless Training Acceleration"
+    },
+    {
+      "id": "paper:2506.23673v1",
+      "type": "paper",
+      "label": "HASD: Hierarchical Adaption for pathology Slide-level Domain-shift"
+    },
+    {
+      "id": "paper:2506.23670v1",
+      "type": "paper",
+      "label": "Efficient Interleaved Speech Modeling through Knowledge Distillation"
+    },
+    {
+      "id": "paper:2506.23667v1",
+      "type": "paper",
+      "label": "L0: Reinforcement Learning to Become General Agents"
+    },
+    {
+      "id": "paper:2506.23664v1",
+      "type": "paper",
+      "label": "Diffusion Model-based Data Augmentation Method for Fetal Head Ultrasound Segmentation"
+    },
+    {
+      "id": "paper:2506.23663v1",
+      "type": "paper",
+      "label": "On the Domain Robustness of Contrastive Vision-Language Models"
+    },
+    {
+      "id": "paper:2506.23662v1",
+      "type": "paper",
+      "label": "Zero-Shot Contextual Embeddings via Offline Synthetic Corpus Generation"
+    },
+    {
+      "id": "paper:2506.23661v1",
+      "type": "paper",
+      "label": "Robustness of Misinformation Classification Systems to Adversarial Examples Through BeamAttack"
+    },
+    {
+      "id": "paper:2506.23657v2",
+      "type": "paper",
+      "label": "Towards Markerless Intraoperative Tracking of Deformable Spine Tissue"
+    },
+    {
+      "id": "paper:2506.23648v1",
+      "type": "paper",
+      "label": "MReg: A Novel Regression Model with MoE-based Video Feature Mining for Mitral Regurgitation Diagnosis"
+    },
+    {
+      "id": "paper:2506.23644v1",
+      "type": "paper",
+      "label": "QLPro: Automated Code Vulnerability Discovery via LLM and Static Code Analysis Integration"
+    },
+    {
+      "id": "paper:2506.23641v1",
+      "type": "paper",
+      "label": "VAP-Diffusion: Enriching Descriptions with MLLMs for Enhanced Medical Image Generation"
+    },
+    {
+      "id": "paper:2506.23640v1",
+      "type": "paper",
+      "label": "Geminet: Learning the Duality-based Iterative Process for Lightweight Traffic Engineering in Changing Topologies"
+    },
+    {
+      "id": "paper:2506.23639v1",
+      "type": "paper",
+      "label": "Unified Multimodal Understanding via Byte-Pair Visual Encoding"
+    },
+    {
+      "id": "paper:2506.23635v1",
+      "type": "paper",
+      "label": "Towards Building Private LLMs: Exploring Multi-Node Expert Parallelism on Apple Silicon for Mixture-of-Experts Large Language Model"
+    },
+    {
+      "id": "paper:2506.23634v1",
+      "type": "paper",
+      "label": "gMBA: Expression Semantic Guided Mixed Boolean-Arithmetic Deobfuscation Using Transformer Architectures"
+    },
+    {
+      "id": "paper:2506.23630v1",
+      "type": "paper",
+      "label": "Blending Concepts with Text-to-Image Diffusion Models"
+    },
+    {
+      "id": "paper:2506.23629v1",
+      "type": "paper",
+      "label": "A Nonlinear Low-rank Representation Model with Convolutional Neural Network for Imputing Water Quality Data"
+    },
+    {
+      "id": "paper:2506.23628v1",
+      "type": "paper",
+      "label": "The Kubernetes Network Driver Model: A Composable Architecture for High-Performance Networking"
+    },
+    {
+      "id": "paper:2506.23627v1",
+      "type": "paper",
+      "label": "Brain Tumor Detection through Thermal Imaging and MobileNET"
+    },
+    {
+      "id": "paper:2506.23626v1",
+      "type": "paper",
+      "label": "Self-correcting Reward Shaping via Language Models for Reinforcement Learning Agents in Games"
+    },
+    {
+      "id": "paper:2506.23623v1",
+      "type": "paper",
+      "label": "Revisiting Audio-Visual Segmentation with Vision-Centric Transformer"
+    },
+    {
+      "id": "paper:2506.23619v1",
+      "type": "paper",
+      "label": "Overparametrized models with posterior drift"
+    },
+    {
+      "id": "task:Recommendation",
+      "type": "task",
+      "label": "Recommendation"
+    },
+    {
+      "id": "paper:2506.23618v1",
+      "type": "paper",
+      "label": "TurboVSR: Fantastic Video Upscalers and Where to Find Them"
+    },
+    {
+      "id": "paper:2506.23611v1",
+      "type": "paper",
+      "label": "AttentionGS: Towards Initialization-Free 3D Gaussian Splatting via Structural Attention"
+    },
+    {
+      "id": "paper:2506.23610v1",
+      "type": "paper",
+      "label": "Evaluating the Simulation of Human Personality-Driven Susceptibility to Misinformation with LLMs"
+    },
+    {
+      "id": "paper:2506.23607v1",
+      "type": "paper",
+      "label": "PGOV3D: Open-Vocabulary 3D Semantic Segmentation with Partial-to-Global Curriculum"
+    },
+    {
+      "id": "paper:2506.23606v1",
+      "type": "paper",
+      "label": "SG-LDM: Semantic-Guided LiDAR Generation via Latent-Aligned Diffusion"
+    },
+    {
+      "id": "paper:2506.23605v1",
+      "type": "paper",
+      "label": "AI-Generated Lecture Slides for Improving Slide Element Detection and Retrieval"
+    },
+    {
+      "id": "paper:2506.23603v1",
+      "type": "paper",
+      "label": "SoK: Semantic Privacy in Large Language Models"
+    },
+    {
+      "id": "paper:2506.23601v1",
+      "type": "paper",
+      "label": "Semantic-guided Diverse Decoding for Large Language Model"
+    },
+    {
+      "id": "paper:2506.23596v1",
+      "type": "paper",
+      "label": "When Will It Fail?: Anomaly to Prompt for Forecasting Future Anomalies in Time Series"
+    },
+    {
+      "id": "paper:2506.23590v1",
+      "type": "paper",
+      "label": "CAI: Caption-Sensitive Attention Intervention for Mitigating Object Hallucination in Large Vision-Language Models"
+    },
+    {
+      "id": "paper:2506.23589v1",
+      "type": "paper",
+      "label": "Transition Matching: Scalable and Flexible Generative Modeling"
+    },
+    {
+      "id": "paper:2506.23584v1",
+      "type": "paper",
+      "label": "A Clinically-Grounded Two-Stage Framework for Renal CT Report Generation"
+    },
+    {
+      "id": "paper:2506.23583v1",
+      "type": "paper",
+      "label": "Detect \\& Score: Privacy-Preserving Misbehaviour Detection and Contribution Evaluation in Federated Learning"
+    },
+    {
+      "id": "paper:2506.23581v1",
+      "type": "paper",
+      "label": "PBCAT: Patch-based composite adversarial training against physically realizable attacks on object detection"
+    },
+    {
+      "id": "paper:2506.23580v1",
+      "type": "paper",
+      "label": "Dataset Distillation via Vision-Language Category Prototype"
+    },
+    {
+      "id": "paper:2506.23578v1",
+      "type": "paper",
+      "label": "Reachability in symmetric VASS"
+    },
+    {
+      "id": "paper:2506.23577v1",
+      "type": "paper",
+      "label": "StackCLIP: Clustering-Driven Stacked Prompt in Zero-Shot Industrial Anomaly Detection"
+    },
+    {
+      "id": "paper:2506.23576v1",
+      "type": "paper",
+      "label": "Evaluating Multi-Agent Defences Against Jailbreaking Attacks on Large Language Models"
+    },
+    {
+      "id": "paper:2506.23575v1",
+      "type": "paper",
+      "label": "Event-based Tiny Object Detection: A Benchmark Dataset and Baseline"
+    },
+    {
+      "id": "paper:2506.23573v1",
+      "type": "paper",
+      "label": "Online Human Action Detection during Escorting"
+    },
+    {
+      "id": "paper:2506.23566v1",
+      "type": "paper",
+      "label": "Metadata, Wavelet, and Time Aware Diffusion Models for Satellite Image Super Resolution"
+    },
+    {
+      "id": "paper:2506.23565v1",
+      "type": "paper",
+      "label": "OcRFDet: Object-Centric Radiance Fields for Multi-View 3D Object Detection in Autonomous Driving"
+    },
+    {
+      "id": "paper:2506.23563v1",
+      "type": "paper",
+      "label": "MMReason: An Open-Ended Multi-Modal Multi-Step Reasoning Benchmark for MLLMs Toward AGI"
+    },
+    {
+      "id": "paper:2506.23560v1",
+      "type": "paper",
+      "label": "Tensor Train Quantum State Tomography using Compressed Sensing"
+    },
+    {
+      "id": "paper:2506.23555v1",
+      "type": "paper",
+      "label": "LH2Face: Loss function for Hard High-quality Face"
+    },
+    {
+      "id": "paper:2506.23552v1",
+      "type": "paper",
+      "label": "JAM-Flow: Joint Audio-Motion Synthesis with Flow Matching"
+    },
+    {
+      "id": "paper:2506.23551v1",
+      "type": "paper",
+      "label": "A unified framework on the universal approximation of transformer-type architectures"
+    },
+    {
+      "id": "paper:2506.23550v1",
+      "type": "paper",
+      "label": "Seeding neural network quantum states with tensor network states"
+    },
+    {
+      "id": "paper:2506.23549v1",
+      "type": "paper",
+      "label": "CooT: Learning to Coordinate In-Context with Coordination Transformers"
+    },
+    {
+      "id": "paper:2506.23547v1",
+      "type": "paper",
+      "label": "Oneta: Multi-Style Image Enhancement Using Eigentransformation Functions"
+    },
+    {
+      "id": "paper:2506.23546v1",
+      "type": "paper",
+      "label": "Neural Langevin Machine: a local asymmetric learning rule can be creative"
+    },
+    {
+      "id": "paper:2506.23544v2",
+      "type": "paper",
+      "label": "Both Asymptotic and Non-Asymptotic Convergence of Quasi-Hyperbolic Momentum using Increasing Batch Size"
+    },
+    {
+      "id": "paper:2506.23542v1",
+      "type": "paper",
+      "label": "Consistent Time-of-Flight Depth Denoising via Graph-Informed Geometric Attention"
+    },
+    {
+      "id": "paper:2506.23543v1",
+      "type": "paper",
+      "label": "Pyramidal Patchification Flow for Visual Generation"
+    },
+    {
+      "id": "paper:2506.23538v1",
+      "type": "paper",
+      "label": "Uncertainty-aware Diffusion and Reinforcement Learning for Joint Plane Localization and Anomaly Diagnosis in 3D Ultrasound"
+    },
+    {
+      "id": "paper:2506.23537v1",
+      "type": "paper",
+      "label": "AFUNet: Cross-Iterative Alignment-Fusion Synergy for HDR Reconstruction via Deep Unfolding Paradigm"
+    },
+    {
+      "id": "paper:2506.23532v1",
+      "type": "paper",
+      "label": "GViT: Representing Images as Gaussians for Visual Recognition"
+    },
+    {
+      "id": "paper:2506.23529v1",
+      "type": "paper",
+      "label": "When Test-Time Adaptation Meets Self-Supervised Models"
+    },
+    {
+      "id": "paper:2506.23527v1",
+      "type": "paper",
+      "label": "On Recipe Memorization and Creativity in Large Language Models: Is Your Model a Creative Cook, a Bad Cook, or Merely a Plagiator?"
+    },
+    {
+      "id": "paper:2506.23524v1",
+      "type": "paper",
+      "label": "NEU-ESC: A Comprehensive Vietnamese dataset for Educational Sentiment analysis and topic Classification toward multitask learning"
+    },
+    {
+      "id": "paper:2506.23523v1",
+      "type": "paper",
+      "label": "Lightweight Temporal Transformer Decomposition for Federated Autonomous Driving"
+    },
+    {
+      "id": "paper:2506.23520v2",
+      "type": "paper",
+      "label": "ChemActor: Enhancing Automated Extraction of Chemical Synthesis Actions with LLM-Generated Data"
+    },
+    {
+      "id": "paper:2506.23519v1",
+      "type": "paper",
+      "label": "From Sight to Insight: Unleashing Eye-Tracking in Weakly Supervised Video Salient Object Detection"
+    },
+    {
+      "id": "paper:2506.23518v1",
+      "type": "paper",
+      "label": "WAVE: Warp-Based View Guidance for Consistent Novel View Synthesis Using a Single Image"
+    },
+    {
+      "id": "paper:2506.23517v1",
+      "type": "paper",
+      "label": "Assessing GPTZero's Accuracy in Identifying AI vs. Human-Written Essays"
+    },
+    {
+      "id": "paper:2506.23516v1",
+      "type": "paper",
+      "label": "FedWSQ: Efficient Federated Learning with Weight Standardization and Distribution-Aware Non-Uniform Quantization"
+    },
+    {
+      "id": "paper:2506.23514v1",
+      "type": "paper",
+      "label": "MGPRL: Distributed Multi-Gaussian Processes for Wi-Fi-based Multi-Robot Relative Localization in Large Indoor Environments"
+    },
+    {
+      "id": "paper:2506.23513v1",
+      "type": "paper",
+      "label": "ViewPoint: Panoramic Video Generation with Pretrained Diffusion Models"
+    },
+    {
+      "id": "paper:2506.23508v1",
+      "type": "paper",
+      "label": "Reinforcement Fine-Tuning Enables MLLMs Learning Novel Tasks Stably"
+    },
+    {
+      "id": "paper:2506.23506v1",
+      "type": "paper",
+      "label": "Artificial Intelligence-assisted Pixel-level Lung (APL) Scoring for Fast and Accurate Quantification in Ultra-short Echo-time MRI"
+    },
+    {
+      "id": "paper:2506.23505v1",
+      "type": "paper",
+      "label": "Improve Underwater Object Detection through YOLOv12 Architecture and Physics-informed Augmentation"
+    },
+    {
+      "id": "paper:2506.23504v1",
+      "type": "paper",
+      "label": "Hybrid Approach for Electricity Price Forecasting using AlexNet and LSTM"
+    },
+    {
+      "id": "paper:2506.23503v1",
+      "type": "paper",
+      "label": "Data Augmentation for Cognitive Behavioral Therapy: Leveraging ERNIE Language Models using Artificial Intelligence"
+    },
+    {
+      "id": "paper:2506.23502v1",
+      "type": "paper",
+      "label": "LLM-enhanced Action-aware Multi-modal Prompt Tuning for Image-Text Matching"
+    },
+    {
+      "id": "paper:2506.23492v1",
+      "type": "paper",
+      "label": "Sample Margin-Aware Recalibration of Temperature Scaling"
+    },
+    {
+      "id": "paper:2506.23491v2",
+      "type": "paper",
+      "label": "ZonUI-3B: A Lightweight Vision-Language Model for Cross-Resolution GUI Grounding"
+    },
+    {
+      "id": "paper:2506.23490v1",
+      "type": "paper",
+      "label": "UltraTwin: Towards Cardiac Anatomical Twin Generation from Multi-view 2D Ultrasound"
+    },
+    {
+      "id": "paper:2506.23487v1",
+      "type": "paper",
+      "label": "Test of partial effects for Frechet regression on Bures-Wasserstein manifolds"
+    },
+    {
+      "id": "paper:2506.23485v1",
+      "type": "paper",
+      "label": "Thought-Augmented Planning for LLM-Powered Interactive Recommender Agent"
+    },
+    {
+      "id": "paper:2506.23484v1",
+      "type": "paper",
+      "label": "TAG-WM: Tamper-Aware Generative Image Watermarking via Diffusion Inversion Sensitivity"
+    },
+    {
+      "id": "paper:2506.23482v1",
+      "type": "paper",
+      "label": "MTADiffusion: Mask Text Alignment Diffusion Model for Object Inpainting"
+    },
+    {
+      "id": "paper:2506.23481v1",
+      "type": "paper",
+      "label": "Evaluation of Geolocation Capabilities of Multimodal Large Language Models and Analysis of Associated Privacy Risks"
+    },
+    {
+      "id": "paper:2506.23479v1",
+      "type": "paper",
+      "label": "Instant GaussianImage: A Generalizable and Self-Adaptive Image Representation via 2D Gaussian Splatting"
+    },
+    {
+      "id": "paper:2506.23478v1",
+      "type": "paper",
+      "label": "GeoCD: A Differential Local Approximation for Geodesic Chamfer Distance"
+    },
+    {
+      "id": "paper:2506.23471v1",
+      "type": "paper",
+      "label": "KiseKloset: Comprehensive System For Outfit Retrieval, Recommendation, And Try-On"
+    },
+    {
+      "id": "paper:2506.23470v1",
+      "type": "paper",
+      "label": "Interactive Interface For Semantic Segmentation Dataset Synthesis"
+    },
+    {
+      "id": "paper:2506.23469v1",
+      "type": "paper",
+      "label": "Reconciling Attribute and Structural Anomalies for Improved Graph Anomaly Detection"
+    },
+    {
+      "id": "paper:2506.23468v1",
+      "type": "paper",
+      "label": "NavMorph: A Self-Evolving World Model for Vision-and-Language Navigation in Continuous Environments"
+    },
+    {
+      "id": "paper:2506.23467v1",
+      "type": "paper",
+      "label": "AdFair-CLIP: Adversarial Fair Contrastive Language-Image Pre-training for Chest X-rays"
+    },
+    {
+      "id": "paper:2506.23466v1",
+      "type": "paper",
+      "label": "FD-DiT: Frequency Domain-Directed Diffusion Transformer for Low-Dose CT Reconstruction"
+    },
+    {
+      "id": "paper:2506.23465v1",
+      "type": "paper",
+      "label": "Sanitizing Manufacturing Dataset Labels Using Vision-Language Models"
+    },
+    {
+      "id": "paper:2506.23464v1",
+      "type": "paper",
+      "label": "The Confidence Paradox: Can LLM Know When It's Wrong"
+    },
+    {
+      "id": "paper:2506.23463v1",
+      "type": "paper",
+      "label": "What to Keep and What to Drop: Adaptive Table Filtering Framework"
+    },
+    {
+      "id": "paper:2506.23462v1",
+      "type": "paper",
+      "label": "Can We Predict the Unpredictable? Leveraging DisasterNet-LLM for Multimodal Disaster Classification"
+    },
+    {
+      "id": "paper:2506.23461v1",
+      "type": "paper",
+      "label": "Time-variant Image Inpainting via Interactive Distribution Transition Estimation"
+    },
+    {
+      "id": "paper:2506.23460v1",
+      "type": "paper",
+      "label": "Contrastive Learning with Diffusion Features for Weakly Supervised Medical Image Segmentation"
+    },
+    {
+      "id": "paper:2506.23458v2",
+      "type": "paper",
+      "label": "Neuro-Informed Joint Learning Enhances Cognitive Workload Decoding in Portable BCIs"
+    },
+    {
+      "id": "paper:2506.23456v1",
+      "type": "paper",
+      "label": "Sampling and Identity-Testing Without Approximate Tensorization of Entropy"
+    },
+    {
+      "id": "paper:2506.23453v1",
+      "type": "paper",
+      "label": "Minimax Optimal Two-Stage Algorithm For Moment Estimation Under Covariate Shift"
+    },
+    {
+      "id": "paper:2506.23446v1",
+      "type": "paper",
+      "label": "Enhancing Insider Threat Detection Using User-Based Sequencing and Transformer Encoders"
+    },
+    {
+      "id": "paper:2506.23440v1",
+      "type": "paper",
+      "label": "PathDiff: Histopathology Image Synthesis with Unpaired Text and Mask Conditions"
+    },
+    {
+      "id": "paper:2506.23437v1",
+      "type": "paper",
+      "label": "From Large-scale Audio Tagging to Real-Time Explainable Emergency Vehicle Sirens Detection"
+    },
+    {
+      "id": "paper:2506.23434v1",
+      "type": "paper",
+      "label": "Towards foundational LiDAR world models with efficient latent flow matching"
+    },
+    {
+      "id": "paper:2506.23431v2",
+      "type": "paper",
+      "label": "Pipelined Decoder for Efficient Context-Aware Text Generation"
+    },
+    {
+      "id": "paper:2506.23429v1",
+      "type": "paper",
+      "label": "DPOT: A DeepParticle method for Computation of Optimal Transport with convergence guarantee"
+    },
+    {
+      "id": "paper:2506.23426v1",
+      "type": "paper",
+      "label": "Detecting What Matters: A Novel Approach for Out-of-Distribution 3D Object Detection in Autonomous Vehicles"
+    },
+    {
+      "id": "paper:2506.23424v1",
+      "type": "paper",
+      "label": "Accurate Parameter-Efficient Test-Time Adaptation for Time Series Forecasting"
+    },
+    {
+      "id": "paper:2506.23423v1",
+      "type": "paper",
+      "label": "TuCo: Measuring the Contribution of Fine-Tuning to Individual Responses of LLMs"
+    },
+    {
+      "id": "paper:2506.23419v1",
+      "type": "paper",
+      "label": "BenchMake: Turn any scientific data set into a reproducible benchmark"
+    },
+    {
+      "id": "paper:2506.23418v1",
+      "type": "paper",
+      "label": "Why Settle for Mid: A Probabilistic Viewpoint to Spatial Relationship Alignment in Text-to-image Models"
+    },
+    {
+      "id": "paper:2506.23414v1",
+      "type": "paper",
+      "label": "A High-Throughput Platform to Bench Test Smartphone-Based Heart Rate Measurements Derived From Video"
+    },
+    {
+      "id": "paper:2506.23411v1",
+      "type": "paper",
+      "label": "Datasets for Fairness in Language Models: An In-Depth Survey"
+    },
+    {
+      "id": "paper:2506.23408v1",
+      "type": "paper",
+      "label": "Do LLMs Dream of Discrete Algorithms?"
+    },
+    {
+      "id": "paper:2506.23396v1",
+      "type": "paper",
+      "label": "AICO: Feature Significance Tests for Supervised Learning"
+    },
+    {
+      "id": "paper:2506.23394v1",
+      "type": "paper",
+      "label": "Teaching a Language Model to Speak the Language of Tools"
+    },
+    {
+      "id": "paper:2506.23393v1",
+      "type": "paper",
+      "label": "Hierarchical Memory Organization for Wikipedia Generation"
+    },
+    {
+      "id": "paper:2506.23382v1",
+      "type": "paper",
+      "label": "SIEDD: Shared-Implicit Encoder with Discrete Decoders"
+    },
+    {
+      "id": "paper:2506.23377v1",
+      "type": "paper",
+      "label": "Perspective Dial: Measuring Perspective of Text and Guiding LLM Outputs"
+    },
+    {
+      "id": "paper:2506.23374v1",
+      "type": "paper",
+      "label": "When Additive Noise Meets Unobserved Mediators: Bivariate Denoising Diffusion for Causal Discovery"
+    },
+    {
+      "id": "paper:2506.23371v1",
+      "type": "paper",
+      "label": "Investigating an Overfitting and Degeneration Phenomenon in Self-Supervised Multi-Pitch Estimation"
+    },
+    {
+      "id": "paper:2506.23367v1",
+      "type": "paper",
+      "label": "You Sound a Little Tense: L2 Tailored Clear TTS Using Durational Vowel Properties"
+    },
+    {
+      "id": "paper:2506.23366v1",
+      "type": "paper",
+      "label": "Density, asymmetry and citation dynamics in scientific literature"
+    },
+    {
+      "id": "paper:2506.23361v1",
+      "type": "paper",
+      "label": "OmniVCus: Feedforward Subject-driven Video Customization with Multimodal Control Conditions"
+    },
+    {
+      "id": "paper:2506.23358v1",
+      "type": "paper",
+      "label": "Federated Timeline Synthesis: Scalable and Private Methodology For Model Training and Deployment"
+    },
+    {
+      "id": "paper:2506.23353v1",
+      "type": "paper",
+      "label": "Layer Decomposition and Morphological Reconstruction for Task-Oriented Infrared Image Enhancement"
+    },
+    {
+      "id": "paper:2506.23352v1",
+      "type": "paper",
+      "label": "GeoProg3D: Compositional Visual Reasoning for City-Scale 3D Language Fields"
+    },
+    {
+      "id": "paper:2506.23351v1",
+      "type": "paper",
+      "label": "Benchmarking Generalizable Bimanual Manipulation: RoboTwin Dual-Arm Collaboration Challenge at CVPR 2025 MEIS Workshop"
+    },
+    {
+      "id": "paper:2506.23349v1",
+      "type": "paper",
+      "label": "A case for data valuation transparency via DValCards"
+    },
+    {
+      "id": "paper:2506.23347v1",
+      "type": "paper",
+      "label": "CycleVAR: Repurposing Autoregressive Model for Unsupervised One-Step Image Translation"
+    },
+    {
+      "id": "paper:2506.23344v1",
+      "type": "paper",
+      "label": "Data-Driven Self-Supervised Learning for the Discovery of Solution Singularity for Partial Differential Equations"
+    },
+    {
+      "id": "paper:2506.23342v1",
+      "type": "paper",
+      "label": "ATGen: A Framework for Active Text Generation"
+    },
+    {
+      "id": "paper:2506.23340v1",
+      "type": "paper",
+      "label": "Information Loss in LLMs' Multilingual Translation: The Role of Training Data, Language Proximity, and Language Family"
+    },
+    {
+      "id": "paper:2506.23339v1",
+      "type": "paper",
+      "label": "VALID-Mol: a Systematic Framework for Validated LLM-Assisted Molecular Design"
+    },
+    {
+      "id": "paper:2506.23334v1",
+      "type": "paper",
+      "label": "Federated Breast Cancer Detection Enhanced by Synthetic Ultrasound Image Augmentation"
+    },
+    {
+      "id": "paper:2506.23329v1",
+      "type": "paper",
+      "label": "IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering"
+    },
+    {
+      "id": "paper:2506.23325v1",
+      "type": "paper",
+      "label": "XY-Tokenizer: Mitigating the Semantic-Acoustic Conflict in Low-Bitrate Speech Codecs"
+    },
+    {
+      "id": "paper:2506.23323v1",
+      "type": "paper",
+      "label": "FastSeg: Efficient Training-Free Open-Vocabulary Segmentation via Hierarchical Attention Refinement Method"
+    },
+    {
+      "id": "paper:2506.23322v1",
+      "type": "paper",
+      "label": "GaussMaster: An LLM-based Database Copilot System"
+    },
+    {
+      "id": "paper:2506.23319v1",
+      "type": "paper",
+      "label": "Learning to Rank with Variable Result Presentation Lengths"
+    },
+    {
+      "id": "paper:2506.23316v1",
+      "type": "paper",
+      "label": "InfGen: Scenario Generation as Next Token Group Prediction"
+    },
+    {
+      "id": "paper:2506.23315v1",
+      "type": "paper",
+      "label": "Ensemble BERT for Medication Event Classification on Electronic Health Records (EHRs)"
+    },
+    {
+      "id": "paper:2506.23314v1",
+      "type": "paper",
+      "label": "Interpretable by Design: MH-AutoML for Transparent and Efficient Android Malware Detection without Compromising Performance"
+    },
+    {
+      "id": "paper:2506.23311v1",
+      "type": "paper",
+      "label": "Physics informed guided diffusion for accelerated multi-parametric MRI reconstruction"
+    },
+    {
+      "id": "paper:2506.23309v2",
+      "type": "paper",
+      "label": "SurgTPGS: Semantic 3D Surgical Scene Understanding with Text Promptable Gaussian Splatting"
+    },
+    {
+      "id": "paper:2506.23308v1",
+      "type": "paper",
+      "label": "Endo-4DGX: Robust Endoscopic Scene Reconstruction and Illumination Correction with Gaussian Splatting"
+    },
+    {
+      "id": "paper:2506.23306v1",
+      "type": "paper",
+      "label": "GATSim: Urban Mobility Simulation with Generative Agents"
+    },
+    {
+      "id": "paper:2506.23305v1",
+      "type": "paper",
+      "label": "BPD-Neo: An MRI Dataset for Lung-Trachea Segmentation with Clinical Data for Neonatal Bronchopulmonary Dysplasia"
+    },
+    {
+      "id": "paper:2506.23296v1",
+      "type": "paper",
+      "label": "Securing AI Systems: A Guide to Known Attacks and Impacts"
+    },
+    {
+      "id": "paper:2506.23295v1",
+      "type": "paper",
+      "label": "DiffFit: Disentangled Garment Warping and Texture Refinement for Virtual Try-On"
+    }
+  ],
+  "edges": [
+    {
+      "source": "paper:2506.24127v1",
+      "target": "dataset:UCF-101",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.24127v1",
+      "target": "method:Hypernetworks",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24125v1",
+      "target": "dataset:ImageNet",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.24124v2",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24120v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24117v2",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24113v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.24113v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24108v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24106v1",
+      "target": "task:Summarization",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.24086v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24086v1",
+      "target": "method:Autoencoders",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24085v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24085v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24074v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.24063v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24042v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24039v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.24034v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24024v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24018v1",
+      "target": "method:Graph Neural Networks",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24003v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.24003v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.24000v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23995v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23978v1",
+      "target": "task:Machine Translation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23977v1",
+      "target": "dataset:ImageNet",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.23977v1",
+      "target": "dataset:MNIST",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.23975v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23960v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23958v1",
+      "target": "task:Machine Translation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23951v1",
+      "target": "method:Autoencoders",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23934v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23929v1",
+      "target": "task:Machine Translation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23926v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23916v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23908v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23903v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23881v1",
+      "target": "dataset:ImageNet",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.23881v1",
+      "target": "dataset:COCO",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.23875v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23873v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23873v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23869v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23869v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23864v1",
+      "target": "task:Question Answering",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23858v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23858v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23852v1",
+      "target": "task:Question Answering",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23845v1",
+      "target": "method:Autoencoders",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23844v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23843v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23832v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23827v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23827v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23810v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23801v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23801v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23793v1",
+      "target": "task:Summarization",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23793v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23785v1",
+      "target": "dataset:COCO",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.23784v1",
+      "target": "method:Graph Neural Networks",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23783v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23782v1",
+      "target": "method:Graph Neural Networks",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23767v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23759v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23743v2",
+      "target": "task:Question Answering",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23743v2",
+      "target": "dataset:SQuAD",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.23735v1",
+      "target": "task:Question Answering",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23731v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23729v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23724v1",
+      "target": "dataset:ImageNet",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.23721v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23717v1",
+      "target": "dataset:ImageNet",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.23714v1",
+      "target": "task:Summarization",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23711v1",
+      "target": "task:Summarization",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23705v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23703v1",
+      "target": "task:Summarization",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23701v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23701v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23700v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23700v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23700v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23689v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23679v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23678v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23676v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23675v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23674v1",
+      "target": "dataset:ImageNet",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.23673v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23670v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23667v1",
+      "target": "task:Question Answering",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23664v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23664v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23663v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23657v2",
+      "target": "task:Machine Translation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23657v2",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23639v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23634v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23630v1",
+      "target": "task:Summarization",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23630v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23623v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23623v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23619v1",
+      "target": "task:Recommendation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23618v1",
+      "target": "method:Autoencoders",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23618v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23611v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23607v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23606v1",
+      "target": "task:Machine Translation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23606v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23606v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23590v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23577v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23575v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23566v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23565v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23552v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23551v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23549v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23542v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23543v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23538v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23538v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23532v1",
+      "target": "dataset:ImageNet",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.23529v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23523v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23519v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23518v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23518v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23513v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23513v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23506v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23505v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23503v1",
+      "target": "task:Machine Translation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23503v1",
+      "target": "task:Summarization",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23502v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23490v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23490v1",
+      "target": "method:Autoencoders",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23485v1",
+      "target": "task:Recommendation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23485v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23484v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23482v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23471v1",
+      "target": "task:Recommendation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23471v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23470v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23468v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23467v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23467v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23466v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23466v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23464v1",
+      "target": "task:Question Answering",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23464v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23463v1",
+      "target": "task:Question Answering",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23462v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23461v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23460v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23460v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23460v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23458v2",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23446v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23446v1",
+      "target": "method:Autoencoders",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23440v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23431v2",
+      "target": "task:Question Answering",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23431v2",
+      "target": "task:Summarization",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23418v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23411v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23394v1",
+      "target": "task:Machine Translation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23374v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23361v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23358v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23353v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23352v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23347v1",
+      "target": "task:Machine Translation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23347v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23347v1",
+      "target": "method:Autoencoders",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23340v1",
+      "target": "task:Machine Translation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23323v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23323v1",
+      "target": "dataset:COCO",
+      "relation": "MENTIONS_DATASET"
+    },
+    {
+      "source": "paper:2506.23323v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23323v1",
+      "target": "method:Contrastive Learning",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23323v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23319v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23316v1",
+      "target": "method:Transformers",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23311v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    },
+    {
+      "source": "paper:2506.23309v2",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23309v2",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23306v1",
+      "target": "task:Planning",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23305v1",
+      "target": "task:Segmentation",
+      "relation": "MENTIONS_TASK"
+    },
+    {
+      "source": "paper:2506.23295v1",
+      "target": "method:Diffusion Models",
+      "relation": "MENTIONS_METHOD"
+    }
+  ]
+}
