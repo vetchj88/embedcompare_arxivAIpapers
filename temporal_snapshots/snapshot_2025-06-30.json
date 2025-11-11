@@ -1,0 +1,407 @@
+{
+  "timestamp": "2025-06-30T00:00:00+00:00",
+  "models": {
+    "BGE-Large": [
+      {
+        "title": "How to Design and Train Your Implicit Neural Representation for Video Compression",
+        "date": "2025-06-30",
+        "abstract": "Implicit neural representation (INR) methods for video compression have recently achieved visual quality and compression ratios that are competitive with traditional pipelines. However, due to the need for per-sample network training, the encoding speeds of these methods are too slow for practical adoption. We develop a library to allow us to disentangle and review the components of methods from the NeRV family, reframing their performance in terms of not only size-quality trade-offs, but also impacts on training time. We uncover principles for effective video INR design and propose a state-of-the-art configuration of these components, Rabbit NeRV (RNeRV). When all methods are given equal training time (equivalent to 300 NeRV epochs) for 7 different UVG videos at 1080p, RNeRV achieves +1.27% PSNR on average compared to the best-performing alternative for each video in our NeRV library. We then tackle the encoding speed issue head-on by investigating the viability of hyper-networks, which predict INR weights from video inputs, to disentangle training from encoding to allow for real-time encoding. We propose masking the weights of the predicted INR during training to allow for variable, higher quality compression, resulting in 1.7% improvements to both PSNR and MS-SSIM at 0.037 bpp on the UCF-101 dataset, and we increase hyper-network parameters by 0.4% for 2.5%/2.7% improvements to PSNR/MS-SSIM with equal bpp and similar speeds. Our project website is available at https://mgwillia.github.io/vinrb/ and our code is available at https://github.com/mgwillia/vinrb.",
+        "id": "2506.24127v1",
+        "authors": "Matthew Gwilliam, Roy Zhang, Namitha Padmanabhan, Hongyang Du, Abhinav Shrivastava",
+        "x": -3.7361719608306885,
+        "y": 0.9686218500137329,
+        "z": 2.977987289428711,
+        "cluster_id": -1
+      },
+      {
+        "abstract": "Residual connection has been extensively studied and widely applied at the model architecture level. However, its potential in the more challenging data-centric approaches remains unexplored. In this work, we introduce the concept of Data Residual Matching for the first time, leveraging data-level skip connections to facilitate data generation and mitigate data information vanishing. This approach maintains a balance between newly acquired knowledge through pixel space optimization and existing core local information identification within raw data modalities, specifically for the dataset distillation task. Furthermore, by incorporating optimization-level refinements, our method significantly improves computational efficiency, achieving superior performance while reducing training time and peak GPU memory usage by 50%. Consequently, the proposed method Fast and Accurate Data Residual Matching for Dataset Distillation (FADRM) establishes a new state-of-the-art, demonstrating substantial improvements over existing methods across multiple dataset benchmarks in both efficiency and effectiveness. For instance, with ResNet-18 as the student model and a 0.8% compression ratio on ImageNet-1K, the method achieves 47.7% test accuracy in single-model dataset distillation and 50.0% in multi-model dataset distillation, surpassing RDED by +5.7% and outperforming state-of-the-art multi-model approaches, EDC and CV-DD, by +1.4% and +4.0%. Code is available at: https://github.com/Jiacheng8/FADRM.",
+        "date": "2025-06-30",
+        "title": "FADRM: Fast and Accurate Data Residual Matching for Dataset Distillation",
+        "authors": "Jiacheng Cui, Xinyue Bi, Yaxin Luo, Xiaohan Zhao, Jiacheng Liu, Zhiqiang Shen",
+        "id": "2506.24125v1",
+        "x": -3.337207794189453,
+        "y": 1.2458488941192627,
+        "z": 2.802851438522339,
+        "cluster_id": -1
+      },
+      {
+        "date": "2025-06-30",
+        "abstract": "Time series forecasting traditionally relies on unimodal numerical inputs, which often struggle to capture high-level semantic patterns due to their dense and unstructured nature. While recent approaches have explored representing time series as text using large language models (LLMs), these methods remain limited by the discrete nature of token sequences and lack the perceptual intuition humans typically apply, such as interpreting visual patterns. In this paper, we propose a multimodal contrastive learning framework that transforms raw time series into structured visual and textual perspectives. Rather than using natural language or real-world images, we construct both modalities directly from numerical sequences. We then align these views in a shared semantic space via contrastive learning, enabling the model to capture richer and more complementary representations. Furthermore, we introduce a variate selection module that leverages the aligned representations to identify the most informative variables for multivariate forecasting. Extensive experiments on fifteen short-term and six long-term forecasting benchmarks demonstrate that our approach consistently outperforms strong unimodal and cross-modal baselines, highlighting the effectiveness of multimodal alignment in enhancing time series forecasting. Code is available at: https://github.com/Ironieser/TimesCLIP.",
+        "id": "2506.24124v2",
+        "title": "Teaching Time Series to See and Speak: Forecasting with Aligned Visual and Textual Perspectives",
+        "authors": "Sixun Dong, Wei Fan, Teresa Wu, Yanjie Fu",
+        "x": -3.0208754539489746,
+        "y": 2.181411027908325,
+        "z": 3.933537006378174,
+        "cluster_id": 2
+      },
+      {
+        "date": "2025-06-30",
+        "abstract": "We introduce Calligrapher, a novel diffusion-based framework that innovatively integrates advanced text customization with artistic typography for digital calligraphy and design applications. Addressing the challenges of precise style control and data dependency in typographic customization, our framework incorporates three key technical contributions. First, we develop a self-distillation mechanism that leverages the pre-trained text-to-image generative model itself alongside the large language model to automatically construct a style-centric typography benchmark. Second, we introduce a localized style injection framework via a trainable style encoder, which comprises both Qformer and linear layers, to extract robust style features from reference images. An in-context generation mechanism is also employed to directly embed reference images into the denoising process, further enhancing the refined alignment of target styles. Extensive quantitative and qualitative evaluations across diverse fonts and design contexts confirm Calligrapher's accurate reproduction of intricate stylistic details and precise glyph positioning. By automating high-quality, visually consistent typography, Calligrapher surpasses traditional models, empowering creative practitioners in digital art, branding, and contextual typographic design.",
+        "title": "Calligrapher: Freestyle Text Image Customization",
+        "id": "2506.24123v1",
+        "authors": "Yue Ma, Qingyan Bai, Hao Ouyang, Ka Leong Cheng, Qiuyu Wang, Hongyu Liu, Zichen Liu, Haofan Wang, Jingye Chen, Yujun Shen, Qifeng Chen",
+        "x": -4.418950080871582,
+        "y": 1.3300689458847046,
+        "z": 2.5009405612945557,
+        "cluster_id": 6
+      },
+      {
+        "title": "TextMesh4D: High-Quality Text-to-4D Mesh Generation",
+        "abstract": "Recent advancements in diffusion generative models significantly advanced image, video, and 3D content creation from user-provided text prompts. However, the challenging problem of dynamic 3D content generation (text-to-4D) with diffusion guidance remains largely unexplored. In this paper, we introduce TextMesh4D, a novel framework for high-quality text-to-4D generation. Our approach leverages per-face Jacobians as a differentiable mesh representation and decomposes 4D generation into two stages: static object creation and dynamic motion synthesis. We further propose a flexibility-rigidity regularization term to stabilize Jacobian optimization under video diffusion priors, ensuring robust geometric performance. Experiments demonstrate that TextMesh4D achieves state-of-the-art results in terms of temporal consistency, structural fidelity, and visual realism. Moreover, TextMesh4D operates with a low GPU memory overhead-requiring only a single 24GB GPU-offering a cost-effective yet high-quality solution for text-driven 4D mesh generation. The code will be released to facilitate future research in text-to-4D generation.",
+        "authors": "Sisi Dai, Xinxin Su, Boyan Wan, Ruizhen Hu, Kai Xu",
+        "id": "2506.24121v1",
+        "date": "2025-06-30",
+        "x": -4.4680070877075195,
+        "y": 1.2669199705123901,
+        "z": 2.34027099609375,
+        "cluster_id": 6
+      },
+      {
+        "id": "2506.24120v1",
+        "title": "Data Uniformity Improves Training Efficiency and More, with a Convergence Framework Beyond the NTK Regime",
+        "authors": "Yuqing Wang, Shangding Gu",
+        "abstract": "Data selection plays a crucial role in data-driven decision-making, including in large language models (LLMs), and is typically task-dependent. Properties such as data quality and diversity have been extensively studied and are known to enhance model performance. However, it remains unclear whether there exist other quantitative and general principles of data selection that can consistently improve performance, especially for complex tasks with limited prior knowledge. In this paper, we demonstrate that selecting more uniformly distributed data can improve training efficiency while enhancing performance. Specifically, we establish that more uniform (less biased) distribution leads to a larger minimum pairwise distance between data points, denoted by $h_{\\min}$, and prove that a smaller $h_{\\min}$ can slow down the training dynamics of gradient descent (GD). Moreover, we theoretically show that the approximation error of neural networks decreases as $h_{\\min}$ increases. Our analysis introduces a convergence framework for GD beyond the Neural Tangent Kernel (NTK) regime, applicable to a broad class of architectures, including transformers, without requiring Lipschitz smoothness. This framework further provides theoretical justification for the use of residual connections and function compositions in deep neural architectures. In the end, we conduct comprehensive experiments for supervised fine-tuning across various settings, including different optimization strategies, model sizes, and training datasets. The results consistently demonstrate that selecting data by maximizing pairwise distance significantly accelerates training and achieves comparable or better performance in LLMs across diverse datasets. Code and Datasets are available at the link: https://github.com/SafeRL-Lab/data-uniformity.",
+        "date": "2025-06-30",
+        "x": -2.7256829738616943,
+        "y": 2.3541364669799805,
+        "z": 5.7610297203063965,
+        "cluster_id": -1
+      },
+      {
+        "authors": "Bo Liu, Leon Guertler, Simon Yu, Zichen Liu, Penghui Qi, Daniel Balcells, Mickel Liu, Cheston Tan, Weiyan Shi, Min Lin, Wee Sun Lee, Natasha Jaques",
+        "id": "2506.24119v2",
+        "abstract": "Recent advances in reinforcement learning have shown that language models can develop sophisticated reasoning through training on tasks with verifiable rewards, but these approaches depend on human-curated problem-answer pairs and domain-specific reward engineering. We introduce SPIRAL, a self-play framework where models learn by playing multi-turn, zero-sum games against continuously improving versions of themselves, eliminating the need for human supervision. Through self-play, SPIRAL generates an infinite curriculum of progressively challenging problems as models must constantly adapt to stronger opponents. To enable this self-play training at scale, We implement a fully online, multi-turn, multi-agent reinforcement learning system for LLMs and propose role-conditioned advantage estimation (RAE) to stabilize multi-agent training. Using SPIRAL, self-play on zero-sum games produces reasoning capabilities that transfer broadly. Training Qwen3-4B-Base on Kuhn Poker alone achieves 8.6% improvement on math and 8.4% on general reasoning, outperforming SFT on 25,000 expert game trajectories. Analysis reveals that this transfer occurs through three cognitive patterns: systematic decomposition, expected value calculation, and case-by-case analysis. Multi-game training (TicTacToe, Kuhn Poker, Simple Negotiation) further enhances performance as each game develops distinct reasoning strengths. Applying SPIRAL to a strong reasoning model (DeepSeek-R1-Distill-Qwen-7B) can still lead to 2.0% average improvement. These results demonstrate that zero-sum games naturally develop transferable reasoning capabilities, highlighting a promising direction for autonomous reasoning development.",
+        "date": "2025-06-30",
+        "title": "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning",
+        "x": -4.549900054931641,
+        "y": 1.8696413040161133,
+        "z": 5.875370979309082,
+        "cluster_id": 4
+      },
+      {
+        "abstract": "Identifying parallel passages in biblical Hebrew (BH) is central to biblical scholarship for understanding intertextual relationships. Traditional methods rely on manual comparison, a labor-intensive process prone to human error. This study evaluates the potential of pre-trained transformer-based language models, including E5, AlephBERT, MPNet, and LaBSE, for detecting textual parallels in the Hebrew Bible. Focusing on known parallels between Samuel/Kings and Chronicles, I assessed each model's capability to generate word embeddings distinguishing parallel from non-parallel passages. Using cosine similarity and Wasserstein Distance measures, I found that E5 and AlephBERT show promise; E5 excels in parallel detection, while AlephBERT demonstrates stronger non-parallel differentiation. These findings indicate that pre-trained models can enhance the efficiency and accuracy of detecting intertextual parallels in ancient texts, suggesting broader applications for ancient language studies.",
+        "date": "2025-06-30",
+        "authors": "David M. Smiley",
+        "id": "2506.24117v2",
+        "title": "Intertextual Parallel Detection in Biblical Hebrew: A Transformer-Based Benchmark",
+        "x": -3.4089601039886475,
+        "y": 2.960385799407959,
+        "z": 6.7467474937438965,
+        "cluster_id": 4
+      },
+      {
+        "date": "2025-06-30",
+        "title": "Epona: Autoregressive Diffusion World Model for Autonomous Driving",
+        "abstract": "Diffusion models have demonstrated exceptional visual quality in video generation, making them promising for autonomous driving world modeling. However, existing video diffusion-based world models struggle with flexible-length, long-horizon predictions and integrating trajectory planning. This is because conventional video diffusion models rely on global joint distribution modeling of fixed-length frame sequences rather than sequentially constructing localized distributions at each timestep. In this work, we propose Epona, an autoregressive diffusion world model that enables localized spatiotemporal distribution modeling through two key innovations: 1) Decoupled spatiotemporal factorization that separates temporal dynamics modeling from fine-grained future world generation, and 2) Modular trajectory and video prediction that seamlessly integrate motion planning with visual modeling in an end-to-end framework. Our architecture enables high-resolution, long-duration generation while introducing a novel chain-of-forward training strategy to address error accumulation in autoregressive loops. Experimental results demonstrate state-of-the-art performance with 7.4\\% FVD improvement and minutes longer prediction duration compared to prior works. The learned world model further serves as a real-time motion planner, outperforming strong end-to-end planners on NAVSIM benchmarks. Code will be publicly available at \\href{https://github.com/Kevin-thu/Epona/}{https://github.com/Kevin-thu/Epona/}.",
+        "id": "2506.24113v1",
+        "authors": "Kaiwen Zhang, Zhenyu Tang, Xiaotao Hu, Xingang Pan, Xiaoyang Guo, Yuan Liu, Jingwei Huang, Li Yuan, Qian Zhang, Xiao-Xiao Long, Xun Cao, Wei Yin",
+        "x": -5.174636363983154,
+        "y": 1.671791672706604,
+        "z": 4.280013561248779,
+        "cluster_id": 4
+      },
+      {
+        "abstract": "Denoising diffusion models excel at generating high-quality images conditioned on text prompts, yet their effectiveness heavily relies on careful guidance during the sampling process. Classifier-Free Guidance (CFG) provides a widely used mechanism for steering generation by setting the guidance scale, which balances image quality and prompt alignment. However, the choice of the guidance scale has a critical impact on the convergence toward a visually appealing and prompt-adherent image. In this work, we propose an annealing guidance scheduler which dynamically adjusts the guidance scale over time based on the conditional noisy signal. By learning a scheduling policy, our method addresses the temperamental behavior of CFG. Empirical results demonstrate that our guidance scheduler significantly enhances image quality and alignment with the text prompt, advancing the performance of text-to-image generation. Notably, our novel scheduler requires no additional activations or memory consumption, and can seamlessly replace the common classifier-free guidance, offering an improved trade-off between prompt alignment and quality.",
+        "authors": "Shai Yehezkel, Omer Dahary, Andrey Voynov, Daniel Cohen-Or",
+        "id": "2506.24108v1",
+        "date": "2025-06-30",
+        "title": "Navigating with Annealing Guidance Scale in Diffusion Space",
+        "x": -4.272542953491211,
+        "y": 1.1013822555541992,
+        "z": 2.383606195449829,
+        "cluster_id": 6
+      },
+      {
+        "abstract": "We show that a language model's ability to predict text is tightly linked to the breadth of its embedding space: models that spread their contextual representations more widely tend to achieve lower perplexity. Concretely, we find that representation dispersion - the average pairwise cosine distance among hidden vectors - strongly and negatively correlates with perplexity across diverse model families (LLaMA, Qwen, and others) and domains (Wikipedia, news, scientific abstracts). Beyond illustrating this link, we show how dispersion can be leveraged for a range of practical tasks without requiring labeled data. First, measuring dispersion on unlabeled text allows us to predict downstream accuracy in new domains, offering a data-efficient tool for model selection. Next, we find that identifying layers with higher dispersion pinpoints the best representations for retrieval-based methods such as kNN-LM, bypassing exhaustive layer-by-layer searches. Finally, we integrate a simple push-away objective into training, which increases dispersion in both single-domain and cross-domain scenarios and directly improves perplexity in each.",
+        "date": "2025-06-30",
+        "authors": "Yanhong Li, Ming Li, Karen Livescu, Jiawei Zhou",
+        "title": "On the Predictive Power of Representation Dispersion in Language Models",
+        "id": "2506.24106v1",
+        "x": -2.78953218460083,
+        "y": 2.7680013179779053,
+        "z": 6.053227424621582,
+        "cluster_id": 4
+      },
+      {
+        "id": "2506.24102v1",
+        "title": "DenseWorld-1M: Towards Detailed Dense Grounded Caption in the Real World",
+        "date": "2025-06-30",
+        "authors": "Xiangtai Li, Tao Zhang, Yanwei Li, Haobo Yuan, Shihao Chen, Yikang Zhou, Jiahao Meng, Yueyi Sun, Shilin Xu, Lu Qi, Tianheng Cheng, Yi Lin, Zilong Huang, Wenhao Huang, Jiashi Feng, Guang Shi",
+        "abstract": "Multimodal Large Language Models (MLLMs) demonstrate a complex understanding of scenes, benefiting from large-scale and high-quality datasets. Most existing caption datasets lack the ground locations and relations for visual entities. Several grounded caption datasets face the problems of missing detailed descriptions, relations, and massive object descriptions on high-resolution images. To fill this gap for the community, we present DenseWorld-1M, the first massive, detailed, dense grounded caption dataset in the real world. We design a three-stage labeling pipeline, containing open-world perception, detailed object caption generation, and dense caption merging. The first stage obtains entity-level masks and labels. The second stage generates the object-level, detailed captions with the guidance of masks and labels from the first stage. The final stage merges object captions and masks into spatial and relational dense captions. To accelerate the labeling process and improve caption quality, we present two VLM models: the Detailed Region Caption model and the Spatial Caption Merging model. Extensive experiments on various settings, including vision-language understanding, visual grounding, and region caption generation, demonstrate the effectiveness of our DenseWorld-1M dataset and labeling models.",
+        "x": -3.5028154850006104,
+        "y": 2.505825996398926,
+        "z": 2.8036961555480957,
+        "cluster_id": 6
+      }
+    ],
+    "GTE-Large": [
+      {
+        "title": "How to Design and Train Your Implicit Neural Representation for Video Compression",
+        "date": "2025-06-30",
+        "abstract": "Implicit neural representation (INR) methods for video compression have recently achieved visual quality and compression ratios that are competitive with traditional pipelines. However, due to the need for per-sample network training, the encoding speeds of these methods are too slow for practical adoption. We develop a library to allow us to disentangle and review the components of methods from the NeRV family, reframing their performance in terms of not only size-quality trade-offs, but also impacts on training time. We uncover principles for effective video INR design and propose a state-of-the-art configuration of these components, Rabbit NeRV (RNeRV). When all methods are given equal training time (equivalent to 300 NeRV epochs) for 7 different UVG videos at 1080p, RNeRV achieves +1.27% PSNR on average compared to the best-performing alternative for each video in our NeRV library. We then tackle the encoding speed issue head-on by investigating the viability of hyper-networks, which predict INR weights from video inputs, to disentangle training from encoding to allow for real-time encoding. We propose masking the weights of the predicted INR during training to allow for variable, higher quality compression, resulting in 1.7% improvements to both PSNR and MS-SSIM at 0.037 bpp on the UCF-101 dataset, and we increase hyper-network parameters by 0.4% for 2.5%/2.7% improvements to PSNR/MS-SSIM with equal bpp and similar speeds. Our project website is available at https://mgwillia.github.io/vinrb/ and our code is available at https://github.com/mgwillia/vinrb.",
+        "authors": "Matthew Gwilliam, Roy Zhang, Namitha Padmanabhan, Hongyang Du, Abhinav Shrivastava",
+        "id": "2506.24127v1",
+        "x": -2.902562141418457,
+        "y": -2.5464327335357666,
+        "z": 5.358081340789795,
+        "cluster_id": -1
+      },
+      {
+        "abstract": "Residual connection has been extensively studied and widely applied at the model architecture level. However, its potential in the more challenging data-centric approaches remains unexplored. In this work, we introduce the concept of Data Residual Matching for the first time, leveraging data-level skip connections to facilitate data generation and mitigate data information vanishing. This approach maintains a balance between newly acquired knowledge through pixel space optimization and existing core local information identification within raw data modalities, specifically for the dataset distillation task. Furthermore, by incorporating optimization-level refinements, our method significantly improves computational efficiency, achieving superior performance while reducing training time and peak GPU memory usage by 50%. Consequently, the proposed method Fast and Accurate Data Residual Matching for Dataset Distillation (FADRM) establishes a new state-of-the-art, demonstrating substantial improvements over existing methods across multiple dataset benchmarks in both efficiency and effectiveness. For instance, with ResNet-18 as the student model and a 0.8% compression ratio on ImageNet-1K, the method achieves 47.7% test accuracy in single-model dataset distillation and 50.0% in multi-model dataset distillation, surpassing RDED by +5.7% and outperforming state-of-the-art multi-model approaches, EDC and CV-DD, by +1.4% and +4.0%. Code is available at: https://github.com/Jiacheng8/FADRM.",
+        "date": "2025-06-30",
+        "id": "2506.24125v1",
+        "title": "FADRM: Fast and Accurate Data Residual Matching for Dataset Distillation",
+        "authors": "Jiacheng Cui, Xinyue Bi, Yaxin Luo, Xiaohan Zhao, Jiacheng Liu, Zhiqiang Shen",
+        "x": -2.7311367988586426,
+        "y": -1.9102962017059326,
+        "z": 5.287621021270752,
+        "cluster_id": -1
+      },
+      {
+        "title": "Teaching Time Series to See and Speak: Forecasting with Aligned Visual and Textual Perspectives",
+        "date": "2025-06-30",
+        "id": "2506.24124v2",
+        "abstract": "Time series forecasting traditionally relies on unimodal numerical inputs, which often struggle to capture high-level semantic patterns due to their dense and unstructured nature. While recent approaches have explored representing time series as text using large language models (LLMs), these methods remain limited by the discrete nature of token sequences and lack the perceptual intuition humans typically apply, such as interpreting visual patterns. In this paper, we propose a multimodal contrastive learning framework that transforms raw time series into structured visual and textual perspectives. Rather than using natural language or real-world images, we construct both modalities directly from numerical sequences. We then align these views in a shared semantic space via contrastive learning, enabling the model to capture richer and more complementary representations. Furthermore, we introduce a variate selection module that leverages the aligned representations to identify the most informative variables for multivariate forecasting. Extensive experiments on fifteen short-term and six long-term forecasting benchmarks demonstrate that our approach consistently outperforms strong unimodal and cross-modal baselines, highlighting the effectiveness of multimodal alignment in enhancing time series forecasting. Code is available at: https://github.com/Ironieser/TimesCLIP.",
+        "authors": "Sixun Dong, Wei Fan, Teresa Wu, Yanjie Fu",
+        "x": -3.694042205810547,
+        "y": -1.2518543004989624,
+        "z": 5.925760269165039,
+        "cluster_id": -1
+      },
+      {
+        "id": "2506.24123v1",
+        "title": "Calligrapher: Freestyle Text Image Customization",
+        "authors": "Yue Ma, Qingyan Bai, Hao Ouyang, Ka Leong Cheng, Qiuyu Wang, Hongyu Liu, Zichen Liu, Haofan Wang, Jingye Chen, Yujun Shen, Qifeng Chen",
+        "date": "2025-06-30",
+        "abstract": "We introduce Calligrapher, a novel diffusion-based framework that innovatively integrates advanced text customization with artistic typography for digital calligraphy and design applications. Addressing the challenges of precise style control and data dependency in typographic customization, our framework incorporates three key technical contributions. First, we develop a self-distillation mechanism that leverages the pre-trained text-to-image generative model itself alongside the large language model to automatically construct a style-centric typography benchmark. Second, we introduce a localized style injection framework via a trainable style encoder, which comprises both Qformer and linear layers, to extract robust style features from reference images. An in-context generation mechanism is also employed to directly embed reference images into the denoising process, further enhancing the refined alignment of target styles. Extensive quantitative and qualitative evaluations across diverse fonts and design contexts confirm Calligrapher's accurate reproduction of intricate stylistic details and precise glyph positioning. By automating high-quality, visually consistent typography, Calligrapher surpasses traditional models, empowering creative practitioners in digital art, branding, and contextual typographic design.",
+        "x": -3.7129762172698975,
+        "y": -1.770625352859497,
+        "z": 3.8785479068756104,
+        "cluster_id": 2
+      },
+      {
+        "date": "2025-06-30",
+        "id": "2506.24121v1",
+        "abstract": "Recent advancements in diffusion generative models significantly advanced image, video, and 3D content creation from user-provided text prompts. However, the challenging problem of dynamic 3D content generation (text-to-4D) with diffusion guidance remains largely unexplored. In this paper, we introduce TextMesh4D, a novel framework for high-quality text-to-4D generation. Our approach leverages per-face Jacobians as a differentiable mesh representation and decomposes 4D generation into two stages: static object creation and dynamic motion synthesis. We further propose a flexibility-rigidity regularization term to stabilize Jacobian optimization under video diffusion priors, ensuring robust geometric performance. Experiments demonstrate that TextMesh4D achieves state-of-the-art results in terms of temporal consistency, structural fidelity, and visual realism. Moreover, TextMesh4D operates with a low GPU memory overhead-requiring only a single 24GB GPU-offering a cost-effective yet high-quality solution for text-driven 4D mesh generation. The code will be released to facilitate future research in text-to-4D generation.",
+        "authors": "Sisi Dai, Xinxin Su, Boyan Wan, Ruizhen Hu, Kai Xu",
+        "title": "TextMesh4D: High-Quality Text-to-4D Mesh Generation",
+        "x": -3.80515193939209,
+        "y": -1.980102300643921,
+        "z": 3.8983988761901855,
+        "cluster_id": 2
+      },
+      {
+        "authors": "Yuqing Wang, Shangding Gu",
+        "title": "Data Uniformity Improves Training Efficiency and More, with a Convergence Framework Beyond the NTK Regime",
+        "id": "2506.24120v1",
+        "date": "2025-06-30",
+        "abstract": "Data selection plays a crucial role in data-driven decision-making, including in large language models (LLMs), and is typically task-dependent. Properties such as data quality and diversity have been extensively studied and are known to enhance model performance. However, it remains unclear whether there exist other quantitative and general principles of data selection that can consistently improve performance, especially for complex tasks with limited prior knowledge. In this paper, we demonstrate that selecting more uniformly distributed data can improve training efficiency while enhancing performance. Specifically, we establish that more uniform (less biased) distribution leads to a larger minimum pairwise distance between data points, denoted by $h_{\\min}$, and prove that a smaller $h_{\\min}$ can slow down the training dynamics of gradient descent (GD). Moreover, we theoretically show that the approximation error of neural networks decreases as $h_{\\min}$ increases. Our analysis introduces a convergence framework for GD beyond the Neural Tangent Kernel (NTK) regime, applicable to a broad class of architectures, including transformers, without requiring Lipschitz smoothness. This framework further provides theoretical justification for the use of residual connections and function compositions in deep neural architectures. In the end, we conduct comprehensive experiments for supervised fine-tuning across various settings, including different optimization strategies, model sizes, and training datasets. The results consistently demonstrate that selecting data by maximizing pairwise distance significantly accelerates training and achieves comparable or better performance in LLMs across diverse datasets. Code and Datasets are available at the link: https://github.com/SafeRL-Lab/data-uniformity.",
+        "x": -3.2940762042999268,
+        "y": -1.8865845203399658,
+        "z": 6.572396278381348,
+        "cluster_id": -1
+      },
+      {
+        "abstract": "Recent advances in reinforcement learning have shown that language models can develop sophisticated reasoning through training on tasks with verifiable rewards, but these approaches depend on human-curated problem-answer pairs and domain-specific reward engineering. We introduce SPIRAL, a self-play framework where models learn by playing multi-turn, zero-sum games against continuously improving versions of themselves, eliminating the need for human supervision. Through self-play, SPIRAL generates an infinite curriculum of progressively challenging problems as models must constantly adapt to stronger opponents. To enable this self-play training at scale, We implement a fully online, multi-turn, multi-agent reinforcement learning system for LLMs and propose role-conditioned advantage estimation (RAE) to stabilize multi-agent training. Using SPIRAL, self-play on zero-sum games produces reasoning capabilities that transfer broadly. Training Qwen3-4B-Base on Kuhn Poker alone achieves 8.6% improvement on math and 8.4% on general reasoning, outperforming SFT on 25,000 expert game trajectories. Analysis reveals that this transfer occurs through three cognitive patterns: systematic decomposition, expected value calculation, and case-by-case analysis. Multi-game training (TicTacToe, Kuhn Poker, Simple Negotiation) further enhances performance as each game develops distinct reasoning strengths. Applying SPIRAL to a strong reasoning model (DeepSeek-R1-Distill-Qwen-7B) can still lead to 2.0% average improvement. These results demonstrate that zero-sum games naturally develop transferable reasoning capabilities, highlighting a promising direction for autonomous reasoning development.",
+        "authors": "Bo Liu, Leon Guertler, Simon Yu, Zichen Liu, Penghui Qi, Daniel Balcells, Mickel Liu, Cheston Tan, Weiyan Shi, Min Lin, Wee Sun Lee, Natasha Jaques",
+        "date": "2025-06-30",
+        "title": "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning",
+        "id": "2506.24119v2",
+        "x": -4.906366348266602,
+        "y": -3.304835557937622,
+        "z": 6.915719509124756,
+        "cluster_id": 0
+      },
+      {
+        "id": "2506.24117v2",
+        "abstract": "Identifying parallel passages in biblical Hebrew (BH) is central to biblical scholarship for understanding intertextual relationships. Traditional methods rely on manual comparison, a labor-intensive process prone to human error. This study evaluates the potential of pre-trained transformer-based language models, including E5, AlephBERT, MPNet, and LaBSE, for detecting textual parallels in the Hebrew Bible. Focusing on known parallels between Samuel/Kings and Chronicles, I assessed each model's capability to generate word embeddings distinguishing parallel from non-parallel passages. Using cosine similarity and Wasserstein Distance measures, I found that E5 and AlephBERT show promise; E5 excels in parallel detection, while AlephBERT demonstrates stronger non-parallel differentiation. These findings indicate that pre-trained models can enhance the efficiency and accuracy of detecting intertextual parallels in ancient texts, suggesting broader applications for ancient language studies.",
+        "date": "2025-06-30",
+        "title": "Intertextual Parallel Detection in Biblical Hebrew: A Transformer-Based Benchmark",
+        "authors": "David M. Smiley",
+        "x": -4.960668563842773,
+        "y": -1.7864396572113037,
+        "z": 7.382084369659424,
+        "cluster_id": 0
+      },
+      {
+        "title": "Epona: Autoregressive Diffusion World Model for Autonomous Driving",
+        "id": "2506.24113v1",
+        "authors": "Kaiwen Zhang, Zhenyu Tang, Xiaotao Hu, Xingang Pan, Xiaoyang Guo, Yuan Liu, Jingwei Huang, Li Yuan, Qian Zhang, Xiao-Xiao Long, Xun Cao, Wei Yin",
+        "abstract": "Diffusion models have demonstrated exceptional visual quality in video generation, making them promising for autonomous driving world modeling. However, existing video diffusion-based world models struggle with flexible-length, long-horizon predictions and integrating trajectory planning. This is because conventional video diffusion models rely on global joint distribution modeling of fixed-length frame sequences rather than sequentially constructing localized distributions at each timestep. In this work, we propose Epona, an autoregressive diffusion world model that enables localized spatiotemporal distribution modeling through two key innovations: 1) Decoupled spatiotemporal factorization that separates temporal dynamics modeling from fine-grained future world generation, and 2) Modular trajectory and video prediction that seamlessly integrate motion planning with visual modeling in an end-to-end framework. Our architecture enables high-resolution, long-duration generation while introducing a novel chain-of-forward training strategy to address error accumulation in autoregressive loops. Experimental results demonstrate state-of-the-art performance with 7.4\\% FVD improvement and minutes longer prediction duration compared to prior works. The learned world model further serves as a real-time motion planner, outperforming strong end-to-end planners on NAVSIM benchmarks. Code will be publicly available at \\href{https://github.com/Kevin-thu/Epona/}{https://github.com/Kevin-thu/Epona/}.",
+        "date": "2025-06-30",
+        "x": -3.957460641860962,
+        "y": -2.7551474571228027,
+        "z": 4.729753494262695,
+        "cluster_id": -1
+      },
+      {
+        "authors": "Shai Yehezkel, Omer Dahary, Andrey Voynov, Daniel Cohen-Or",
+        "date": "2025-06-30",
+        "id": "2506.24108v1",
+        "abstract": "Denoising diffusion models excel at generating high-quality images conditioned on text prompts, yet their effectiveness heavily relies on careful guidance during the sampling process. Classifier-Free Guidance (CFG) provides a widely used mechanism for steering generation by setting the guidance scale, which balances image quality and prompt alignment. However, the choice of the guidance scale has a critical impact on the convergence toward a visually appealing and prompt-adherent image. In this work, we propose an annealing guidance scheduler which dynamically adjusts the guidance scale over time based on the conditional noisy signal. By learning a scheduling policy, our method addresses the temperamental behavior of CFG. Empirical results demonstrate that our guidance scheduler significantly enhances image quality and alignment with the text prompt, advancing the performance of text-to-image generation. Notably, our novel scheduler requires no additional activations or memory consumption, and can seamlessly replace the common classifier-free guidance, offering an improved trade-off between prompt alignment and quality.",
+        "title": "Navigating with Annealing Guidance Scale in Diffusion Space",
+        "x": -3.4731333255767822,
+        "y": -1.8752979040145874,
+        "z": 4.034226894378662,
+        "cluster_id": 2
+      },
+      {
+        "date": "2025-06-30",
+        "authors": "Yanhong Li, Ming Li, Karen Livescu, Jiawei Zhou",
+        "id": "2506.24106v1",
+        "abstract": "We show that a language model's ability to predict text is tightly linked to the breadth of its embedding space: models that spread their contextual representations more widely tend to achieve lower perplexity. Concretely, we find that representation dispersion - the average pairwise cosine distance among hidden vectors - strongly and negatively correlates with perplexity across diverse model families (LLaMA, Qwen, and others) and domains (Wikipedia, news, scientific abstracts). Beyond illustrating this link, we show how dispersion can be leveraged for a range of practical tasks without requiring labeled data. First, measuring dispersion on unlabeled text allows us to predict downstream accuracy in new domains, offering a data-efficient tool for model selection. Next, we find that identifying layers with higher dispersion pinpoints the best representations for retrieval-based methods such as kNN-LM, bypassing exhaustive layer-by-layer searches. Finally, we integrate a simple push-away objective into training, which increases dispersion in both single-domain and cross-domain scenarios and directly improves perplexity in each.",
+        "title": "On the Predictive Power of Representation Dispersion in Language Models",
+        "x": -4.493597507476807,
+        "y": -1.7124525308609009,
+        "z": 7.113419532775879,
+        "cluster_id": -1
+      },
+      {
+        "date": "2025-06-30",
+        "title": "DenseWorld-1M: Towards Detailed Dense Grounded Caption in the Real World",
+        "abstract": "Multimodal Large Language Models (MLLMs) demonstrate a complex understanding of scenes, benefiting from large-scale and high-quality datasets. Most existing caption datasets lack the ground locations and relations for visual entities. Several grounded caption datasets face the problems of missing detailed descriptions, relations, and massive object descriptions on high-resolution images. To fill this gap for the community, we present DenseWorld-1M, the first massive, detailed, dense grounded caption dataset in the real world. We design a three-stage labeling pipeline, containing open-world perception, detailed object caption generation, and dense caption merging. The first stage obtains entity-level masks and labels. The second stage generates the object-level, detailed captions with the guidance of masks and labels from the first stage. The final stage merges object captions and masks into spatial and relational dense captions. To accelerate the labeling process and improve caption quality, we present two VLM models: the Detailed Region Caption model and the Spatial Caption Merging model. Extensive experiments on various settings, including vision-language understanding, visual grounding, and region caption generation, demonstrate the effectiveness of our DenseWorld-1M dataset and labeling models.",
+        "id": "2506.24102v1",
+        "authors": "Xiangtai Li, Tao Zhang, Yanwei Li, Haobo Yuan, Shihao Chen, Yikang Zhou, Jiahao Meng, Yueyi Sun, Shilin Xu, Lu Qi, Tianheng Cheng, Yi Lin, Zilong Huang, Wenhao Huang, Jiashi Feng, Guang Shi",
+        "x": -4.326333045959473,
+        "y": -1.129026174545288,
+        "z": 4.929413795471191,
+        "cluster_id": 3
+      }
+    ],
+    "MiniLM": [
+      {
+        "authors": "Matthew Gwilliam, Roy Zhang, Namitha Padmanabhan, Hongyang Du, Abhinav Shrivastava",
+        "id": "2506.24127v1",
+        "abstract": "Implicit neural representation (INR) methods for video compression have recently achieved visual quality and compression ratios that are competitive with traditional pipelines. However, due to the need for per-sample network training, the encoding speeds of these methods are too slow for practical adoption. We develop a library to allow us to disentangle and review the components of methods from the NeRV family, reframing their performance in terms of not only size-quality trade-offs, but also impacts on training time. We uncover principles for effective video INR design and propose a state-of-the-art configuration of these components, Rabbit NeRV (RNeRV). When all methods are given equal training time (equivalent to 300 NeRV epochs) for 7 different UVG videos at 1080p, RNeRV achieves +1.27% PSNR on average compared to the best-performing alternative for each video in our NeRV library. We then tackle the encoding speed issue head-on by investigating the viability of hyper-networks, which predict INR weights from video inputs, to disentangle training from encoding to allow for real-time encoding. We propose masking the weights of the predicted INR during training to allow for variable, higher quality compression, resulting in 1.7% improvements to both PSNR and MS-SSIM at 0.037 bpp on the UCF-101 dataset, and we increase hyper-network parameters by 0.4% for 2.5%/2.7% improvements to PSNR/MS-SSIM with equal bpp and similar speeds. Our project website is available at https://mgwillia.github.io/vinrb/ and our code is available at https://github.com/mgwillia/vinrb.",
+        "date": "2025-06-30",
+        "title": "How to Design and Train Your Implicit Neural Representation for Video Compression",
+        "x": 6.034681797027588,
+        "y": -7.5711236000061035,
+        "z": 2.720578193664551,
+        "cluster_id": 2
+      },
+      {
+        "id": "2506.24125v1",
+        "date": "2025-06-30",
+        "title": "FADRM: Fast and Accurate Data Residual Matching for Dataset Distillation",
+        "abstract": "Residual connection has been extensively studied and widely applied at the model architecture level. However, its potential in the more challenging data-centric approaches remains unexplored. In this work, we introduce the concept of Data Residual Matching for the first time, leveraging data-level skip connections to facilitate data generation and mitigate data information vanishing. This approach maintains a balance between newly acquired knowledge through pixel space optimization and existing core local information identification within raw data modalities, specifically for the dataset distillation task. Furthermore, by incorporating optimization-level refinements, our method significantly improves computational efficiency, achieving superior performance while reducing training time and peak GPU memory usage by 50%. Consequently, the proposed method Fast and Accurate Data Residual Matching for Dataset Distillation (FADRM) establishes a new state-of-the-art, demonstrating substantial improvements over existing methods across multiple dataset benchmarks in both efficiency and effectiveness. For instance, with ResNet-18 as the student model and a 0.8% compression ratio on ImageNet-1K, the method achieves 47.7% test accuracy in single-model dataset distillation and 50.0% in multi-model dataset distillation, surpassing RDED by +5.7% and outperforming state-of-the-art multi-model approaches, EDC and CV-DD, by +1.4% and +4.0%. Code is available at: https://github.com/Jiacheng8/FADRM.",
+        "authors": "Jiacheng Cui, Xinyue Bi, Yaxin Luo, Xiaohan Zhao, Jiacheng Liu, Zhiqiang Shen",
+        "x": 6.714999675750732,
+        "y": -6.785102367401123,
+        "z": 3.568054676055908,
+        "cluster_id": -1
+      },
+      {
+        "abstract": "Time series forecasting traditionally relies on unimodal numerical inputs, which often struggle to capture high-level semantic patterns due to their dense and unstructured nature. While recent approaches have explored representing time series as text using large language models (LLMs), these methods remain limited by the discrete nature of token sequences and lack the perceptual intuition humans typically apply, such as interpreting visual patterns. In this paper, we propose a multimodal contrastive learning framework that transforms raw time series into structured visual and textual perspectives. Rather than using natural language or real-world images, we construct both modalities directly from numerical sequences. We then align these views in a shared semantic space via contrastive learning, enabling the model to capture richer and more complementary representations. Furthermore, we introduce a variate selection module that leverages the aligned representations to identify the most informative variables for multivariate forecasting. Extensive experiments on fifteen short-term and six long-term forecasting benchmarks demonstrate that our approach consistently outperforms strong unimodal and cross-modal baselines, highlighting the effectiveness of multimodal alignment in enhancing time series forecasting. Code is available at: https://github.com/Ironieser/TimesCLIP.",
+        "id": "2506.24124v2",
+        "authors": "Sixun Dong, Wei Fan, Teresa Wu, Yanjie Fu",
+        "date": "2025-06-30",
+        "title": "Teaching Time Series to See and Speak: Forecasting with Aligned Visual and Textual Perspectives",
+        "x": 7.125927448272705,
+        "y": -7.281100749969482,
+        "z": 4.144628524780273,
+        "cluster_id": -1
+      },
+      {
+        "id": "2506.24123v1",
+        "abstract": "We introduce Calligrapher, a novel diffusion-based framework that innovatively integrates advanced text customization with artistic typography for digital calligraphy and design applications. Addressing the challenges of precise style control and data dependency in typographic customization, our framework incorporates three key technical contributions. First, we develop a self-distillation mechanism that leverages the pre-trained text-to-image generative model itself alongside the large language model to automatically construct a style-centric typography benchmark. Second, we introduce a localized style injection framework via a trainable style encoder, which comprises both Qformer and linear layers, to extract robust style features from reference images. An in-context generation mechanism is also employed to directly embed reference images into the denoising process, further enhancing the refined alignment of target styles. Extensive quantitative and qualitative evaluations across diverse fonts and design contexts confirm Calligrapher's accurate reproduction of intricate stylistic details and precise glyph positioning. By automating high-quality, visually consistent typography, Calligrapher surpasses traditional models, empowering creative practitioners in digital art, branding, and contextual typographic design.",
+        "title": "Calligrapher: Freestyle Text Image Customization",
+        "date": "2025-06-30",
+        "authors": "Yue Ma, Qingyan Bai, Hao Ouyang, Ka Leong Cheng, Qiuyu Wang, Hongyu Liu, Zichen Liu, Haofan Wang, Jingye Chen, Yujun Shen, Qifeng Chen",
+        "x": 7.321277618408203,
+        "y": -7.86830472946167,
+        "z": 3.2446861267089844,
+        "cluster_id": 13
+      },
+      {
+        "abstract": "Recent advancements in diffusion generative models significantly advanced image, video, and 3D content creation from user-provided text prompts. However, the challenging problem of dynamic 3D content generation (text-to-4D) with diffusion guidance remains largely unexplored. In this paper, we introduce TextMesh4D, a novel framework for high-quality text-to-4D generation. Our approach leverages per-face Jacobians as a differentiable mesh representation and decomposes 4D generation into two stages: static object creation and dynamic motion synthesis. We further propose a flexibility-rigidity regularization term to stabilize Jacobian optimization under video diffusion priors, ensuring robust geometric performance. Experiments demonstrate that TextMesh4D achieves state-of-the-art results in terms of temporal consistency, structural fidelity, and visual realism. Moreover, TextMesh4D operates with a low GPU memory overhead-requiring only a single 24GB GPU-offering a cost-effective yet high-quality solution for text-driven 4D mesh generation. The code will be released to facilitate future research in text-to-4D generation.",
+        "date": "2025-06-30",
+        "id": "2506.24121v1",
+        "title": "TextMesh4D: High-Quality Text-to-4D Mesh Generation",
+        "authors": "Sisi Dai, Xinxin Su, Boyan Wan, Ruizhen Hu, Kai Xu",
+        "x": 7.033217430114746,
+        "y": -8.214569091796875,
+        "z": 2.648313045501709,
+        "cluster_id": -1
+      },
+      {
+        "date": "2025-06-30",
+        "abstract": "Data selection plays a crucial role in data-driven decision-making, including in large language models (LLMs), and is typically task-dependent. Properties such as data quality and diversity have been extensively studied and are known to enhance model performance. However, it remains unclear whether there exist other quantitative and general principles of data selection that can consistently improve performance, especially for complex tasks with limited prior knowledge. In this paper, we demonstrate that selecting more uniformly distributed data can improve training efficiency while enhancing performance. Specifically, we establish that more uniform (less biased) distribution leads to a larger minimum pairwise distance between data points, denoted by $h_{\\min}$, and prove that a smaller $h_{\\min}$ can slow down the training dynamics of gradient descent (GD). Moreover, we theoretically show that the approximation error of neural networks decreases as $h_{\\min}$ increases. Our analysis introduces a convergence framework for GD beyond the Neural Tangent Kernel (NTK) regime, applicable to a broad class of architectures, including transformers, without requiring Lipschitz smoothness. This framework further provides theoretical justification for the use of residual connections and function compositions in deep neural architectures. In the end, we conduct comprehensive experiments for supervised fine-tuning across various settings, including different optimization strategies, model sizes, and training datasets. The results consistently demonstrate that selecting data by maximizing pairwise distance significantly accelerates training and achieves comparable or better performance in LLMs across diverse datasets. Code and Datasets are available at the link: https://github.com/SafeRL-Lab/data-uniformity.",
+        "authors": "Yuqing Wang, Shangding Gu",
+        "id": "2506.24120v1",
+        "title": "Data Uniformity Improves Training Efficiency and More, with a Convergence Framework Beyond the NTK Regime",
+        "x": 5.995631694793701,
+        "y": -5.522038459777832,
+        "z": 3.770106792449951,
+        "cluster_id": 10
+      },
+      {
+        "abstract": "Recent advances in reinforcement learning have shown that language models can develop sophisticated reasoning through training on tasks with verifiable rewards, but these approaches depend on human-curated problem-answer pairs and domain-specific reward engineering. We introduce SPIRAL, a self-play framework where models learn by playing multi-turn, zero-sum games against continuously improving versions of themselves, eliminating the need for human supervision. Through self-play, SPIRAL generates an infinite curriculum of progressively challenging problems as models must constantly adapt to stronger opponents. To enable this self-play training at scale, We implement a fully online, multi-turn, multi-agent reinforcement learning system for LLMs and propose role-conditioned advantage estimation (RAE) to stabilize multi-agent training. Using SPIRAL, self-play on zero-sum games produces reasoning capabilities that transfer broadly. Training Qwen3-4B-Base on Kuhn Poker alone achieves 8.6% improvement on math and 8.4% on general reasoning, outperforming SFT on 25,000 expert game trajectories. Analysis reveals that this transfer occurs through three cognitive patterns: systematic decomposition, expected value calculation, and case-by-case analysis. Multi-game training (TicTacToe, Kuhn Poker, Simple Negotiation) further enhances performance as each game develops distinct reasoning strengths. Applying SPIRAL to a strong reasoning model (DeepSeek-R1-Distill-Qwen-7B) can still lead to 2.0% average improvement. These results demonstrate that zero-sum games naturally develop transferable reasoning capabilities, highlighting a promising direction for autonomous reasoning development.",
+        "id": "2506.24119v2",
+        "title": "SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning",
+        "authors": "Bo Liu, Leon Guertler, Simon Yu, Zichen Liu, Penghui Qi, Daniel Balcells, Mickel Liu, Cheston Tan, Weiyan Shi, Min Lin, Wee Sun Lee, Natasha Jaques",
+        "date": "2025-06-30",
+        "x": 5.738438606262207,
+        "y": -7.561725616455078,
+        "z": 5.7744927406311035,
+        "cluster_id": 8
+      },
+      {
+        "title": "Intertextual Parallel Detection in Biblical Hebrew: A Transformer-Based Benchmark",
+        "authors": "David M. Smiley",
+        "date": "2025-06-30",
+        "abstract": "Identifying parallel passages in biblical Hebrew (BH) is central to biblical scholarship for understanding intertextual relationships. Traditional methods rely on manual comparison, a labor-intensive process prone to human error. This study evaluates the potential of pre-trained transformer-based language models, including E5, AlephBERT, MPNet, and LaBSE, for detecting textual parallels in the Hebrew Bible. Focusing on known parallels between Samuel/Kings and Chronicles, I assessed each model's capability to generate word embeddings distinguishing parallel from non-parallel passages. Using cosine similarity and Wasserstein Distance measures, I found that E5 and AlephBERT show promise; E5 excels in parallel detection, while AlephBERT demonstrates stronger non-parallel differentiation. These findings indicate that pre-trained models can enhance the efficiency and accuracy of detecting intertextual parallels in ancient texts, suggesting broader applications for ancient language studies.",
+        "id": "2506.24117v2",
+        "x": 7.382392883300781,
+        "y": -6.607250690460205,
+        "z": 6.532660484313965,
+        "cluster_id": 8
+      },
+      {
+        "abstract": "Diffusion models have demonstrated exceptional visual quality in video generation, making them promising for autonomous driving world modeling. However, existing video diffusion-based world models struggle with flexible-length, long-horizon predictions and integrating trajectory planning. This is because conventional video diffusion models rely on global joint distribution modeling of fixed-length frame sequences rather than sequentially constructing localized distributions at each timestep. In this work, we propose Epona, an autoregressive diffusion world model that enables localized spatiotemporal distribution modeling through two key innovations: 1) Decoupled spatiotemporal factorization that separates temporal dynamics modeling from fine-grained future world generation, and 2) Modular trajectory and video prediction that seamlessly integrate motion planning with visual modeling in an end-to-end framework. Our architecture enables high-resolution, long-duration generation while introducing a novel chain-of-forward training strategy to address error accumulation in autoregressive loops. Experimental results demonstrate state-of-the-art performance with 7.4\\% FVD improvement and minutes longer prediction duration compared to prior works. The learned world model further serves as a real-time motion planner, outperforming strong end-to-end planners on NAVSIM benchmarks. Code will be publicly available at \\href{https://github.com/Kevin-thu/Epona/}{https://github.com/Kevin-thu/Epona/}.",
+        "id": "2506.24113v1",
+        "title": "Epona: Autoregressive Diffusion World Model for Autonomous Driving",
+        "authors": "Kaiwen Zhang, Zhenyu Tang, Xiaotao Hu, Xingang Pan, Xiaoyang Guo, Yuan Liu, Jingwei Huang, Li Yuan, Qian Zhang, Xiao-Xiao Long, Xun Cao, Wei Yin",
+        "date": "2025-06-30",
+        "x": 6.162049293518066,
+        "y": -8.386301040649414,
+        "z": 3.3222007751464844,
+        "cluster_id": 7
+      },
+      {
+        "date": "2025-06-30",
+        "authors": "Shai Yehezkel, Omer Dahary, Andrey Voynov, Daniel Cohen-Or",
+        "id": "2506.24108v1",
+        "title": "Navigating with Annealing Guidance Scale in Diffusion Space",
+        "abstract": "Denoising diffusion models excel at generating high-quality images conditioned on text prompts, yet their effectiveness heavily relies on careful guidance during the sampling process. Classifier-Free Guidance (CFG) provides a widely used mechanism for steering generation by setting the guidance scale, which balances image quality and prompt alignment. However, the choice of the guidance scale has a critical impact on the convergence toward a visually appealing and prompt-adherent image. In this work, we propose an annealing guidance scheduler which dynamically adjusts the guidance scale over time based on the conditional noisy signal. By learning a scheduling policy, our method addresses the temperamental behavior of CFG. Empirical results demonstrate that our guidance scheduler significantly enhances image quality and alignment with the text prompt, advancing the performance of text-to-image generation. Notably, our novel scheduler requires no additional activations or memory consumption, and can seamlessly replace the common classifier-free guidance, offering an improved trade-off between prompt alignment and quality.",
+        "x": 7.35501766204834,
+        "y": -7.601809978485107,
+        "z": 3.1376402378082275,
+        "cluster_id": 13
+      },
+      {
+        "id": "2506.24106v1",
+        "abstract": "We show that a language model's ability to predict text is tightly linked to the breadth of its embedding space: models that spread their contextual representations more widely tend to achieve lower perplexity. Concretely, we find that representation dispersion - the average pairwise cosine distance among hidden vectors - strongly and negatively correlates with perplexity across diverse model families (LLaMA, Qwen, and others) and domains (Wikipedia, news, scientific abstracts). Beyond illustrating this link, we show how dispersion can be leveraged for a range of practical tasks without requiring labeled data. First, measuring dispersion on unlabeled text allows us to predict downstream accuracy in new domains, offering a data-efficient tool for model selection. Next, we find that identifying layers with higher dispersion pinpoints the best representations for retrieval-based methods such as kNN-LM, bypassing exhaustive layer-by-layer searches. Finally, we integrate a simple push-away objective into training, which increases dispersion in both single-domain and cross-domain scenarios and directly improves perplexity in each.",
+        "title": "On the Predictive Power of Representation Dispersion in Language Models",
+        "date": "2025-06-30",
+        "authors": "Yanhong Li, Ming Li, Karen Livescu, Jiawei Zhou",
+        "x": 7.366977691650391,
+        "y": -6.8287672996521,
+        "z": 5.823881149291992,
+        "cluster_id": 8
+      },
+      {
+        "abstract": "Multimodal Large Language Models (MLLMs) demonstrate a complex understanding of scenes, benefiting from large-scale and high-quality datasets. Most existing caption datasets lack the ground locations and relations for visual entities. Several grounded caption datasets face the problems of missing detailed descriptions, relations, and massive object descriptions on high-resolution images. To fill this gap for the community, we present DenseWorld-1M, the first massive, detailed, dense grounded caption dataset in the real world. We design a three-stage labeling pipeline, containing open-world perception, detailed object caption generation, and dense caption merging. The first stage obtains entity-level masks and labels. The second stage generates the object-level, detailed captions with the guidance of masks and labels from the first stage. The final stage merges object captions and masks into spatial and relational dense captions. To accelerate the labeling process and improve caption quality, we present two VLM models: the Detailed Region Caption model and the Spatial Caption Merging model. Extensive experiments on various settings, including vision-language understanding, visual grounding, and region caption generation, demonstrate the effectiveness of our DenseWorld-1M dataset and labeling models.",
+        "date": "2025-06-30",
+        "authors": "Xiangtai Li, Tao Zhang, Yanwei Li, Haobo Yuan, Shihao Chen, Yikang Zhou, Jiahao Meng, Yueyi Sun, Shilin Xu, Lu Qi, Tianheng Cheng, Yi Lin, Zilong Huang, Wenhao Huang, Jiashi Feng, Guang Shi",
+        "title": "DenseWorld-1M: Towards Detailed Dense Grounded Caption in the Real World",
+        "id": "2506.24102v1",
+        "x": 7.45742654800415,
+        "y": -8.030275344848633,
+        "z": 4.110993385314941,
+        "cluster_id": 11
+      }
+    ]
+  }
+}

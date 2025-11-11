@@ -1,0 +1,176 @@
+{
+  "timestamp": "2025-06-25T00:00:00+00:00",
+  "models": {
+    "BGE-Large": [
+      {
+        "title": "How to Design and Train Your Implicit Neural Representation for Video Compression",
+        "date": "2025-06-30",
+        "abstract": "Implicit neural representation (INR) methods for video compression have recently achieved visual quality and compression ratios that are competitive with traditional pipelines. However, due to the need for per-sample network training, the encoding speeds of these methods are too slow for practical adoption. We develop a library to allow us to disentangle and review the components of methods from the NeRV family, reframing their performance in terms of not only size-quality trade-offs, but also impacts on training time. We uncover principles for effective video INR design and propose a state-of-the-art configuration of these components, Rabbit NeRV (RNeRV). When all methods are given equal training time (equivalent to 300 NeRV epochs) for 7 different UVG videos at 1080p, RNeRV achieves +1.27% PSNR on average compared to the best-performing alternative for each video in our NeRV library. We then tackle the encoding speed issue head-on by investigating the viability of hyper-networks, which predict INR weights from video inputs, to disentangle training from encoding to allow for real-time encoding. We propose masking the weights of the predicted INR during training to allow for variable, higher quality compression, resulting in 1.7% improvements to both PSNR and MS-SSIM at 0.037 bpp on the UCF-101 dataset, and we increase hyper-network parameters by 0.4% for 2.5%/2.7% improvements to PSNR/MS-SSIM with equal bpp and similar speeds. Our project website is available at https://mgwillia.github.io/vinrb/ and our code is available at https://github.com/mgwillia/vinrb.",
+        "id": "2506.24127v1",
+        "authors": "Matthew Gwilliam, Roy Zhang, Namitha Padmanabhan, Hongyang Du, Abhinav Shrivastava",
+        "x": -3.7361719608306885,
+        "y": 0.9686218500137329,
+        "z": 2.977987289428711,
+        "cluster_id": -1
+      },
+      {
+        "abstract": "Residual connection has been extensively studied and widely applied at the model architecture level. However, its potential in the more challenging data-centric approaches remains unexplored. In this work, we introduce the concept of Data Residual Matching for the first time, leveraging data-level skip connections to facilitate data generation and mitigate data information vanishing. This approach maintains a balance between newly acquired knowledge through pixel space optimization and existing core local information identification within raw data modalities, specifically for the dataset distillation task. Furthermore, by incorporating optimization-level refinements, our method significantly improves computational efficiency, achieving superior performance while reducing training time and peak GPU memory usage by 50%. Consequently, the proposed method Fast and Accurate Data Residual Matching for Dataset Distillation (FADRM) establishes a new state-of-the-art, demonstrating substantial improvements over existing methods across multiple dataset benchmarks in both efficiency and effectiveness. For instance, with ResNet-18 as the student model and a 0.8% compression ratio on ImageNet-1K, the method achieves 47.7% test accuracy in single-model dataset distillation and 50.0% in multi-model dataset distillation, surpassing RDED by +5.7% and outperforming state-of-the-art multi-model approaches, EDC and CV-DD, by +1.4% and +4.0%. Code is available at: https://github.com/Jiacheng8/FADRM.",
+        "date": "2025-06-30",
+        "title": "FADRM: Fast and Accurate Data Residual Matching for Dataset Distillation",
+        "authors": "Jiacheng Cui, Xinyue Bi, Yaxin Luo, Xiaohan Zhao, Jiacheng Liu, Zhiqiang Shen",
+        "id": "2506.24125v1",
+        "x": -3.337207794189453,
+        "y": 1.2458488941192627,
+        "z": 2.802851438522339,
+        "cluster_id": -1
+      },
+      {
+        "date": "2025-06-30",
+        "abstract": "Time series forecasting traditionally relies on unimodal numerical inputs, which often struggle to capture high-level semantic patterns due to their dense and unstructured nature. While recent approaches have explored representing time series as text using large language models (LLMs), these methods remain limited by the discrete nature of token sequences and lack the perceptual intuition humans typically apply, such as interpreting visual patterns. In this paper, we propose a multimodal contrastive learning framework that transforms raw time series into structured visual and textual perspectives. Rather than using natural language or real-world images, we construct both modalities directly from numerical sequences. We then align these views in a shared semantic space via contrastive learning, enabling the model to capture richer and more complementary representations. Furthermore, we introduce a variate selection module that leverages the aligned representations to identify the most informative variables for multivariate forecasting. Extensive experiments on fifteen short-term and six long-term forecasting benchmarks demonstrate that our approach consistently outperforms strong unimodal and cross-modal baselines, highlighting the effectiveness of multimodal alignment in enhancing time series forecasting. Code is available at: https://github.com/Ironieser/TimesCLIP.",
+        "id": "2506.24124v2",
+        "title": "Teaching Time Series to See and Speak: Forecasting with Aligned Visual and Textual Perspectives",
+        "authors": "Sixun Dong, Wei Fan, Teresa Wu, Yanjie Fu",
+        "x": -3.0208754539489746,
+        "y": 2.181411027908325,
+        "z": 3.933537006378174,
+        "cluster_id": 2
+      },
+      {
+        "date": "2025-06-30",
+        "abstract": "We introduce Calligrapher, a novel diffusion-based framework that innovatively integrates advanced text customization with artistic typography for digital calligraphy and design applications. Addressing the challenges of precise style control and data dependency in typographic customization, our framework incorporates three key technical contributions. First, we develop a self-distillation mechanism that leverages the pre-trained text-to-image generative model itself alongside the large language model to automatically construct a style-centric typography benchmark. Second, we introduce a localized style injection framework via a trainable style encoder, which comprises both Qformer and linear layers, to extract robust style features from reference images. An in-context generation mechanism is also employed to directly embed reference images into the denoising process, further enhancing the refined alignment of target styles. Extensive quantitative and qualitative evaluations across diverse fonts and design contexts confirm Calligrapher's accurate reproduction of intricate stylistic details and precise glyph positioning. By automating high-quality, visually consistent typography, Calligrapher surpasses traditional models, empowering creative practitioners in digital art, branding, and contextual typographic design.",
+        "title": "Calligrapher: Freestyle Text Image Customization",
+        "id": "2506.24123v1",
+        "authors": "Yue Ma, Qingyan Bai, Hao Ouyang, Ka Leong Cheng, Qiuyu Wang, Hongyu Liu, Zichen Liu, Haofan Wang, Jingye Chen, Yujun Shen, Qifeng Chen",
+        "x": -4.418950080871582,
+        "y": 1.3300689458847046,
+        "z": 2.5009405612945557,
+        "cluster_id": 6
+      },
+      {
+        "title": "TextMesh4D: High-Quality Text-to-4D Mesh Generation",
+        "abstract": "Recent advancements in diffusion generative models significantly advanced image, video, and 3D content creation from user-provided text prompts. However, the challenging problem of dynamic 3D content generation (text-to-4D) with diffusion guidance remains largely unexplored. In this paper, we introduce TextMesh4D, a novel framework for high-quality text-to-4D generation. Our approach leverages per-face Jacobians as a differentiable mesh representation and decomposes 4D generation into two stages: static object creation and dynamic motion synthesis. We further propose a flexibility-rigidity regularization term to stabilize Jacobian optimization under video diffusion priors, ensuring robust geometric performance. Experiments demonstrate that TextMesh4D achieves state-of-the-art results in terms of temporal consistency, structural fidelity, and visual realism. Moreover, TextMesh4D operates with a low GPU memory overhead-requiring only a single 24GB GPU-offering a cost-effective yet high-quality solution for text-driven 4D mesh generation. The code will be released to facilitate future research in text-to-4D generation.",
+        "authors": "Sisi Dai, Xinxin Su, Boyan Wan, Ruizhen Hu, Kai Xu",
+        "id": "2506.24121v1",
+        "date": "2025-06-30",
+        "x": -4.4680070877075195,
+        "y": 1.2669199705123901,
+        "z": 2.34027099609375,
+        "cluster_id": 6
+      }
+    ],
+    "GTE-Large": [
+      {
+        "title": "How to Design and Train Your Implicit Neural Representation for Video Compression",
+        "date": "2025-06-30",
+        "abstract": "Implicit neural representation (INR) methods for video compression have recently achieved visual quality and compression ratios that are competitive with traditional pipelines. However, due to the need for per-sample network training, the encoding speeds of these methods are too slow for practical adoption. We develop a library to allow us to disentangle and review the components of methods from the NeRV family, reframing their performance in terms of not only size-quality trade-offs, but also impacts on training time. We uncover principles for effective video INR design and propose a state-of-the-art configuration of these components, Rabbit NeRV (RNeRV). When all methods are given equal training time (equivalent to 300 NeRV epochs) for 7 different UVG videos at 1080p, RNeRV achieves +1.27% PSNR on average compared to the best-performing alternative for each video in our NeRV library. We then tackle the encoding speed issue head-on by investigating the viability of hyper-networks, which predict INR weights from video inputs, to disentangle training from encoding to allow for real-time encoding. We propose masking the weights of the predicted INR during training to allow for variable, higher quality compression, resulting in 1.7% improvements to both PSNR and MS-SSIM at 0.037 bpp on the UCF-101 dataset, and we increase hyper-network parameters by 0.4% for 2.5%/2.7% improvements to PSNR/MS-SSIM with equal bpp and similar speeds. Our project website is available at https://mgwillia.github.io/vinrb/ and our code is available at https://github.com/mgwillia/vinrb.",
+        "authors": "Matthew Gwilliam, Roy Zhang, Namitha Padmanabhan, Hongyang Du, Abhinav Shrivastava",
+        "id": "2506.24127v1",
+        "x": -2.902562141418457,
+        "y": -2.5464327335357666,
+        "z": 5.358081340789795,
+        "cluster_id": -1
+      },
+      {
+        "abstract": "Residual connection has been extensively studied and widely applied at the model architecture level. However, its potential in the more challenging data-centric approaches remains unexplored. In this work, we introduce the concept of Data Residual Matching for the first time, leveraging data-level skip connections to facilitate data generation and mitigate data information vanishing. This approach maintains a balance between newly acquired knowledge through pixel space optimization and existing core local information identification within raw data modalities, specifically for the dataset distillation task. Furthermore, by incorporating optimization-level refinements, our method significantly improves computational efficiency, achieving superior performance while reducing training time and peak GPU memory usage by 50%. Consequently, the proposed method Fast and Accurate Data Residual Matching for Dataset Distillation (FADRM) establishes a new state-of-the-art, demonstrating substantial improvements over existing methods across multiple dataset benchmarks in both efficiency and effectiveness. For instance, with ResNet-18 as the student model and a 0.8% compression ratio on ImageNet-1K, the method achieves 47.7% test accuracy in single-model dataset distillation and 50.0% in multi-model dataset distillation, surpassing RDED by +5.7% and outperforming state-of-the-art multi-model approaches, EDC and CV-DD, by +1.4% and +4.0%. Code is available at: https://github.com/Jiacheng8/FADRM.",
+        "date": "2025-06-30",
+        "id": "2506.24125v1",
+        "title": "FADRM: Fast and Accurate Data Residual Matching for Dataset Distillation",
+        "authors": "Jiacheng Cui, Xinyue Bi, Yaxin Luo, Xiaohan Zhao, Jiacheng Liu, Zhiqiang Shen",
+        "x": -2.7311367988586426,
+        "y": -1.9102962017059326,
+        "z": 5.287621021270752,
+        "cluster_id": -1
+      },
+      {
+        "title": "Teaching Time Series to See and Speak: Forecasting with Aligned Visual and Textual Perspectives",
+        "date": "2025-06-30",
+        "id": "2506.24124v2",
+        "abstract": "Time series forecasting traditionally relies on unimodal numerical inputs, which often struggle to capture high-level semantic patterns due to their dense and unstructured nature. While recent approaches have explored representing time series as text using large language models (LLMs), these methods remain limited by the discrete nature of token sequences and lack the perceptual intuition humans typically apply, such as interpreting visual patterns. In this paper, we propose a multimodal contrastive learning framework that transforms raw time series into structured visual and textual perspectives. Rather than using natural language or real-world images, we construct both modalities directly from numerical sequences. We then align these views in a shared semantic space via contrastive learning, enabling the model to capture richer and more complementary representations. Furthermore, we introduce a variate selection module that leverages the aligned representations to identify the most informative variables for multivariate forecasting. Extensive experiments on fifteen short-term and six long-term forecasting benchmarks demonstrate that our approach consistently outperforms strong unimodal and cross-modal baselines, highlighting the effectiveness of multimodal alignment in enhancing time series forecasting. Code is available at: https://github.com/Ironieser/TimesCLIP.",
+        "authors": "Sixun Dong, Wei Fan, Teresa Wu, Yanjie Fu",
+        "x": -3.694042205810547,
+        "y": -1.2518543004989624,
+        "z": 5.925760269165039,
+        "cluster_id": -1
+      },
+      {
+        "id": "2506.24123v1",
+        "title": "Calligrapher: Freestyle Text Image Customization",
+        "authors": "Yue Ma, Qingyan Bai, Hao Ouyang, Ka Leong Cheng, Qiuyu Wang, Hongyu Liu, Zichen Liu, Haofan Wang, Jingye Chen, Yujun Shen, Qifeng Chen",
+        "date": "2025-06-30",
+        "abstract": "We introduce Calligrapher, a novel diffusion-based framework that innovatively integrates advanced text customization with artistic typography for digital calligraphy and design applications. Addressing the challenges of precise style control and data dependency in typographic customization, our framework incorporates three key technical contributions. First, we develop a self-distillation mechanism that leverages the pre-trained text-to-image generative model itself alongside the large language model to automatically construct a style-centric typography benchmark. Second, we introduce a localized style injection framework via a trainable style encoder, which comprises both Qformer and linear layers, to extract robust style features from reference images. An in-context generation mechanism is also employed to directly embed reference images into the denoising process, further enhancing the refined alignment of target styles. Extensive quantitative and qualitative evaluations across diverse fonts and design contexts confirm Calligrapher's accurate reproduction of intricate stylistic details and precise glyph positioning. By automating high-quality, visually consistent typography, Calligrapher surpasses traditional models, empowering creative practitioners in digital art, branding, and contextual typographic design.",
+        "x": -3.7129762172698975,
+        "y": -1.770625352859497,
+        "z": 3.8785479068756104,
+        "cluster_id": 2
+      },
+      {
+        "date": "2025-06-30",
+        "id": "2506.24121v1",
+        "abstract": "Recent advancements in diffusion generative models significantly advanced image, video, and 3D content creation from user-provided text prompts. However, the challenging problem of dynamic 3D content generation (text-to-4D) with diffusion guidance remains largely unexplored. In this paper, we introduce TextMesh4D, a novel framework for high-quality text-to-4D generation. Our approach leverages per-face Jacobians as a differentiable mesh representation and decomposes 4D generation into two stages: static object creation and dynamic motion synthesis. We further propose a flexibility-rigidity regularization term to stabilize Jacobian optimization under video diffusion priors, ensuring robust geometric performance. Experiments demonstrate that TextMesh4D achieves state-of-the-art results in terms of temporal consistency, structural fidelity, and visual realism. Moreover, TextMesh4D operates with a low GPU memory overhead-requiring only a single 24GB GPU-offering a cost-effective yet high-quality solution for text-driven 4D mesh generation. The code will be released to facilitate future research in text-to-4D generation.",
+        "authors": "Sisi Dai, Xinxin Su, Boyan Wan, Ruizhen Hu, Kai Xu",
+        "title": "TextMesh4D: High-Quality Text-to-4D Mesh Generation",
+        "x": -3.80515193939209,
+        "y": -1.980102300643921,
+        "z": 3.8983988761901855,
+        "cluster_id": 2
+      }
+    ],
+    "MiniLM": [
+      {
+        "authors": "Matthew Gwilliam, Roy Zhang, Namitha Padmanabhan, Hongyang Du, Abhinav Shrivastava",
+        "id": "2506.24127v1",
+        "abstract": "Implicit neural representation (INR) methods for video compression have recently achieved visual quality and compression ratios that are competitive with traditional pipelines. However, due to the need for per-sample network training, the encoding speeds of these methods are too slow for practical adoption. We develop a library to allow us to disentangle and review the components of methods from the NeRV family, reframing their performance in terms of not only size-quality trade-offs, but also impacts on training time. We uncover principles for effective video INR design and propose a state-of-the-art configuration of these components, Rabbit NeRV (RNeRV). When all methods are given equal training time (equivalent to 300 NeRV epochs) for 7 different UVG videos at 1080p, RNeRV achieves +1.27% PSNR on average compared to the best-performing alternative for each video in our NeRV library. We then tackle the encoding speed issue head-on by investigating the viability of hyper-networks, which predict INR weights from video inputs, to disentangle training from encoding to allow for real-time encoding. We propose masking the weights of the predicted INR during training to allow for variable, higher quality compression, resulting in 1.7% improvements to both PSNR and MS-SSIM at 0.037 bpp on the UCF-101 dataset, and we increase hyper-network parameters by 0.4% for 2.5%/2.7% improvements to PSNR/MS-SSIM with equal bpp and similar speeds. Our project website is available at https://mgwillia.github.io/vinrb/ and our code is available at https://github.com/mgwillia/vinrb.",
+        "date": "2025-06-30",
+        "title": "How to Design and Train Your Implicit Neural Representation for Video Compression",
+        "x": 6.034681797027588,
+        "y": -7.5711236000061035,
+        "z": 2.720578193664551,
+        "cluster_id": 2
+      },
+      {
+        "id": "2506.24125v1",
+        "date": "2025-06-30",
+        "title": "FADRM: Fast and Accurate Data Residual Matching for Dataset Distillation",
+        "abstract": "Residual connection has been extensively studied and widely applied at the model architecture level. However, its potential in the more challenging data-centric approaches remains unexplored. In this work, we introduce the concept of Data Residual Matching for the first time, leveraging data-level skip connections to facilitate data generation and mitigate data information vanishing. This approach maintains a balance between newly acquired knowledge through pixel space optimization and existing core local information identification within raw data modalities, specifically for the dataset distillation task. Furthermore, by incorporating optimization-level refinements, our method significantly improves computational efficiency, achieving superior performance while reducing training time and peak GPU memory usage by 50%. Consequently, the proposed method Fast and Accurate Data Residual Matching for Dataset Distillation (FADRM) establishes a new state-of-the-art, demonstrating substantial improvements over existing methods across multiple dataset benchmarks in both efficiency and effectiveness. For instance, with ResNet-18 as the student model and a 0.8% compression ratio on ImageNet-1K, the method achieves 47.7% test accuracy in single-model dataset distillation and 50.0% in multi-model dataset distillation, surpassing RDED by +5.7% and outperforming state-of-the-art multi-model approaches, EDC and CV-DD, by +1.4% and +4.0%. Code is available at: https://github.com/Jiacheng8/FADRM.",
+        "authors": "Jiacheng Cui, Xinyue Bi, Yaxin Luo, Xiaohan Zhao, Jiacheng Liu, Zhiqiang Shen",
+        "x": 6.714999675750732,
+        "y": -6.785102367401123,
+        "z": 3.568054676055908,
+        "cluster_id": -1
+      },
+      {
+        "abstract": "Time series forecasting traditionally relies on unimodal numerical inputs, which often struggle to capture high-level semantic patterns due to their dense and unstructured nature. While recent approaches have explored representing time series as text using large language models (LLMs), these methods remain limited by the discrete nature of token sequences and lack the perceptual intuition humans typically apply, such as interpreting visual patterns. In this paper, we propose a multimodal contrastive learning framework that transforms raw time series into structured visual and textual perspectives. Rather than using natural language or real-world images, we construct both modalities directly from numerical sequences. We then align these views in a shared semantic space via contrastive learning, enabling the model to capture richer and more complementary representations. Furthermore, we introduce a variate selection module that leverages the aligned representations to identify the most informative variables for multivariate forecasting. Extensive experiments on fifteen short-term and six long-term forecasting benchmarks demonstrate that our approach consistently outperforms strong unimodal and cross-modal baselines, highlighting the effectiveness of multimodal alignment in enhancing time series forecasting. Code is available at: https://github.com/Ironieser/TimesCLIP.",
+        "id": "2506.24124v2",
+        "authors": "Sixun Dong, Wei Fan, Teresa Wu, Yanjie Fu",
+        "date": "2025-06-30",
+        "title": "Teaching Time Series to See and Speak: Forecasting with Aligned Visual and Textual Perspectives",
+        "x": 7.125927448272705,
+        "y": -7.281100749969482,
+        "z": 4.144628524780273,
+        "cluster_id": -1
+      },
+      {
+        "id": "2506.24123v1",
+        "abstract": "We introduce Calligrapher, a novel diffusion-based framework that innovatively integrates advanced text customization with artistic typography for digital calligraphy and design applications. Addressing the challenges of precise style control and data dependency in typographic customization, our framework incorporates three key technical contributions. First, we develop a self-distillation mechanism that leverages the pre-trained text-to-image generative model itself alongside the large language model to automatically construct a style-centric typography benchmark. Second, we introduce a localized style injection framework via a trainable style encoder, which comprises both Qformer and linear layers, to extract robust style features from reference images. An in-context generation mechanism is also employed to directly embed reference images into the denoising process, further enhancing the refined alignment of target styles. Extensive quantitative and qualitative evaluations across diverse fonts and design contexts confirm Calligrapher's accurate reproduction of intricate stylistic details and precise glyph positioning. By automating high-quality, visually consistent typography, Calligrapher surpasses traditional models, empowering creative practitioners in digital art, branding, and contextual typographic design.",
+        "title": "Calligrapher: Freestyle Text Image Customization",
+        "date": "2025-06-30",
+        "authors": "Yue Ma, Qingyan Bai, Hao Ouyang, Ka Leong Cheng, Qiuyu Wang, Hongyu Liu, Zichen Liu, Haofan Wang, Jingye Chen, Yujun Shen, Qifeng Chen",
+        "x": 7.321277618408203,
+        "y": -7.86830472946167,
+        "z": 3.2446861267089844,
+        "cluster_id": 13
+      },
+      {
+        "abstract": "Recent advancements in diffusion generative models significantly advanced image, video, and 3D content creation from user-provided text prompts. However, the challenging problem of dynamic 3D content generation (text-to-4D) with diffusion guidance remains largely unexplored. In this paper, we introduce TextMesh4D, a novel framework for high-quality text-to-4D generation. Our approach leverages per-face Jacobians as a differentiable mesh representation and decomposes 4D generation into two stages: static object creation and dynamic motion synthesis. We further propose a flexibility-rigidity regularization term to stabilize Jacobian optimization under video diffusion priors, ensuring robust geometric performance. Experiments demonstrate that TextMesh4D achieves state-of-the-art results in terms of temporal consistency, structural fidelity, and visual realism. Moreover, TextMesh4D operates with a low GPU memory overhead-requiring only a single 24GB GPU-offering a cost-effective yet high-quality solution for text-driven 4D mesh generation. The code will be released to facilitate future research in text-to-4D generation.",
+        "date": "2025-06-30",
+        "id": "2506.24121v1",
+        "title": "TextMesh4D: High-Quality Text-to-4D Mesh Generation",
+        "authors": "Sisi Dai, Xinxin Su, Boyan Wan, Ruizhen Hu, Kai Xu",
+        "x": 7.033217430114746,
+        "y": -8.214569091796875,
+        "z": 2.648313045501709,
+        "cluster_id": -1
+      }
+    ]
+  }
+}
